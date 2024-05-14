@@ -91,7 +91,7 @@ footer {
 }
 
 .photo-set img {
-    width: 300px; /* Adjust size as needed */
+    width: 100px; /* Adjust size as needed */
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s;
