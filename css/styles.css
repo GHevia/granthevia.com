@@ -8,12 +8,14 @@ body {
 }
 
 header {
+    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     background: #333;
     color: white;
     padding: 0.5em 0;
 }
 
 nav ul {
+    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -26,6 +28,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     color: white;
     text-decoration: none;
     padding: 0.5em 1em;
@@ -39,6 +42,7 @@ nav ul li a:hover {
 }
 
 main {
+    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     padding: 2em;
     max-width: 1200px;
     margin: 0 auto;
@@ -71,6 +75,7 @@ main {
 }
 
 footer {
+    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     text-align: center;
     padding: 1em 0;
     background: #333;
