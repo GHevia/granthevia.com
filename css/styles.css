@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     margin: 0;
@@ -5,17 +6,19 @@ body {
     box-sizing: border-box;
     background-color: #f4f4f9;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header and navigation styles */
 header {
-    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     background: #333;
     color: white;
     padding: 0.5em 0;
 }
 
 nav ul {
-    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -28,7 +31,6 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     color: white;
     text-decoration: none;
     padding: 0.5em 1em;
@@ -41,62 +43,20 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-main {
-    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
-    padding: 2em;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.intro, .portfolio, .games {
-    text-align: center;
-}
-
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    padding: 20px;
-}
-
-.gallery img {
-    max-width: 90%; /* Ensures images are not too wide on any screen */
-    height: auto; /* Maintains the aspect ratio of the images */
-    margin: 10px; /* Adds some space around each image */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
-    border-radius: 5px; /* Rounded corners for aesthetic */
-    transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
-}
-
-.gallery img:hover {
-    transform: scale(1.05); /* Slightly enlarges the image on hover */
-}
-
-/* Additional styles to ensure the whole page is visually appealing */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
+/* Main content styles */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-
+/* Footer styles */
 footer {
-    font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     text-align: center;
     padding: 1em 0;
     background: #333;
@@ -106,19 +66,43 @@ footer {
     width: 100%;
 }
 
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery img {
+    max-width: 90%;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Photo set styles */
 .photo-set {
-    width: 33%; /* Each photo set takes up one third of the gallery's width */
-    padding: 0.5%; /* Optional: adds spacing between images */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-    text-align: center; /* Centers the text and image */
+    width: 33%;
+    padding: 0.5%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .photo-set img {
-    width: 100%; /* Makes the image fill the container */
-    height: auto; /* Maintains the aspect ratio of the image */
-    border-radius: 5px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth transform effect on hover */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
+
 .photo-set img:hover {
     transform: scale(1.05);
 }
