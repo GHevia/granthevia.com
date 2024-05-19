@@ -52,27 +52,48 @@ main {
     text-align: center;
 }
 
+
 .gallery {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    padding: 20px;
 }
 
-.gallery a {
-    display: block;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid #ddd;
-    text-decoration: none;
+.gallery img {
+    max-width: 90%; /* Ensures images are not too wide on any screen */
+    height: auto; /* Maintains the aspect ratio of the images */
+    margin: 10px; /* Adds some space around each image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+/* Additional styles to ensure the whole page is visually appealing */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.gallery a:hover {
-    background: #e2e2e2;
-    transform: scale(1.05);
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
+
 
 footer {
     font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
