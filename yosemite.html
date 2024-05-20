@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Yosemite</title>
+    <title>Page Title</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="Logo_Icon.ico">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="photos.html">Photos</a></li>
-                <li><a href="games.html">Games</a></li>
+                <li class="dropdown">
+                    <a href="photos.html" class="dropbtn">Photos <span class="dropdown-icon">v</span></a>
+                    <div class="dropdown-content">
+                        <a href="grandcanyon.html">Grand Canyon</a>
+                        <a href="yosemite.html">Yosemite</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="games.html" class="dropbtn">Games <span class="dropdown-icon">v</span></a>
+                    <div class="dropdown-content">
+                        <!-- Future game options can be added here -->
+                        <a href="#">Game 1</a>
+                        <a href="#">Game 2</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -37,5 +50,6 @@
     <footer>
         <p>&copy; Made by Grant Hevia</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
