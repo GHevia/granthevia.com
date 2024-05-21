@@ -108,7 +108,7 @@ footer {
 }
 
 .gallery img {
-    max-width: 95%;
+    max-width: 90%;
     height: auto;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -143,4 +143,34 @@ footer {
     margin-top: 0.5em;
     font-size: 1em;
     color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px; /* Adjust the base font size for mobile devices */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the nav items vertically on small screens */
+        font-size: 1.2em; /* Adjust font size for nav links */
+    }
+
+    nav ul li {
+        margin: 0.5em 0; /* Adjust margin for nav items */
+    }
+
+    nav ul li a {
+        padding: 0.5em; /* Adjust padding for nav links */
+    }
+
+    .dropdown-content {
+        position: static; /* Ensure dropdown content flows with the document */
+        box-shadow: none; /* Remove shadow for mobile dropdown */
+        background-color: #444; /* Slightly lighter background for dropdown on mobile */
+    }
+
+    .dropdown-content a {
+        padding: 10px; /* Adjust padding for dropdown links */
+    }
 }
