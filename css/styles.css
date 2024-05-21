@@ -71,7 +71,7 @@ nav ul li .dropbtn:hover {
     margin-left: 0.5em;
 }
 
-.dropdown.open .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
