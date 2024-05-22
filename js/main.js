@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             lightboxModal.style.display = 'block';
             lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt;
         });
     });
 

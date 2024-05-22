@@ -162,8 +162,10 @@ footer {
 .lightbox-content {
     margin: auto;
     display: block;
-    width: 97%;
-    max-width: 2000px;
+    width: 97%; /* Increase width percentage */
+    max-width: 1700px; /* Increase maximum width */
+    max-height: 97%; /* Add max-height to utilize available height */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .lightbox-close {
@@ -181,34 +183,4 @@ footer {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    body {
-        font-size: 18px; /* Adjust the base font size for mobile devices */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack the nav items vertically on small screens */
-        font-size: 1.2em; /* Adjust font size for nav links */
-    }
-
-    nav ul li {
-        margin: 0.5em 0; /* Adjust margin for nav items */
-    }
-
-    nav ul li a {
-        padding: 0.5em; /* Adjust padding for nav links */
-    }
-
-    .dropdown-content {
-        position: static; /* Ensure dropdown content flows with the document */
-        box-shadow: none; /* Remove shadow for mobile dropdown */
-        background-color: #444; /* Slightly lighter background for dropdown on mobile */
-    }
-
-    .dropdown-content a {
-        padding: 10px; /* Adjust padding for dropdown links */
-    }
 }
