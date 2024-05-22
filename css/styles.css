@@ -162,9 +162,9 @@ footer {
 .lightbox-content {
     margin: auto;
     display: block;
-    width: 93%; /* Increase width percentage */
-    max-width: 1400px; /* Increase maximum width */
-    max-height: 93%; /* Add max-height to utilize available height */
+    width: 90%; /* Increase width percentage */
+    max-width: 1200px; /* Increase maximum width */
+    max-height: 90%; /* Add max-height to utilize available height */
     height: auto; /* Maintain aspect ratio */
 }
 
