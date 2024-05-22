@@ -16,4 +16,27 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdown.classList.remove('open');
         });
     }
+
+    // Lightbox functionality
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            lightboxModal.style.display = 'block';
+            lightboxImg.src = this.src;
+        });
+    });
+
+    lightboxClose.addEventListener('click', function() {
+        lightboxModal.style.display = 'none';
+    });
+
+    lightboxModal.addEventListener('click', function(event) {
+        if (event.target === lightboxModal) {
+            lightboxModal.style.display = 'none';
+        }
+    });
 });
