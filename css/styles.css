@@ -162,11 +162,11 @@ footer {
 .lightbox-content {
     margin: auto;
     display: block;
-    width: 90%; /* Increase width percentage */
-    max-width: 1200px; /* Increase maximum width */
-    max-height: 90%; /* Add max-height to utilize available height */
-    height: auto; /* Maintain aspect ratio */
-    width: auto;
+    width: 90%;
+    max-width: 90%;
+    height: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Maintain aspect ratio */
 }
 
 .lightbox-close {
