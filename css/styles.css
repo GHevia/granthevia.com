@@ -166,6 +166,7 @@ footer {
     max-width: 1200px; /* Increase maximum width */
     max-height: 90%; /* Add max-height to utilize available height */
     height: auto; /* Maintain aspect ratio */
+    width: auto;
 }
 
 .lightbox-close {
