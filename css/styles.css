@@ -67,10 +67,6 @@ nav ul li .dropbtn:hover {
     background-color: #575757;
 }
 
-.dropdown-icon {
-    margin-left: 0.5em;
-}
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
