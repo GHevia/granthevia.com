@@ -141,7 +141,7 @@ footer {
 
 .photo-set p {
     margin-top: 0.5em;
-    font-size: 1.5em;
+    font-size: 1.5em; /* Original font size for captions */
     color: #333;
 }
 
@@ -166,7 +166,7 @@ footer {
 
 .homescreen-set p {
     margin-top: 0.5em;
-    font-size: 1.5em;
+    font-size: 1.5em; /* Original font size for captions */
     color: #333;
 }
 
@@ -209,4 +209,24 @@ footer {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Media Queries for Mobile Devices */
+
+/* Reduce font size for top headers and captions on mobile devices */
+@media (max-width: 768px) {
+    /* Adjusting font size for navigation links */
+    nav ul {
+        font-size: 1.2em; /* Smaller font size for nav links on mobile */
+    }
+
+    /* Adjusting font size for photo-set captions */
+    .photo-set p {
+        font-size: 1.2em; /* Smaller font size for captions on mobile */
+    }
+
+    /* Adjusting font size for homescreen-set captions */
+    .homescreen-set p {
+        font-size: 1.2em; /* Smaller font size for captions on mobile */
+    }
 }
