@@ -51,7 +51,7 @@ nav ul li .dropbtn:hover {
     display: none;
     position: absolute;
     background-color: #333;
-    min-width: 33%;
+    min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -61,7 +61,6 @@ nav ul li .dropbtn:hover {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    /* max-width: 33%; */
 }
 
 .dropdown-content a:hover {
@@ -229,5 +228,13 @@ footer {
     /* Adjusting font size for homescreen-set captions */
     .homescreen-set p {
         font-size: 1.2em; /* Smaller font size for captions on mobile */
+    }
+
+    /* Ensure dropdown menu takes full width on mobile */
+    .dropdown-content {
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
