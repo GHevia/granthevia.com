@@ -234,7 +234,7 @@ footer {
     .dropdown-content {
         left: 0;
         right: 0;
-        width: 100%;
+        width: 90%;
         box-sizing: border-box;
     }
 }
