@@ -228,9 +228,9 @@ footer {
 
     /* Ensure dropdown menu takes full width on mobile */
     .dropdown-content {
-        left: 0;
-        right: 0;
-        width: 90%;
+        left: 5%;
+        right: 5%;
+        width: 100%;
         box-sizing: border-box;
     }
 }
