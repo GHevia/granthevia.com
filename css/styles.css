@@ -234,4 +234,30 @@ footer {
         margin: 0 auto; /* Center align dropdown */
         box-sizing: border-box;
     }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* Header and navigation styles */
+    /* header {
+        background: #333;
+        color: white;
+        padding: 0.5em 0;
+    } */
+
+    /* nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5em; 
+    } */
 }
