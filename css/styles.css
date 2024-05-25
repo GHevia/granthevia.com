@@ -246,11 +246,12 @@ footer {
         text-align: center;
     }
     /* Header and navigation styles */
-    /* header {
+    header {
         background: #333;
         color: white;
         padding: 0.5em 0;
-    } */
+        max-width: 95%;
+    }
 
     /* nav ul {
         list-style-type: none;
