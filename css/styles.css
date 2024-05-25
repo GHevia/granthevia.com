@@ -211,56 +211,30 @@ footer {
 
 /* Reduce font size for top headers and captions on mobile devices */
 @media (max-width: 768px) {
-    /* Adjusting font size for navigation links */
+    body {
+        font-size: 18px; /* Adjust the base font size for mobile devices */
+    }
+
     nav ul {
-        font-size: 1.2em; /* Smaller font size for nav links on mobile */
+        flex-direction: column; /* Stack the nav items vertically on small screens */
+        font-size: 1.2em; /* Adjust font size for nav links */
     }
 
-    /* Adjusting font size for photo-set captions */
-    .photo-set p {
-        font-size: 1.2em; /* Smaller font size for captions on mobile */
+    nav ul li {
+        margin: 0.5em 0; /* Adjust margin for nav items */
     }
 
-    /* Adjusting font size for homescreen-set captions */
-    .homescreen-set p {
-        font-size: 1.2em; /* Smaller font size for captions on mobile */
+    nav ul li a {
+        padding: 0.5em; /* Adjust padding for nav links */
     }
 
-    /* Ensure dropdown menu takes full width on mobile */
     .dropdown-content {
-        left: 0;
-        right: 0;
-        width: 90%; /* Adjust to fit better within mobile screen */
-        margin: 0 auto; /* Center align dropdown */
-        box-sizing: border-box;
+        position: static; /* Ensure dropdown content flows with the document */
+        box-shadow: none; /* Remove shadow for mobile dropdown */
+        background-color: #444; /* Slightly lighter background for dropdown on mobile */
     }
 
-    main {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        max-width: 95%;
-        margin: 5px auto;
-        text-align: center;
-    }
-    /* Header and navigation styles */
-    header {
-        background: #333;
-        color: white;
-        padding: 0.5em 0;
-        max-width: 95%;
-        width: 90%
-    }
-
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 5%;
-        display: flex;
-        justify-content: center;
-        font-size: 1.2em; 
-        width: 90%;
+    .dropdown-content a {
+        padding: 10px; /* Adjust padding for dropdown links */
     }
 }
