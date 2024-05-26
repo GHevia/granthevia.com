@@ -215,17 +215,20 @@ footer {
         font-size: 18px; /* Adjust the base font size for mobile devices */
     }
 
-    /* nav ul li {
-        margin: 0.5em 0; /* Adjust margin for nav items 
-    } */
+    nav ul {
+        /* flex-direction: column; Stack the nav items vertically on small screens */
+        font-size: 1.2em; /* Adjust font size for nav links */
+    }
+
+    nav ul li {
+        margin: 0.5em 0; /* Adjust margin for nav items */
+    }
 
     nav ul li a {
         padding: 0.5em; /* Adjust padding for nav links */
     }
 
     .photo-set p {
-        /* margin-top: 0.5em; */
         font-size: 1.0em; /* Original font size for captions */
-        /* color: #333; */
     }
 }
