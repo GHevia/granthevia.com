@@ -220,9 +220,9 @@ footer {
         font-size: 1.2em; /* Adjust font size for nav links */
     }
 
-    nav ul li {
-        margin: 0.5em 0; /* Adjust margin for nav items */
-    }
+    /* nav ul li {
+        margin: 0.5em 0; /* Adjust margin for nav items 
+    } */
 
     nav ul li a {
         padding: 0.5em; /* Adjust padding for nav links */
