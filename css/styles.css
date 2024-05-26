@@ -227,14 +227,4 @@ footer {
     nav ul li a {
         padding: 0.5em; /* Adjust padding for nav links */
     }
-
-    .dropdown-content {
-        position: static; /* Ensure dropdown content flows with the document */
-        box-shadow: none; /* Remove shadow for mobile dropdown */
-        background-color: #444; /* Slightly lighter background for dropdown on mobile */
-    }
-
-    .dropdown-content a {
-        padding: 10px; /* Adjust padding for dropdown links */
-    }
 }
