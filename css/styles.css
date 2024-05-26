@@ -215,11 +215,6 @@ footer {
         font-size: 18px; /* Adjust the base font size for mobile devices */
     }
 
-    nav ul {
-        /* flex-direction: column; Stack the nav items vertically on small screens */
-        font-size: 1.2em; /* Adjust font size for nav links */
-    }
-
     /* nav ul li {
         margin: 0.5em 0; /* Adjust margin for nav items 
     } */
