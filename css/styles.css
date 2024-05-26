@@ -222,4 +222,10 @@ footer {
     nav ul li a {
         padding: 0.5em; /* Adjust padding for nav links */
     }
+
+    .photo-set p {
+        /* margin-top: 0.5em; */
+        font-size: 1.0em; /* Original font size for captions */
+        /* color: #333; */
+    }
 }
