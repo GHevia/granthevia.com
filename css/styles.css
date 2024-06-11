@@ -104,13 +104,10 @@ footer {
 }
 
 .gallery img {
-    max-width: 90%;
-    width: 90%;
-    max-width: 90%;
-    height: 90%;
-    max-height: 90%;
-    object-fit: contain; /* Maintain aspect ratio */
-    /* height: auto; */
+    max-width: 90vw; /* Maximum width as a percentage of viewport width */
+    max-height: 90vh; /* Maximum height as a percentage of viewport height */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 5px;
