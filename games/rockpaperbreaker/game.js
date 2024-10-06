@@ -1,0 +1,409 @@
+// Get the canvas and context
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+// Set canvas size
+canvas.width = 800;
+canvas.height = 600;
+
+// Image paths for rock, paper, scissors
+const rockImg = new Image();
+const paperImg = new Image();
+const scissorsImg = new Image();
+
+rockImg.src = 'images/rock.png';
+paperImg.src = 'images/paper.png';
+scissorsImg.src = 'images/scissors.png';
+
+rockImg.src = 'images/rock.png';
+paperImg.src = 'images/paper.png';
+scissorsImg.src = 'images/scissors.png';
+
+// Set up game variables
+let objects = [];  // General array for all objects (rocks, paper, scissors)
+const objectRadius = 20;
+const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
+const initialRockSpeed = 6;
+const maxAmmo = 10;  // Start with 10 rocks to shoot
+let remainingAmmo = maxAmmo;  // Track remaining ammo
+let isShooting = false;
+let shootAngle = 0; // Direction the rocks will be shot
+let streamInterval;
+let gameOver = false;
+let gameStarted = false;  // Track if the game has started (for movement)
+let fastForward = false;  // Speed up flag
+let level = 1;  // Start at level 1
+const maxLevels = 6;  // Define how many levels there are
+const levelSettings = [
+    { paper: 5, scissors: 5 },   // Level 1: 5 paper, 5 scissors (50/50)
+    { paper: 10, scissors: 10 }, // Level 2: 10 paper, 10 scissors (50/50)
+    { paper: 15, scissors: 15 }, // Level 3: 15 paper, 15 scissors (50/50)
+    { paper: 12, scissors: 8 },  // Level 4: 60% paper, 40% scissors
+    { paper: 14, scissors: 6 },  // Level 5: 70% paper, 30% scissors
+    { paper: 16, scissors: 4 },  // Level 6: 80% paper, 20% scissors
+];
+
+// Control buttons
+const fastForwardBtn = document.getElementById('fastForwardBtn');
+const restartBtn = document.getElementById('restartBtn');
+const restartLevelBtn = document.getElementById('restartLevelBtn');  // New restart level button
+
+// Center bottom position for rock spawning
+const rockStartX = canvas.width / 2;
+const rockStartY = canvas.height - objectRadius;
+
+// Mouse controls for shooting and angle
+canvas.addEventListener('mousedown', (event) => {
+    if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
+        isShooting = true;
+        updateShootAngle(event);
+        startRockStream();
+
+        if (!gameStarted) {
+            startObjectMovement();  // Start object movement on first click
+            gameStarted = true;
+        }
+    }
+});
+
+canvas.addEventListener('mousemove', (event) => {
+    if (!gameOver) {
+        updateShootAngle(event);  // Continuously update angle based on mouse movement
+    }
+});
+
+canvas.addEventListener('mouseup', () => {
+    isShooting = false;
+    clearInterval(streamInterval);  // Stop the stream when the mouse is released
+});
+
+// Restart button event listener
+restartBtn.addEventListener('click', () => {
+    restartGame();  // Restart the game (goes back to level 1)
+});
+
+// Restart level button event listener
+restartLevelBtn.addEventListener('click', () => {
+    restartCurrentLevel();  // Restart the current level
+});
+
+// Fast Forward button event listener
+fastForwardBtn.addEventListener('click', () => {
+    fastForward = true;  // Enable fast forward mode
+    fastForwardBtn.style.display = 'none';  // Hide fast forward button
+});
+
+// Function to update the shooting angle based on mouse position
+function updateShootAngle(event) {
+    const rect = canvas.getBoundingClientRect();
+    const targetX = event.clientX - rect.left;
+    const targetY = event.clientY - rect.top;
+
+    // Calculate angle between the rock start point and the mouse
+    shootAngle = Math.atan2(targetY - rockStartY, targetX - rockStartX);
+}
+
+// Function to shoot rocks continuously while mouse is held down
+function startRockStream() {
+    streamInterval = setInterval(() => {
+        if (remainingAmmo > 0) {
+            // Shoot a rock from the bottom center at the calculated angle
+            objects.push({
+                x: rockStartX,
+                y: rockStartY,
+                dx: initialRockSpeed * Math.cos(shootAngle),
+                dy: initialRockSpeed * Math.sin(shootAngle),
+                type: 'rock'  // All objects start as rocks and can change
+            });
+            remainingAmmo--;  // Decrease ammo
+        } else {
+            clearInterval(streamInterval);  // Stop stream when out of ammo
+        }
+    }, 100); // Release a rock every 100ms
+}
+
+// Function to draw objects (rock/paper/scissors)
+function drawObjects() {
+    objects.forEach((obj) => {
+        let img;
+        if (obj.type === 'rock') {
+            img = rockImg;
+        } else if (obj.type === 'paper') {
+            img = paperImg;
+        } else {
+            img = scissorsImg;
+        }
+        ctx.drawImage(img, obj.x - objectRadius, obj.y - objectRadius, objectRadius * 2, objectRadius * 2);
+
+        // Draw directional arrow before the game starts
+        if (!gameStarted) {
+            drawArrow(obj);
+        }
+    });
+}
+
+// Draw larger arrows for object movement direction
+function drawArrow(obj) {
+    const arrowLength = 20;  // Increased arrow length for visibility
+    const arrowHeadLength = 12;
+
+    ctx.beginPath();
+    ctx.moveTo(obj.x, obj.y);
+    ctx.lineTo(obj.x + obj.dx * arrowLength, obj.y + obj.dy * arrowLength);
+    ctx.strokeStyle = '#333';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Arrowhead
+    const angle = Math.atan2(obj.dy, obj.dx);
+    ctx.beginPath();
+    ctx.moveTo(obj.x + obj.dx * arrowLength, obj.y + obj.dy * arrowLength);
+    ctx.lineTo(
+        obj.x + obj.dx * arrowLength - arrowHeadLength * Math.cos(angle - Math.PI / 6),
+        obj.y + obj.dy * arrowLength - arrowHeadLength * Math.sin(angle - Math.PI / 6)
+    );
+    ctx.lineTo(
+        obj.x + obj.dx * arrowLength - arrowHeadLength * Math.cos(angle + Math.PI / 6),
+        obj.y + obj.dy * arrowLength - arrowHeadLength * Math.sin(angle + Math.PI / 6)
+    );
+    ctx.lineTo(obj.x + obj.dx * arrowLength, obj.y + obj.dy * arrowLength);
+    ctx.fillStyle = '#333';
+    ctx.fill();
+}
+
+// Draw trajectory dotted line and small rock icon
+function drawTrajectoryLine() {
+    if (remainingAmmo > 0) {
+        // Draw small rock icon at the base of the line
+        const rockIconSize = 40;  // Size of the rock icon
+        ctx.drawImage(rockImg, rockStartX - rockIconSize / 2, rockStartY - rockIconSize / 2, rockIconSize, rockIconSize);
+
+        // Draw the dotted line showing the trajectory
+        ctx.beginPath();
+        ctx.setLineDash([5, 5]); // Create dotted line
+        ctx.moveTo(rockStartX, rockStartY);
+        ctx.lineTo(rockStartX + Math.cos(shootAngle) * 100, rockStartY + Math.sin(shootAngle) * 100); // Extend line for visual indication
+        ctx.strokeStyle = '#999';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.setLineDash([]); // Reset to solid line
+    }
+}
+
+// Draw remaining ammo
+function drawAmmoCount() {
+    ctx.font = '20px Verdana';
+    ctx.fillStyle = '#000';
+    ctx.textAlign = 'left';  // Ensure the text starts from the left edge
+    ctx.fillText(`Rock ammo: ${remainingAmmo}`, 20, 30);
+}
+
+// Function to display the current level
+function drawLevel() {
+    ctx.font = '20px Verdana';
+    ctx.fillStyle = '#000';
+    ctx.textAlign = 'right';
+    ctx.fillText(`Level: ${level}`, canvas.width - 20, 30);
+}
+
+// Function to update positions and handle bouncing
+function updateObjects() {
+    // Update positions and bounce for all objects
+    const speedMultiplier = fastForward ? 3 : 1;  // Speed up if fast forward is enabled
+
+    objects.forEach((obj) => {
+        obj.x += obj.dx * speedMultiplier;
+        obj.y += obj.dy * speedMultiplier;
+        bounceOffWalls(obj);
+    });
+
+    // Check collisions after all positions are updated
+    objects.forEach((currentObj) => {
+        objects.forEach((otherObj) => {
+            if (currentObj !== otherObj && isColliding(currentObj, otherObj)) {
+                resolveCollision(currentObj, otherObj);
+            }
+        });
+    });
+
+    // Check if the game has been won or lost
+    checkGameOver();
+}
+
+// Function to handle bouncing off walls
+function bounceOffWalls(obj) {
+    if (obj.x + objectRadius > canvas.width || obj.x - objectRadius < 0) {
+        obj.dx = -obj.dx;
+    }
+    if (obj.y + objectRadius > canvas.height || obj.y - objectRadius < 0) {
+        obj.dy = -obj.dy;
+    }
+}
+
+// Function to resolve collisions and change both objects' type
+function resolveCollision(currentObj, otherObj) {
+    // Apply the collision logic: both objects change into the same type
+    if (currentObj.type === 'rock' && otherObj.type === 'paper') {
+        currentObj.type = 'paper';
+        otherObj.type = 'paper';
+    } else if (currentObj.type === 'rock' && otherObj.type === 'scissors') {
+        currentObj.type = 'rock';
+        otherObj.type = 'rock';
+    } else if (currentObj.type === 'paper' && otherObj.type === 'scissors') {
+        currentObj.type = 'scissors';
+        otherObj.type = 'scissors';
+    }
+}
+
+// Helper function to detect collision
+function isColliding(obj1, obj2) {
+    const dx = obj1.x - obj2.x;
+    const dy = obj1.y - obj2.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    return distance < objectRadius * 2 - 5;  // Add a slight buffer to prevent constant collision
+}
+
+// Function to create initial objects (paper and scissors) based on the level
+function createInitialObjects() {
+    const settings = levelSettings[level - 1];  // Get the settings for the current level
+    const { paper, scissors } = settings;
+
+    objects = [];  // Clear existing objects
+
+    // Create paper objects
+    for (let i = 0; i < paper; i++) {
+        const dx_init = (Math.random() - 0.5) * initialSpeed;
+        objects.push({
+            x: (Math.random() * 0.9 + 0.05) * canvas.width,
+            y: (Math.random() * 0.9 + 0.05) * canvas.height,
+            dx: dx_init,
+            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init)),
+            type: 'paper',
+        });
+    }
+
+    // Create scissors objects
+    for (let i = 0; i < scissors; i++) {
+        const dx_init = (Math.random() - 0.5) * initialSpeed;
+        objects.push({
+            x: (Math.random() * 0.9 + 0.05) * canvas.width,
+            y: (Math.random() * 0.9 + 0.05) * canvas.height,
+            dx: dx_init,
+            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init)),
+            type: 'scissors',
+        });
+    }
+}
+
+// Function to start object movement after the user starts shooting
+function startObjectMovement() {
+    // Movement already set, so no need to change dx/dy
+}
+
+// Function to check if the game is over
+function checkGameOver() {
+    const rockCount = objects.filter(obj => obj.type === 'rock').length;
+    const paperCount = objects.filter(obj => obj.type === 'paper').length;
+    const scissorsCount = objects.filter(obj => obj.type === 'scissors').length;
+
+    // Check if all objects have become rocks (win the level)
+    if (rockCount === objects.length) {
+        if (level < maxLevels) {
+            levelUp();  // Move to the next level
+        } else {
+            endGame('You completed all levels! You win!');
+        }
+    } else if (scissorsCount === objects.length || paperCount === objects.length) {
+        endGame('You lose! Try again.');
+    }
+}
+
+// Function to progress to the next level
+function levelUp() {
+    level++;
+    remainingAmmo = maxAmmo;  // Reset ammo for the new level
+    gameOver = false;  // Reset game over state
+    fastForward = false;
+    gameStarted = false;
+    fastForwardBtn.style.display = 'none';  // Hide fast forward button
+    createInitialObjects();  // Create new objects for the next level
+}
+
+// Function to end the game and show restart button
+function endGame(message) {
+    gameOver = true;
+
+    // Stop further updates
+    cancelAnimationFrame(requestId);  // Stop the game loop
+
+    // Clear the canvas and show the end game message
+    ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear the canvas
+    drawObjects();  // Redraw the objects before showing the message
+
+    // Draw black background for the message
+    ctx.fillStyle = '#000';  // Black background
+    ctx.fillRect(canvas.width / 2 - 200, canvas.height / 2 - 40, 400, 80);  // Background box
+
+    // Draw white end game message text
+    ctx.font = '25px Verdana';
+    ctx.fillStyle = '#FFF';  // White text color
+    ctx.textAlign = 'center';  // Center align the text
+    ctx.fillText(message, canvas.width / 2, canvas.height / 2 + 10);  // Center the text vertically
+}
+
+// Function to restart the game
+function restartGame() {
+    // Stop the current game loop before restarting
+    cancelAnimationFrame(requestId);  // Stop the previous loop
+
+    level = 1;  // Reset to level 1
+    remainingAmmo = maxAmmo;
+    gameOver = false;
+    fastForward = false;
+    gameStarted = false;
+    fastForwardBtn.style.display = 'none';  // Hide fast forward button
+
+    createInitialObjects();
+    gameLoop();  // Start the game loop fresh
+}
+
+// Function to restart the current level
+function restartCurrentLevel() {
+    // Stop the current game loop before restarting
+    cancelAnimationFrame(requestId);  // Stop the previous loop
+
+    remainingAmmo = maxAmmo;
+    gameOver = false;
+    fastForward = false;
+    gameStarted = false;
+    fastForwardBtn.style.display = 'none';  // Hide fast forward button
+
+    createInitialObjects();  // Recreate objects for the current level
+    gameLoop();  // Start the game loop fresh
+}
+
+let requestId;
+
+// Game loop
+function gameLoop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear canvas
+    if (!gameOver) {
+        drawObjects();    // Draw all objects (rocks, paper, scissors)
+        if (gameStarted) {
+            updateObjects();  // Update positions if the game has started
+        }
+        drawAmmoCount();  // Draw remaining ammo count
+        drawTrajectoryLine();  // Show the shooting direction when mouse moves
+        drawLevel();  // Show the current level
+    }
+
+    if (remainingAmmo === 0 && !gameOver && !fastForward) {
+        fastForwardBtn.style.display = 'inline';  // Display fast forward button
+    }
+
+    requestId = requestAnimationFrame(gameLoop);  // Keep looping the game
+}
+
+// Initialize the game
+createInitialObjects();
+gameLoop();

@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#game-section {
+    position: relative;
+}
+
+#gameCanvas {
+    border: 2px solid #000;
+    background-color: #fff;
+    display: block;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+}
