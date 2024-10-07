@@ -42,3 +42,20 @@ button {
     font-size: 16px;
     margin-right: 10px;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    #fastForwardBtn, #restartBtn, #restartLevelBtn {
+        font-size: 18px;  /* Larger button text for mobile */
+        padding: 10px 20px;  /* More padding for easier clicks */
+    }
+
+    .end-message {
+        font-size: 22px;  /* Increase font size for mobile */
+    }
+}

@@ -1,3 +1,5 @@
+
+
 // Get the canvas and context
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
@@ -6,18 +8,39 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
+// Set canvas size based on screen size
+function adjustCanvasSize() {
+    canvas.width = window.innerWidth * 0.9;  // Set canvas width to 90% of the screen width
+    canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
+}
+
+window.addEventListener('resize', adjustCanvasSize);  // Adjust canvas size when window is resized
+adjustCanvasSize();  // Call on page load
+
+
 // Image paths for rock, paper, scissors
 const rockImg = new Image();
 const paperImg = new Image();
 const scissorsImg = new Image();
 
+let imagesLoaded = 0;  // Track number of loaded images
+
+// Load images and ensure game starts only when all are loaded
 rockImg.src = 'images/rock.png';
 paperImg.src = 'images/paper.png';
 scissorsImg.src = 'images/scissors.png';
 
-rockImg.src = 'images/rock.png';
-paperImg.src = 'images/paper.png';
-scissorsImg.src = 'images/scissors.png';
+// rockImg.onload = imageLoaded;
+// paperImg.onload = imageLoaded;
+// scissorsImg.onload = imageLoaded;
+
+// function imageLoaded() {
+//     imagesLoaded++;
+//     if (imagesLoaded === 3) {
+//         createInitialObjects();
+//         gameLoop();
+//     }
+// }
 
 // Set up game variables
 let objects = [];  // General array for all objects (rocks, paper, scissors)
@@ -33,7 +56,9 @@ let gameOver = false;
 let gameStarted = false;  // Track if the game has started (for movement)
 let fastForward = false;  // Speed up flag
 let level = 1;  // Start at level 1
+let levelWon = false;  // New flag to track whether the player won or lost
 const maxLevels = 6;  // Define how many levels there are
+let endMessage = ''; // Store end message
 const levelSettings = [
     { paper: 5, scissors: 5 },   // Level 1: 5 paper, 5 scissors (50/50)
     { paper: 10, scissors: 10 }, // Level 2: 10 paper, 10 scissors (50/50)
@@ -52,6 +77,7 @@ const restartLevelBtn = document.getElementById('restartLevelBtn');  // New rest
 const rockStartX = canvas.width / 2;
 const rockStartY = canvas.height - objectRadius;
 
+
 // Mouse controls for shooting and angle
 canvas.addEventListener('mousedown', (event) => {
     if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
@@ -62,6 +88,13 @@ canvas.addEventListener('mousedown', (event) => {
         if (!gameStarted) {
             startObjectMovement();  // Start object movement on first click
             gameStarted = true;
+        }
+    } else if (gameOver) {
+        // Handle clicking for next level or restart after the game ends
+        if (levelWon && level < maxLevels) {  // Only allow level up if the player won
+            levelUp();
+        } else {
+            restartGame();  // Restart entire game if all levels are completed or user lost
         }
     }
 });
@@ -267,6 +300,11 @@ function isColliding(obj1, obj2) {
 function createInitialObjects() {
     const settings = levelSettings[level - 1];  // Get the settings for the current level
     const { paper, scissors } = settings;
+    
+    // Reset game status and fastForward
+    levelWon = false;  // Reset win flag at the start of each level
+    fastForward = false;  // Ensure fast forward is off at the start
+    fastForwardBtn.style.display = 'none';  // Ensure fast forward button is hidden
 
     objects = [];  // Clear existing objects
 
@@ -308,26 +346,31 @@ function checkGameOver() {
 
     // Check if all objects have become rocks (win the level)
     if (rockCount === objects.length) {
+        levelWon = true;  // Set win flag to true
         if (level < maxLevels) {
-            levelUp();  // Move to the next level
+            endGame('You win this level! Click to proceed to the next level.');
         } else {
-            endGame('You completed all levels! You win!');
+            endGame('You completed all levels! Click to restart the game.');
         }
     } else if (scissorsCount === objects.length || paperCount === objects.length) {
-        endGame('You lose! Try again.');
+        levelWon = false;  // Set win flag to false
+        endGame('You lose! Click to restart the level.');
     }
 }
 
 // Function to progress to the next level
 function levelUp() {
+    cancelAnimationFrame(requestId);  // Stop the previous loop
     level++;
     remainingAmmo = maxAmmo;  // Reset ammo for the new level
     gameOver = false;  // Reset game over state
-    fastForward = false;
+    fastForward = false;  // Reset fast forward
     gameStarted = false;
     fastForwardBtn.style.display = 'none';  // Hide fast forward button
     createInitialObjects();  // Create new objects for the next level
+    gameLoop();  // Restart game loop
 }
+
 
 // Function to end the game and show restart button
 function endGame(message) {
@@ -336,36 +379,49 @@ function endGame(message) {
     // Stop further updates
     cancelAnimationFrame(requestId);  // Stop the game loop
 
+    // Store the end message for display
+    endMessage = message;
+
     // Clear the canvas and show the end game message
+    drawEndMessage();
+}
+
+// Function to draw the end game message on screen
+function drawEndMessage() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear the canvas
     drawObjects();  // Redraw the objects before showing the message
 
     // Draw black background for the message
     ctx.fillStyle = '#000';  // Black background
-    ctx.fillRect(canvas.width / 2 - 200, canvas.height / 2 - 40, 400, 80);  // Background box
+    ctx.fillRect(0, canvas.height / 2 - 40, canvas.width, 80);  // Background box
 
     // Draw white end game message text
     ctx.font = '25px Verdana';
     ctx.fillStyle = '#FFF';  // White text color
     ctx.textAlign = 'center';  // Center align the text
-    ctx.fillText(message, canvas.width / 2, canvas.height / 2 + 10);  // Center the text vertically
+    ctx.fillText(endMessage, canvas.width / 2, canvas.height / 2 + 10);  // Center the text vertically
 }
 
-// Function to restart the game
+// Function to restart the game or current level
 function restartGame() {
     // Stop the current game loop before restarting
     cancelAnimationFrame(requestId);  // Stop the previous loop
 
-    level = 1;  // Reset to level 1
+    if (levelWon && level >= maxLevels) {
+        level = 1;  // Reset to level 1 only if the player has completed all levels
+    } 
+
+    // Reset other game variables
     remainingAmmo = maxAmmo;
     gameOver = false;
     fastForward = false;
     gameStarted = false;
     fastForwardBtn.style.display = 'none';  // Hide fast forward button
 
-    createInitialObjects();
+    createInitialObjects();  // Recreate objects for the current level or reset to level 1
     gameLoop();  // Start the game loop fresh
 }
+
 
 // Function to restart the current level
 function restartCurrentLevel() {
@@ -386,8 +442,9 @@ let requestId;
 
 // Game loop
 function gameLoop() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear canvas
+    
     if (!gameOver) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear canvas
         drawObjects();    // Draw all objects (rocks, paper, scissors)
         if (gameStarted) {
             updateObjects();  // Update positions if the game has started
@@ -395,6 +452,8 @@ function gameLoop() {
         drawAmmoCount();  // Draw remaining ammo count
         drawTrajectoryLine();  // Show the shooting direction when mouse moves
         drawLevel();  // Show the current level
+    } else {
+        checkGameOver();
     }
 
     if (remainingAmmo === 0 && !gameOver && !fastForward) {
