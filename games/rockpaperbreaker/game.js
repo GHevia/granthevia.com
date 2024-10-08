@@ -396,12 +396,15 @@ function checkGameOver() {
         levelWon = true;  // Set win flag to true
         if (level < maxLevels) {
             endGame('You win this level! Click to proceed to the next level.');
+            clearInterval(streamInterval);  // Clear any existing intervals
         } else {
             endGame('You completed all levels! Click to restart the game.');
+            clearInterval(streamInterval);  // Clear any existing intervals
         }
     } else if (scissorsCount === objects.length || paperCount === objects.length) {
         levelWon = false;  // Set win flag to false
         endGame('You lose! Click to restart the level.');
+        clearInterval(streamInterval);  // Clear any existing intervals
     }
 }
 
