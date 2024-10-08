@@ -63,7 +63,7 @@ if (isMobileDevice()) {
         clearInterval(streamInterval);  // Stop the stream when touch or mouse is released
     }
 
-    const objectRadius = 10;
+    const objectRadius = 5;
     const initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
     const initialRockSpeed = 4;
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
@@ -447,44 +447,52 @@ function drawEndMessage() {
 
 // Function to restart the game or current level
 function restartGame() {
-    // Stop the current game loop before restarting
     cancelAnimationFrame(requestId);  // Stop the previous loop
 
     if (levelWon && level >= maxLevels) {
         level = 1;  // Reset to level 1 only if the player has completed all levels
-    } 
+    }
 
     const settings = levelSettings[level - 1];  // Get the settings for the current level
-    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
+    const { maxAmmo } = settings;
 
-    // Reset other game variables
+    // Reset game variables
     remainingAmmo = maxAmmo;
     gameOver = false;
+    isShooting = false; // Reset shooting flag
+    gameStarted = false; // Reset gameStarted flag
     fastForward = false;
-    gameStarted = false;
     fastForwardBtn.style.display = 'none';  // Hide fast forward button
+    clearInterval(streamInterval);  // Clear any existing intervals
 
-    createInitialObjects();  // Recreate objects for the current level or reset to level 1
-    gameLoop();  // Start the game loop fresh
+    createInitialObjects();  // Recreate objects for the current level
+        // Add a short delay before allowing new input
+    setTimeout(() => {
+        gameLoop();  // Start the game loop after delay
+    }, 100);  // 100ms delay to prevent accidental input
 }
-
 
 // Function to restart the current level
 function restartCurrentLevel() {
-    // Stop the current game loop before restarting
     cancelAnimationFrame(requestId);  // Stop the previous loop
 
     const settings = levelSettings[level - 1];  // Get the settings for the current level
-    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
+    const { maxAmmo } = settings;
 
     remainingAmmo = maxAmmo;
     gameOver = false;
+    isShooting = false;  // Reset shooting flag
+    gameStarted = false;  // Reset gameStarted flag
     fastForward = false;
-    gameStarted = false;
     fastForwardBtn.style.display = 'none';  // Hide fast forward button
+    clearInterval(streamInterval);  // Clear any existing intervals
 
     createInitialObjects();  // Recreate objects for the current level
-    gameLoop();  // Start the game loop fresh
+    
+    // Add a short delay before allowing new input
+    setTimeout(() => {
+        gameLoop();  // Start the game loop after delay
+    }, 100);  // 100ms delay to prevent accidental input
 }
 
 let requestId;
