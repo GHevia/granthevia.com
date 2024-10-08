@@ -179,22 +179,26 @@ function updateShootAngle(event) {
 
 // Function to shoot rocks continuously while mouse is held down
 function startRockStream() {
+    if (streamInterval) {
+        clearInterval(streamInterval);  // Ensure any previous interval is cleared
+    }
+
     streamInterval = setInterval(() => {
         if (remainingAmmo > 0) {
-            // Shoot a rock from the bottom center at the calculated angle
             objects.push({
                 x: rockStartX,
                 y: rockStartY,
                 dx: initialRockSpeed * Math.cos(shootAngle),
                 dy: initialRockSpeed * Math.sin(shootAngle),
-                type: 'rock'  // All objects start as rocks and can change
+                type: 'rock'
             });
-            remainingAmmo--;  // Decrease ammo
+            remainingAmmo--;
         } else {
-            clearInterval(streamInterval);  // Stop stream when out of ammo
+            clearInterval(streamInterval);
         }
-    }, 100); // Release a rock every 100ms
+    }, 100);
 }
+
 
 // Function to draw objects (rock/paper/scissors)
 function drawObjects() {
