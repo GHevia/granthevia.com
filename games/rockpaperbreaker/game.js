@@ -11,7 +11,7 @@ canvas.height = 600;
 const objectRadius = 20;
 const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
 const initialRockSpeed = 6;
-const maxAmmo = 10;  // Start with 10 rocks to shoot
+// const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 // Function to check if the user is on a mobile device
 function isMobileDevice() {
@@ -22,7 +22,7 @@ if (isMobileDevice()) {
         
     // Set canvas size based on screen size
     function adjustCanvasSize() {
-        canvas.width = window.innerWidth * 0.9;  // Set canvas width to 90% of the screen width
+        canvas.width = window.innerWidth * 0.8;  // Set canvas width to 90% of the screen width
         canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
     }
 
@@ -63,19 +63,17 @@ if (isMobileDevice()) {
         clearInterval(streamInterval);  // Stop the stream when touch or mouse is released
     }
 
-    const objectRadius = 20;
-    const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
-    const initialRockSpeed = 6;
-    const maxAmmo = 10;  // Start with 10 rocks to shoot
+    const objectRadius = 10;
+    const initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
+    const initialRockSpeed = 4;
+    // const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 } else {
     const objectRadius = 20;
     const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
     const initialRockSpeed = 6;
-    const maxAmmo = 10;  // Start with 10 rocks to shoot
+    // const maxAmmo = 10;  // Start with 10 rocks to shoot
 }
-
-
 
 // Image paths for rock, paper, scissors
 const rockImg = new Image();
@@ -91,7 +89,7 @@ scissorsImg.src = 'images/scissors.png';
 
 // Set up game variables
 let objects = [];  // General array for all objects (rocks, paper, scissors)
-let remainingAmmo = maxAmmo;  // Track remaining ammo
+let remainingAmmo = 10;  // Track remaining ammo
 let isShooting = false;
 let shootAngle = 0; // Direction the rocks will be shot
 let streamInterval;
@@ -103,12 +101,12 @@ let levelWon = false;  // New flag to track whether the player won or lost
 const maxLevels = 6;  // Define how many levels there are
 let endMessage = ''; // Store end message
 const levelSettings = [
-    { paper: 5, scissors: 5 },   // Level 1: 5 paper, 5 scissors (50/50)
-    { paper: 10, scissors: 10 }, // Level 2: 10 paper, 10 scissors (50/50)
-    { paper: 15, scissors: 15 }, // Level 3: 15 paper, 15 scissors (50/50)
-    { paper: 12, scissors: 8 },  // Level 4: 60% paper, 40% scissors
-    { paper: 14, scissors: 6 },  // Level 5: 70% paper, 30% scissors
-    { paper: 16, scissors: 4 },  // Level 6: 80% paper, 20% scissors
+    { paper: 5, scissors: 5, maxAmmo: 10, initialSpeedMultipler: 1 },   // Level 1: 5 paper, 5 scissors (50/50)
+    { paper: 10, scissors: 10, maxAmmo: 10, initialSpeedMultipler: 1  }, // Level 2: 10 paper, 10 scissors (50/50)
+    { paper: 15, scissors: 15, maxAmmo: 10, initialSpeedMultipler: 1  }, // Level 3: 15 paper, 15 scissors (50/50)
+    { paper: 10, scissors: 5, maxAmmo: 7, initialSpeedMultipler: 0.5  },  // Level 4: 60% paper, 40% scissors
+    { paper: 14, scissors: 6, maxAmmo: 4, initialSpeedMultipler: 0  },  // Level 5: 70% paper, 30% scissors
+    { paper: 5, scissors: 5, maxAmmo: 1, initialSpeedMultipler: 0  },  // Level 6: 80% paper, 20% scissors
 ];
 
 // Control buttons
@@ -342,7 +340,7 @@ function isColliding(obj1, obj2) {
 // Function to create initial objects (paper and scissors) based on the level
 function createInitialObjects() {
     const settings = levelSettings[level - 1];  // Get the settings for the current level
-    const { paper, scissors } = settings;
+    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
     
     // Reset game status and fastForward
     levelWon = false;  // Reset win flag at the start of each level
@@ -357,8 +355,8 @@ function createInitialObjects() {
         objects.push({
             x: (Math.random() * 0.9 + 0.05) * canvas.width,
             y: (Math.random() * 0.9 + 0.05) * canvas.height,
-            dx: dx_init,
-            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init)),
+            dx: dx_init*initialSpeedMultipler,
+            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init))*initialSpeedMultipler,
             type: 'paper',
         });
     }
@@ -369,8 +367,8 @@ function createInitialObjects() {
         objects.push({
             x: (Math.random() * 0.9 + 0.05) * canvas.width,
             y: (Math.random() * 0.9 + 0.05) * canvas.height,
-            dx: dx_init,
-            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init)),
+            dx: dx_init*initialSpeedMultipler,
+            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init))*initialSpeedMultipler,
             type: 'scissors',
         });
     }
@@ -405,6 +403,8 @@ function checkGameOver() {
 function levelUp() {
     cancelAnimationFrame(requestId);  // Stop the previous loop
     level++;
+    const settings = levelSettings[level - 1];  // Get the settings for the current level
+    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
     remainingAmmo = maxAmmo;  // Reset ammo for the new level
     gameOver = false;  // Reset game over state
     fastForward = false;  // Reset fast forward
@@ -454,6 +454,9 @@ function restartGame() {
         level = 1;  // Reset to level 1 only if the player has completed all levels
     } 
 
+    const settings = levelSettings[level - 1];  // Get the settings for the current level
+    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
+
     // Reset other game variables
     remainingAmmo = maxAmmo;
     gameOver = false;
@@ -470,6 +473,9 @@ function restartGame() {
 function restartCurrentLevel() {
     // Stop the current game loop before restarting
     cancelAnimationFrame(requestId);  // Stop the previous loop
+
+    const settings = levelSettings[level - 1];  // Get the settings for the current level
+    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
 
     remainingAmmo = maxAmmo;
     gameOver = false;
