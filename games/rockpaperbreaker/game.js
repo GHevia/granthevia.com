@@ -69,26 +69,7 @@ if (isMobileDevice()) {
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 } else {
-        // Mouse controls for shooting and angle
-    canvas.addEventListener('mousedown', (event) => {
-        if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
-            isShooting = true;
-            updateShootAngle(event);
-            startRockStream();
 
-            if (!gameStarted) {
-                startObjectMovement();  // Start object movement on first click
-                gameStarted = true;
-            }
-        } else if (gameOver) {
-            // Handle clicking for next level or restart after the game ends
-            if (levelWon && level < maxLevels) {  // Only allow level up if the player won
-                levelUp();
-            } else {
-                restartGame();  // Restart entire game if all levels are completed or user lost
-            }
-        }
-    });
 
     canvas.addEventListener('mousemove', (event) => {
         if (!gameOver) {
@@ -106,6 +87,27 @@ if (isMobileDevice()) {
     initialRockSpeed = 6;
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
 }
+
+        // Mouse controls for shooting and angle
+canvas.addEventListener('mousedown', (event) => {
+    if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
+        isShooting = true;
+        updateShootAngle(event);
+        startRockStream();
+
+        if (!gameStarted) {
+            startObjectMovement();  // Start object movement on first click
+            gameStarted = true;
+        }
+    } else if (gameOver) {
+        // Handle clicking for next level or restart after the game ends
+        if (levelWon && level < maxLevels) {  // Only allow level up if the player won
+            levelUp();
+        } else {
+            restartGame();  // Restart entire game if all levels are completed or user lost
+        }
+    }
+});
 
 // Image paths for rock, paper, scissors
 const rockImg = new Image();
