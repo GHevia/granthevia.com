@@ -455,7 +455,7 @@ function drawEndMessage() {
 
     // Draw white end game message text
     if (isMobileDevice()) {
-        ctx.font = '15px Verdana';
+        ctx.font = '12px Verdana';
     } else {
         ctx.font = '25px Verdana'; 
     }
