@@ -11,6 +11,7 @@ canvas.height = 600;
 let objectRadius = 10;
 let initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
 let initialRockSpeed = 6;
+let buffer = 5;
 // const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 // Function to check if the user is on a mobile device
@@ -63,9 +64,10 @@ if (isMobileDevice()) {
         clearInterval(streamInterval);  // Stop the stream when touch or mouse is released
     }
 
-    objectRadius = 10;
+    objectRadius = 15;
     initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
     initialRockSpeed = 4;
+    buffer = 7;
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 } else {
@@ -85,6 +87,7 @@ if (isMobileDevice()) {
     objectRadius = 20;
     initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
     initialRockSpeed = 6;
+    buffer = 5;
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
 }
 
@@ -257,7 +260,7 @@ function drawArrow(obj) {
 function drawTrajectoryLine() {
     if (remainingAmmo > 0) {
         // Draw small rock icon at the base of the line
-        const rockIconSize = 40;  // Size of the rock icon
+        const rockIconSize = 2*objectRadius;  // Size of the rock icon
         ctx.drawImage(rockImg, rockStartX - rockIconSize / 2, rockStartY - rockIconSize / 2, rockIconSize, rockIconSize);
 
         // Draw the dotted line showing the trajectory
@@ -342,7 +345,7 @@ function isColliding(obj1, obj2) {
     const dx = obj1.x - obj2.x;
     const dy = obj1.y - obj2.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
-    return distance < objectRadius * 2 - 5;  // Add a slight buffer to prevent constant collision
+    return distance < objectRadius * 2 - buffer;  // Add a slight buffer to prevent constant collision
 }
 
 // Function to create initial objects (paper and scissors) based on the level
@@ -450,7 +453,11 @@ function drawEndMessage() {
     ctx.fillRect(0, canvas.height / 2 - 40, canvas.width, 80);  // Background box
 
     // Draw white end game message text
-    ctx.font = '25px Verdana';
+    if (isMobileDevice()) {
+        ctx.font = '10px Verdana';
+    } else {
+        ctx.font = '25px Verdana'; 
+    }
     ctx.fillStyle = '#FFF';  // White text color
     ctx.textAlign = 'center';  // Center align the text
     ctx.fillText(endMessage, canvas.width / 2, canvas.height / 2 + 10);  // Center the text vertically
