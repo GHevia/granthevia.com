@@ -63,7 +63,7 @@ if (isMobileDevice()) {
         clearInterval(streamInterval);  // Stop the stream when touch or mouse is released
     }
 
-    objectRadius = 15;
+    objectRadius = 10;
     initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
     initialRockSpeed = 4;
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
