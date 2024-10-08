@@ -160,6 +160,7 @@ const rockStartY = canvas.height - objectRadius;
 
 // Restart button event listener
 restartBtn.addEventListener('click', () => {
+    level = 1
     restartGame();  // Restart the game (goes back to level 1)
 });
 
