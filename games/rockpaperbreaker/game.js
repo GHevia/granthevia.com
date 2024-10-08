@@ -8,9 +8,9 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
-const objectRadius = 20;
-const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
-const initialRockSpeed = 6;
+let objectRadius = 10;
+let initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
+let initialRockSpeed = 6;
 // const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 // Function to check if the user is on a mobile device
@@ -63,15 +63,15 @@ if (isMobileDevice()) {
         clearInterval(streamInterval);  // Stop the stream when touch or mouse is released
     }
 
-    const objectRadius = 5;
-    const initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
-    const initialRockSpeed = 4;
+    objectRadius = 5;
+    initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
+    initialRockSpeed = 4;
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 } else {
-    const objectRadius = 20;
-    const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
-    const initialRockSpeed = 6;
+    objectRadius = 20;
+    initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
+    initialRockSpeed = 6;
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
 }
 
