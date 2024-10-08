@@ -468,7 +468,7 @@ function drawEndMessage() {
 function restartGame() {
     cancelAnimationFrame(requestId);  // Stop the previous loop
 
-    if ((levelWon && level >= maxLevels) ||  (!levelWon)) {
+    if (levelWon && level >= maxLevels) {
         level = 1;  // Reset to level 1 only if the player has completed all levels
     }
 
