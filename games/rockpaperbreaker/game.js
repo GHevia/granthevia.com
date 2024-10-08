@@ -8,14 +8,73 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
-// Set canvas size based on screen size
-function adjustCanvasSize() {
-    canvas.width = window.innerWidth * 0.9;  // Set canvas width to 90% of the screen width
-    canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
+const objectRadius = 20;
+const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
+const initialRockSpeed = 6;
+const maxAmmo = 10;  // Start with 10 rocks to shoot
+
+// Function to check if the user is on a mobile device
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
 }
 
-window.addEventListener('resize', adjustCanvasSize);  // Adjust canvas size when window is resized
-adjustCanvasSize();  // Call on page load
+if (isMobileDevice()) {
+        
+    // Set canvas size based on screen size
+    function adjustCanvasSize() {
+        canvas.width = window.innerWidth * 0.9;  // Set canvas width to 90% of the screen width
+        canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
+    }
+
+    window.addEventListener('resize', adjustCanvasSize);  // Adjust canvas size when window is resized
+    adjustCanvasSize();  // Call on page load
+
+    // Mouse and touch controls for shooting and angle
+    canvas.addEventListener('mousedown', (event) => handleInputStart(event));
+    canvas.addEventListener('mousemove', (event) => handleInputMove(event));
+    canvas.addEventListener('mouseup', () => handleInputEnd());
+
+    canvas.addEventListener('touchstart', (event) => handleInputStart(event.touches[0]));
+    canvas.addEventListener('touchmove', (event) => handleInputMove(event.touches[0]));
+    canvas.addEventListener('touchend', () => handleInputEnd());
+
+    // Input handler functions
+    function handleInputStart(event) {
+        if (!gameOver && remainingAmmo > 0) {  
+            isShooting = true;
+            updateShootAngle(event);  // Update the shooting angle
+            startRockStream();  // Start the stream of rocks
+
+            if (!gameStarted) {
+                startObjectMovement();  // Start object movement on first touch/click
+                gameStarted = true;
+            }
+        }
+    }
+
+    function handleInputMove(event) {
+        if (!gameOver) {
+            updateShootAngle(event);  // Continuously update angle based on movement
+        }
+    }
+
+    function handleInputEnd() {
+        isShooting = false;
+        clearInterval(streamInterval);  // Stop the stream when touch or mouse is released
+    }
+
+    const objectRadius = 20;
+    const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
+    const initialRockSpeed = 6;
+    const maxAmmo = 10;  // Start with 10 rocks to shoot
+
+} else {
+    const objectRadius = 20;
+    const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
+    const initialRockSpeed = 6;
+    const maxAmmo = 10;  // Start with 10 rocks to shoot
+}
+
 
 
 // Image paths for rock, paper, scissors
@@ -30,24 +89,8 @@ rockImg.src = 'images/rock.png';
 paperImg.src = 'images/paper.png';
 scissorsImg.src = 'images/scissors.png';
 
-// rockImg.onload = imageLoaded;
-// paperImg.onload = imageLoaded;
-// scissorsImg.onload = imageLoaded;
-
-// function imageLoaded() {
-//     imagesLoaded++;
-//     if (imagesLoaded === 3) {
-//         createInitialObjects();
-//         gameLoop();
-//     }
-// }
-
 // Set up game variables
 let objects = [];  // General array for all objects (rocks, paper, scissors)
-const objectRadius = 20;
-const initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
-const initialRockSpeed = 6;
-const maxAmmo = 10;  // Start with 10 rocks to shoot
 let remainingAmmo = maxAmmo;  // Track remaining ammo
 let isShooting = false;
 let shootAngle = 0; // Direction the rocks will be shot
