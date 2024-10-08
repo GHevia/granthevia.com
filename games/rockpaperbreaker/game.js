@@ -454,7 +454,7 @@ function drawEndMessage() {
 
     // Draw white end game message text
     if (isMobileDevice()) {
-        ctx.font = '10px Verdana';
+        ctx.font = '15px Verdana';
     } else {
         ctx.font = '25px Verdana'; 
     }
@@ -467,7 +467,7 @@ function drawEndMessage() {
 function restartGame() {
     cancelAnimationFrame(requestId);  // Stop the previous loop
 
-    if (levelWon && level >= maxLevels) {
+    if ((levelWon && level >= maxLevels) ||  (!levelWon)) {
         level = 1;  // Reset to level 1 only if the player has completed all levels
     }
 
