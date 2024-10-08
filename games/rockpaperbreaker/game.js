@@ -69,6 +69,38 @@ if (isMobileDevice()) {
     // const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 } else {
+        // Mouse controls for shooting and angle
+    canvas.addEventListener('mousedown', (event) => {
+        if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
+            isShooting = true;
+            updateShootAngle(event);
+            startRockStream();
+
+            if (!gameStarted) {
+                startObjectMovement();  // Start object movement on first click
+                gameStarted = true;
+            }
+        } else if (gameOver) {
+            // Handle clicking for next level or restart after the game ends
+            if (levelWon && level < maxLevels) {  // Only allow level up if the player won
+                levelUp();
+            } else {
+                restartGame();  // Restart entire game if all levels are completed or user lost
+            }
+        }
+    });
+
+    canvas.addEventListener('mousemove', (event) => {
+        if (!gameOver) {
+            updateShootAngle(event);  // Continuously update angle based on mouse movement
+        }
+    });
+
+    canvas.addEventListener('mouseup', () => {
+        isShooting = false;
+        clearInterval(streamInterval);  // Stop the stream when the mouse is released
+    });
+
     objectRadius = 20;
     initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
     initialRockSpeed = 6;
@@ -119,37 +151,7 @@ const rockStartX = canvas.width / 2;
 const rockStartY = canvas.height - objectRadius;
 
 
-// Mouse controls for shooting and angle
-canvas.addEventListener('mousedown', (event) => {
-    if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
-        isShooting = true;
-        updateShootAngle(event);
-        startRockStream();
 
-        if (!gameStarted) {
-            startObjectMovement();  // Start object movement on first click
-            gameStarted = true;
-        }
-    } else if (gameOver) {
-        // Handle clicking for next level or restart after the game ends
-        if (levelWon && level < maxLevels) {  // Only allow level up if the player won
-            levelUp();
-        } else {
-            restartGame();  // Restart entire game if all levels are completed or user lost
-        }
-    }
-});
-
-canvas.addEventListener('mousemove', (event) => {
-    if (!gameOver) {
-        updateShootAngle(event);  // Continuously update angle based on mouse movement
-    }
-});
-
-canvas.addEventListener('mouseup', () => {
-    isShooting = false;
-    clearInterval(streamInterval);  // Stop the stream when the mouse is released
-});
 
 // Restart button event listener
 restartBtn.addEventListener('click', () => {
