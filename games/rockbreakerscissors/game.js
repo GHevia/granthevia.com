@@ -35,9 +35,26 @@ if (isMobileDevice()) {
     canvas.addEventListener('mousemove', (event) => handleInputMove(event));
     canvas.addEventListener('mouseup', () => handleInputEnd());
 
-    canvas.addEventListener('touchstart', (event) => handleInputStart(event.touches[0]));
-    canvas.addEventListener('touchmove', (event) => handleInputMove(event.touches[0]));
-    canvas.addEventListener('touchend', () => handleInputEnd());
+    // canvas.addEventListener('touchstart', (event) => handleInputStart(event.touches[0]));
+    // canvas.addEventListener('touchmove', (event) => handleInputMove(event.touches[0]));
+    // canvas.addEventListener('touchend', () => handleInputEnd());
+
+    // Touch controls for mobile
+    canvas.addEventListener('touchstart', function(event) {
+        event.preventDefault();  // Prevent scrolling on touch
+        handleInputStart(event.touches[0]);  // Handle aiming/shooting
+    }, { passive: false });
+
+    canvas.addEventListener('touchmove', function(event) {
+        event.preventDefault();  // Prevent scrolling on touch
+        handleInputMove(event.touches[0]);  // Handle movement for aiming
+    }, { passive: false });
+
+    canvas.addEventListener('touchend', function(event) {
+        event.preventDefault();  // Prevent scrolling on touch
+        handleInputEnd();  // Handle the end of touch for shooting
+    }, { passive: false });
+
 
     // Input handler functions
     function handleInputStart(event) {
