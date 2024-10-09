@@ -43,7 +43,17 @@ if (isMobileDevice()) {
     canvas.addEventListener('touchstart', function(event) {
         event.preventDefault();  // Prevent scrolling on touch
         handleInputStart(event.touches[0]);  // Handle aiming/shooting
+        
+        // Handle clicking for the next level or restarting the game on touch
+        if (gameOver) {
+            if (levelWon && level < maxLevels) {
+                levelUp();
+            } else {
+                restartGame();
+            }
+        }
     }, { passive: false });
+    
 
     canvas.addEventListener('touchmove', function(event) {
         event.preventDefault();  // Prevent scrolling on touch
@@ -193,14 +203,24 @@ fastForwardBtn.addEventListener('click', () => {
 });
 
 // Function to update the shooting angle based on mouse position
-function updateShootAngle(event) {
-    const rect = canvas.getBoundingClientRect();
-    const targetX = event.clientX - rect.left;
-    const targetY = event.clientY - rect.top;
+// function updateShootAngle(event) {
+//     const rect = canvas.getBoundingClientRect();
+//     const targetX = event.clientX - rect.left;
+//     const targetY = event.clientY - rect.top;
 
-    // Calculate angle between the rock start point and the mouse
+//     // Calculate angle between the rock start point and the mouse
+//     shootAngle = Math.atan2(targetY - rockStartY, targetX - rockStartX);
+// }
+
+function updateShootAngle(event) {
+    const rect = canvas.getBoundingClientRect();  // Get canvas bounds relative to the viewport
+    const targetX = (event.clientX - rect.left) * (canvas.width / rect.width);  // Adjust for canvas scaling
+    const targetY = (event.clientY - rect.top) * (canvas.height / rect.height);  // Adjust for canvas scaling
+
+    // Calculate the angle between the rock start point and the touch/click position
     shootAngle = Math.atan2(targetY - rockStartY, targetX - rockStartX);
 }
+
 
 // Function to shoot rocks continuously while mouse is held down
 function startRockStream() {
