@@ -97,7 +97,7 @@ if (isMobileDevice()) {
     // Set canvas size based on screen size
     function adjustCanvasSize() {
         canvas.width = window.innerWidth * 0.8;  // Set canvas width to 90% of the screen width
-        canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
+        canvas.height = window.innerHeight * 0.5;  // Set canvas height to 70% of the screen height
     }
 
     window.addEventListener('resize', adjustCanvasSize);  // Adjust canvas size when window is resized
@@ -247,7 +247,6 @@ const nextLevelBtn = document.getElementById('nextLevelBtn');
 // Center bottom position for rock spawning
 const rockStartX = canvas.width / 2;
 const rockStartY = canvas.height - objectRadius;
-
 
 // Restart level button event listener
 nextLevelBtn.addEventListener('click', () => {
