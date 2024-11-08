@@ -47,28 +47,12 @@ button {
 @media (max-width: 768px) {
     canvas {
         width: 100%;
-        height: auto;
+        height: 80%;
     }
     
     #fastForwardBtn, #restartBtn, #restartLevelBtn {
         font-size: 18px;  /* Larger button text for mobile */
         padding: 10px 20px;  /* More padding for easier clicks */
-    }
-
-    .end-message {
-        font-size: 22px;  /* Increase font size for mobile */
-    }
-}
-/* Mobile styles */
-@media (max-width: 768px) {
-    canvas {
-        width: 100%;
-        height: auto;
-    }
-
-    #fastForwardBtn, #restartBtn, #restartLevelBtn {
-        font-size: 18px;  /* Larger button text for mobile */
-        padding: 10px 20px;  /* More padding for easier taps */
     }
 
     .end-message {

@@ -1,5 +1,3 @@
-
-
 // Get the canvas and context
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
@@ -8,11 +6,86 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
+// Store level data from JSON
+const levelData = [
+    {
+        level: 1,
+        maxAmmo: 10,
+        initialSpeedMultipler: 1.0,
+        objects: [
+            { type: 'scissors', x: 0.2, y: 0.5, dx: 0.8, dy: -0.6 },
+            { type: 'paper', x: 0.8, y: 0.5, dx: -0.8, dy: -0.6 }
+        ]
+    },
+    {
+        level: 2,
+        maxAmmo: 10,
+        initialSpeedMultipler: 1.0,
+        objects: [
+            { type: 'paper', x: .2, y: .2, dx: 0.6, dy: 0.8 },
+            { type: 'scissors', x: .3, y: .8, dx: -0.8, dy: 0.8 },
+            { type: 'paper', x: .5, y: .5, dx: 0.9, dy: -0.2 },
+        ]
+    },
+    {
+        level: 3,
+        maxAmmo: 10,
+        initialSpeedMultipler: 0.5,
+        objects: [
+            { type: 'scissors', x: .1, y: .6, dx: -1.0, dy: 0.0 },
+            { type: 'scissors', x: .2, y: .7, dx: -1.0, dy: 0.0 },
+            { type: 'paper', x: .3, y: .8, dx: -1.0, dy: 0.0 },
+            { type: 'paper', x: .4, y: .9, dx: -1.0, dy: 0.0 }
+        ]
+    },
+    {
+        level: 4,
+        maxAmmo: 10,
+        initialSpeedMultipler: 1.0,
+        objects: [
+            { type: 'paper', x: .1, y: .1, dx: 0.0, dy: 1.0 },
+            { type: 'paper', x: .2, y: .9, dx: 0.0, dy: -1.0 },
+            { type: 'paper', x: .3, y: .1, dx: 0.0, dy: 1.0 },
+            { type: 'paper', x: .4, y: .9, dx: 0.0, dy: -1.0 },
+            { type: 'scissors', x: .6, y: .9, dx: 0.0, dy: -1.0 },
+            { type: 'scissors', x: .7, y: .1, dx: -0.0, dy: 1. },
+            { type: 'scissors', x: .8, y: .9, dx: 0.0, dy: -1.0 },
+            { type: 'scissors', x: .9, y: .1, dx: -0.0, dy: 1. }
+        ]
+    },
+    {
+        level: 5,
+        maxAmmo: 10,
+        initialSpeedMultipler: 1.0,
+        objects: [
+            { type: 'scissors', x: .5, y: .6, dx: 0.0, dy: 1.0 },
+            { type: 'scissors', x: .5, y: .4, dx: 0.0, dy: -1.0 },
+            { type: 'scissors', x: .4, y: .5, dx: -1.0, dy: 0.0 },
+            { type: 'scissors', x: .6, y: .5, dx: 1.0, dy: 0.0 },
+            { type: 'paper', x: .4, y: .4, dx: -0.5, dy: -0.5 },
+            { type: 'paper', x: .4, y: .6, dx: -0.5, dy: 0.5 },
+            { type: 'paper', x: .6, y: .6, dx: 0.5, dy: 0.5 },
+            { type: 'paper', x: .6, y: .4, dx: 0.5, dy: -0.5 }
+        ]
+    },
+    {
+        level: 6,
+        maxAmmo: 4,
+        initialSpeedMultipler: 0.0,
+        objects: [
+            { type: 'scissors', x: .5, y: .6, dx: -1.0, dy: 0.0 },
+            { type: 'scissors', x: .2, y: .7, dx: -1.0, dy: 0.0 },
+            { type: 'paper', x: .3, y: .8, dx: -1.0, dy: 0.0 },
+            { type: 'paper', x: .7, y: .3, dx: -1.0, dy: 0.0 }
+        ]
+    },
+];
+
 let objectRadius = 10;
 let initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
 let initialRockSpeed = 6;
 let buffer = 5;
-// const maxAmmo = 10;  // Start with 10 rocks to shoot
+const maxAmmo = 10;  // Start with 10 rocks to shoot
 
 // Function to check if the user is on a mobile device
 function isMobileDevice() {
@@ -164,26 +237,22 @@ let level = 1;  // Start at level 1
 let levelWon = false;  // New flag to track whether the player won or lost
 const maxLevels = 6;  // Define how many levels there are
 let endMessage = ''; // Store end message
-const levelSettings = [
-    { paper: 5, scissors: 5, maxAmmo: 10, initialSpeedMultipler: 1 },   // Level 1: 5 paper, 5 scissors (50/50)
-    { paper: 10, scissors: 10, maxAmmo: 10, initialSpeedMultipler: 1  }, // Level 2: 10 paper, 10 scissors (50/50)
-    { paper: 15, scissors: 15, maxAmmo: 10, initialSpeedMultipler: 1  }, // Level 3: 15 paper, 15 scissors (50/50)
-    { paper: 10, scissors: 5, maxAmmo: 7, initialSpeedMultipler: 0.5  },  // Level 4: 60% paper, 40% scissors
-    { paper: 14, scissors: 6, maxAmmo: 4, initialSpeedMultipler: 0  },  // Level 5: 70% paper, 30% scissors
-    { paper: 5, scissors: 5, maxAmmo: 1, initialSpeedMultipler: 0  },  // Level 6: 80% paper, 20% scissors
-];
 
 // Control buttons
 const fastForwardBtn = document.getElementById('fastForwardBtn');
 const restartBtn = document.getElementById('restartBtn');
 const restartLevelBtn = document.getElementById('restartLevelBtn');  // New restart level button
+const nextLevelBtn = document.getElementById('nextLevelBtn');
 
 // Center bottom position for rock spawning
 const rockStartX = canvas.width / 2;
 const rockStartY = canvas.height - objectRadius;
 
 
-
+// Restart level button event listener
+nextLevelBtn.addEventListener('click', () => {
+    levelUp();  // Restart the current level
+});
 
 // Restart button event listener
 restartBtn.addEventListener('click', () => {
@@ -387,9 +456,7 @@ function isColliding(obj1, obj2) {
 }
 
 // Function to create initial objects (paper and scissors) based on the level
-function createInitialObjects() {
-    const settings = levelSettings[level - 1];  // Get the settings for the current level
-    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
+async function createInitialObjects() {    
     
     // Reset game status and fastForward
     levelWon = false;  // Reset win flag at the start of each level
@@ -398,29 +465,29 @@ function createInitialObjects() {
 
     objects = [];  // Clear existing objects
 
-    // Create paper objects
-    for (let i = 0; i < paper; i++) {
-        const dx_init = (Math.random() - 0.5) * initialSpeed;
-        objects.push({
-            x: (Math.random() * 0.9 + 0.05) * canvas.width,
-            y: (Math.random() * 0.9 + 0.05) * canvas.height,
-            dx: dx_init*initialSpeedMultipler,
-            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init))*initialSpeedMultipler,
-            type: 'paper',
+    // await loadLevels();
+    const currentLevel = levelData.find(lvl => lvl.level === level);
+    
+    if (currentLevel) {
+        remainingAmmo = currentLevel.maxAmmo || 10;  // Default to 10 if undefined
+
+        // Create objects based on level data
+        currentLevel.objects.forEach(obj => {
+            objects.push({
+                x: obj.x* canvas.width,
+                y: obj.y* canvas.height,
+                dx: obj.dx * initialSpeed*currentLevel.initialSpeedMultipler/Math.sqrt(obj.dx*obj.dx + obj.dy*obj.dy),
+                dy: obj.dy * initialSpeed*currentLevel.initialSpeedMultipler/Math.sqrt(obj.dx*obj.dx + obj.dy*obj.dy),
+                type: obj.type
+            });
         });
+        gameOver = false;
+        gameStarted = false;
+        levelWon = false;
+    } else {
+        console.warn(`Level ${level} data not found.`);
     }
 
-    // Create scissors objects
-    for (let i = 0; i < scissors; i++) {
-        const dx_init = (Math.random() - 0.5) * initialSpeed;
-        objects.push({
-            x: (Math.random() * 0.9 + 0.05) * canvas.width,
-            y: (Math.random() * 0.9 + 0.05) * canvas.height,
-            dx: dx_init*initialSpeedMultipler,
-            dy: Math.sign(Math.random() - 0.5) * (initialSpeed - Math.abs(dx_init))*initialSpeedMultipler,
-            type: 'scissors',
-        });
-    }
 }
 
 // Function to start object movement after the user starts shooting
@@ -455,8 +522,6 @@ function checkGameOver() {
 function levelUp() {
     cancelAnimationFrame(requestId);  // Stop the previous loop
     level++;
-    const settings = levelSettings[level - 1];  // Get the settings for the current level
-    const { paper, scissors, maxAmmo, initialSpeedMultipler } = settings;
     remainingAmmo = maxAmmo;  // Reset ammo for the new level
     gameOver = false;  // Reset game over state
     fastForward = false;  // Reset fast forward
@@ -509,8 +574,8 @@ function restartGame() {
         level = 1;  // Reset to level 1 only if the player has completed all levels
     }
 
-    const settings = levelSettings[level - 1];  // Get the settings for the current level
-    const { maxAmmo } = settings;
+    // const settings = levelSettings[level - 1];  // Get the settings for the current level
+    // const { maxAmmo } = settings;
 
     // Reset game variables
     remainingAmmo = maxAmmo;
@@ -532,8 +597,8 @@ function restartGame() {
 function restartCurrentLevel() {
     cancelAnimationFrame(requestId);  // Stop the previous loop
 
-    const settings = levelSettings[level - 1];  // Get the settings for the current level
-    const { maxAmmo } = settings;
+    // const settings = levelSettings[level - 1];  // Get the settings for the current level
+    // const { maxAmmo } = settings;
 
     remainingAmmo = maxAmmo;
     gameOver = false;
@@ -577,5 +642,6 @@ function gameLoop() {
 }
 
 // Initialize the game
+// loadLevelSettings();
 createInitialObjects();
 gameLoop();
