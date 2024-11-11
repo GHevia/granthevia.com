@@ -6,7 +6,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = 800;
 canvas.height = 600;
 
-// Store level data from JSON
+// LEVEL DATA HERE 
 const levelData = [
     {
         level: 1,
@@ -121,10 +121,6 @@ if (isMobileDevice()) {
     canvas.addEventListener('mousemove', (event) => handleInputMove(event));
     canvas.addEventListener('mouseup', () => handleInputEnd());
 
-    // canvas.addEventListener('touchstart', (event) => handleInputStart(event.touches[0]));
-    // canvas.addEventListener('touchmove', (event) => handleInputMove(event.touches[0]));
-    // canvas.addEventListener('touchend', () => handleInputEnd());
-
     // Touch controls for mobile
     canvas.addEventListener('touchstart', function(event) {
         event.preventDefault();  // Prevent scrolling on touch
@@ -181,10 +177,7 @@ if (isMobileDevice()) {
     initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
     initialRockSpeed = 4;
     buffer = 7;
-    // const maxAmmo = 10;  // Start with 10 rocks to shoot
-
 } else {
-
 
     canvas.addEventListener('mousemove', (event) => {
         if (!gameOver) {
@@ -201,7 +194,6 @@ if (isMobileDevice()) {
     initialSpeed = 6;  // Standardized speed for all objects, matching rock speed
     initialRockSpeed = 6;
     buffer = 5;
-    // const maxAmmo = 10;  // Start with 10 rocks to shoot
 }
 
         // Mouse controls for shooting and angle
@@ -586,9 +578,6 @@ function restartGame() {
         level = 1;  // Reset to level 1 only if the player has completed all levels
     }
 
-    // const settings = levelSettings[level - 1];  // Get the settings for the current level
-    // const { maxAmmo } = settings;
-
     // Reset game variables
     remainingAmmo = maxAmmo;
     gameOver = false;
@@ -608,9 +597,6 @@ function restartGame() {
 // Function to restart the current level
 function restartCurrentLevel() {
     cancelAnimationFrame(requestId);  // Stop the previous loop
-
-    // const settings = levelSettings[level - 1];  // Get the settings for the current level
-    // const { maxAmmo } = settings;
 
     remainingAmmo = maxAmmo;
     gameOver = false;
@@ -654,6 +640,5 @@ function gameLoop() {
 }
 
 // Initialize the game
-// loadLevelSettings();
 createInitialObjects();
 gameLoop();

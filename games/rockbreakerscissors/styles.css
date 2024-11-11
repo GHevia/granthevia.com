@@ -43,19 +43,20 @@ button {
     margin-right: 10px;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
     canvas {
-        width: 100%;
-        height: 80%;
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        border: none; /* Optional: Remove borders on mobile for a cleaner look */
     }
-    
+
     #fastForwardBtn, #restartBtn, #restartLevelBtn {
-        font-size: 18px;  /* Larger button text for mobile */
-        padding: 10px 20px;  /* More padding for easier clicks */
+        font-size: 18px;
+        padding: 12px 24px; /* Slightly larger padding for touch-friendly buttons */
     }
 
     .end-message {
-        font-size: 22px;  /* Increase font size for mobile */
+        font-size: 22px;
+        text-align: center;
     }
 }
