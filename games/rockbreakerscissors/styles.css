@@ -47,7 +47,7 @@ button {
 @media (max-width: 768px) {
     canvas {
         width: 100%;
-        height: 50%;
+        height: 80%;
     }
     
     #fastForwardBtn, #restartBtn, #restartLevelBtn {

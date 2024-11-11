@@ -248,7 +248,7 @@ let gameStarted = false;  // Track if the game has started (for movement)
 let fastForward = false;  // Speed up flag
 let level = 1;  // Start at level 1
 let levelWon = false;  // New flag to track whether the player won or lost
-const maxLevels = 6;  // Define how many levels there are
+const maxLevels = 10;  // Define how many levels there are
 let endMessage = ''; // Store end message
 
 // Control buttons
