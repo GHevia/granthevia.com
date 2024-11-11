@@ -45,10 +45,10 @@ const levelData = [
         objects: [
             { type: 'paper', x: .5, y: .1, dx: 0.8, dy: 0.5 },
             { type: 'paper', x: .2, y: .9, dx: 0.2, dy: -1.0 },
-            { type: 'paper', x: .8, y: .1, dx: -0.6, dy: 1.0 },
+            { type: 'paper', x: .2, y: .1, dx: -0.6, dy: 1.0 },
             { type: 'scissors', x: .7, y: .1, dx: -0.2, dy: 1. },
             { type: 'scissors', x: .4, y: .7, dx: 1.0, dy: -1.0 },
-            { type: 'scissors', x: .9, y: .2, dx: -0.8, dy: -0.4 }
+            { type: 'scissors', x: .9, y: .8, dx: -0.8, dy: -0.4 }
         ]
     },
     {
