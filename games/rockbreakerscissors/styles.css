@@ -103,5 +103,9 @@ button {
         font-size: 14px;
         margin: 0;
     }
+
+    html {
+        margin-bottom: 5%;
+    }
     
 }
