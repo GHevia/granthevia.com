@@ -69,7 +69,7 @@ const levelData = [
     {
         level: 6,
         maxAmmo: 10,
-        initialSpeedMultipler: 1.0,
+        initialSpeedMultipler: 0.75,
         objects: [
             { type: 'scissors', x: .5, y: .6, dx: 0.0, dy: 1.0 },
             { type: 'scissors', x: .5, y: .4, dx: 0.0, dy: -1.0 },
@@ -174,8 +174,8 @@ if (isMobileDevice()) {
     }
 
     objectRadius = 15;
-    initialSpeed = 4;  // Standardized speed for all objects, matching rock speed
-    initialRockSpeed = 4;
+    initialSpeed = 3;  // Standardized speed for all objects, matching rock speed
+    initialRockSpeed = 3;
     buffer = 7;
 } else {
 
