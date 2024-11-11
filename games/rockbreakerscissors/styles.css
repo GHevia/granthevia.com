@@ -64,13 +64,13 @@ button {
         margin-top: 0;
         padding-top: 0;
         overflow: hidden; /* Disable scrolling */
-        height: 100vh; /* Ensure it occupies the full height of the viewport */
+        height: 900vh; /* Ensure it occupies the full height of the viewport */
         font-family: Verdana, sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #f0f0f0;
-        margin-bottom: 10vh;
+        margin-bottom: 15vh;
     }
     
     #gameCanvas {
