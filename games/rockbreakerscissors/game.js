@@ -330,10 +330,12 @@ function drawObjects() {
             img = scissorsImg;
         }
         ctx.drawImage(img, obj.x - objectRadius, obj.y - objectRadius, objectRadius * 2, objectRadius * 2);
-
+        const currentLevel = levelData.find(lvl => lvl.level === level);
         // Draw directional arrow before the game starts
         if (!gameStarted) {
-            drawArrow(obj);
+            if (currentLevel.initialSpeedMultipler != 0) {
+                drawArrow(obj);
+            }
         }
     });
 }
@@ -517,7 +519,7 @@ function checkGameOver() {
     if (rockCount === objects.length) {
         levelWon = true;  // Set win flag to true
         if (level < maxLevels) {
-            endGame('You win this level! Click to proceed to the next level.');
+            endGame('You win! Click to proceed to the next level.');
             clearInterval(streamInterval);  // Clear any existing intervals
         } else {
             endGame('You completed all levels! Click to restart the game.');
