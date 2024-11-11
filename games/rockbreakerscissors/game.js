@@ -388,7 +388,11 @@ function drawTrajectoryLine() {
 
 // Draw remaining ammo
 function drawAmmoCount() {
-    ctx.font = '20px Verdana';
+    if (isMobileDevice()) {
+        ctx.font = '14px Verdana';
+    } else {
+        ctx.font = '20px Verdana'; 
+    }
     ctx.fillStyle = '#000';
     ctx.textAlign = 'left';  // Ensure the text starts from the left edge
     ctx.fillText(`Rock ammo: ${remainingAmmo}`, 20, 30);
@@ -396,7 +400,11 @@ function drawAmmoCount() {
 
 // Function to display the current level
 function drawLevel() {
-    ctx.font = '20px Verdana';
+    if (isMobileDevice()) {
+        ctx.font = '14px Verdana';
+    } else {
+        ctx.font = '20px Verdana'; 
+    }
     ctx.fillStyle = '#000';
     ctx.textAlign = 'right';
     ctx.fillText(`Level: ${level}`, canvas.width - 20, 30);
