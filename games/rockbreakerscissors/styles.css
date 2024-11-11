@@ -46,7 +46,7 @@ button {
 @media (max-width: 768px) {
     canvas {
         width: 100vw; /* Full viewport width */
-        height: 100vh; /* Full viewport height */
+        height: 80vh; /* Full viewport height */
         border: none; /* Optional: Remove borders on mobile for a cleaner look */
     }
 
