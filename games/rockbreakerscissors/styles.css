@@ -94,13 +94,16 @@ button {
     }
 
     h1 {
-        margin: 0;
         font-size: 18px;
     }
     
     p {
         font-size: 14px;
+    }
+
+    html, body, #game-container, header, h1 {
         margin: 0;
+        padding: 0;
     }
     
 }
