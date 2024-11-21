@@ -15,7 +15,8 @@ const levelData = [
         objects: [
             { type: 'scissors', x: 0.2, y: 0.5, dx: 0.8, dy: -0.6 },
             { type: 'paper', x: 0.8, y: 0.5, dx: -0.8, dy: -0.6 }
-        ]
+        ],
+        walls: []
     },
     {
         level: 2,
@@ -71,6 +72,21 @@ const levelData = [
         maxAmmo: 10,
         initialSpeedMultipler: 0.75,
         objects: [
+            { type: 'scissors', x: 0.12, y: 0.93, dx: 0.92, dy: 0.46 },
+            { type: 'scissors', x: 0.65, y: 0.51, dx: 0.76, dy: -0.64 },
+            { type: 'scissors', x: .33, y: .67, dx: -0.92, dy: -0.31 },
+            { type: 'scissors', x: .18, y: .47, dx: -0.27, dy: -0.61 },
+            { type: 'paper', x: .62, y: .05, dx: 0.02, dy: 0.04 },
+            { type: 'paper', x: .38, y: .94, dx: -0.79, dy: 0.4 },
+            { type: 'paper', x: .87, y: .38, dx: -0.4, dy: 0.42 },
+            { type: 'paper', x: .92, y: .96, dx: 0.98, dy: -0.34 }
+        ]
+    },
+    {
+        level: 7,
+        maxAmmo: 10,
+        initialSpeedMultipler: 0.75,
+        objects: [
             { type: 'scissors', x: .5, y: .6, dx: 0.0, dy: 1.0 },
             { type: 'scissors', x: .5, y: .4, dx: 0.0, dy: -1.0 },
             { type: 'scissors', x: .4, y: .5, dx: -1.0, dy: 0.0 },
@@ -82,7 +98,7 @@ const levelData = [
         ]
     },
     {
-        level: 7,
+        level: 8,
         maxAmmo: 4,
         initialSpeedMultipler: 0.0,
         objects: [
@@ -92,6 +108,40 @@ const levelData = [
             { type: 'paper', x: .7, y: .3, dx: -1.0, dy: 0.0 }
         ]
     },
+    {
+        level: 9,
+        maxAmmo: 4,
+        initialSpeedMultipler: 1.0,
+        objects: [
+            { type: 'scissors', x: .5, y: .6, dx: -1.0, dy: 0.5 },
+            { type: 'scissors', x: .2, y: .7, dx: -1.0, dy: -0.8 },
+            { type: 'paper', x: .3, y: .8, dx: -1.0, dy: 2.0 },
+            { type: 'paper', x: .7, y: .3, dx: 1.0, dy: 2.0 }
+        ],
+        walls: [ // New feature: walls
+            { x1: .290, y1: .400, x2: .290, y2: .500, thickness: .010 }, // Vertical wall
+            { x1: .710, y1: .400, x2: .710, y2: .500, thickness: .010 }, // Vertical wall
+            { x1: .300, y1: .380, x2: .710, y2: .380, thickness: .010 },  // Horizontal wall
+            { x1: .300, y1: .510, x2: .710, y2: .510, thickness: .010 }  // Horizontal wall
+        ]
+    },
+    {
+        level: 10,
+        maxAmmo: 5,
+        initialSpeedMultipler: 1.0,
+        objects: [
+            { type: 'scissors', x: .1, y: .1, dx: 0.4, dy: 1.0 },
+            { type: 'paper', x: .2, y: .1, dx: 0.4, dy: 1.0 },
+            { type: 'scissors', x: .3, y: .1, dx: 0.4, dy: 1.0 },
+            { type: 'paper', x: .4, y: .1, dx: 0.4, dy: 1.0 },
+            { type: 'scissors', x: .5, y: .1, dx: 0.4, dy: 1.0 },
+            { type: 'paper', x: .6, y: .1, dx: 0.4, dy: 1. },
+        ],
+        walls: [ // New feature: walls
+            { x1: .000, y1: .500, x2: .810, y2: .500, thickness: .010 }  // Horizontal wall
+        ]
+    }
+    
 ];
 
 let objectRadius = 10;
@@ -161,7 +211,7 @@ if (isMobileDevice()) {
             }
         }
     }
-
+ 
     function handleInputMove(event) {
         if (!gameOver) {
             updateShootAngle(event);  // Continuously update angle based on movement
@@ -340,6 +390,23 @@ function drawObjects() {
     });
 }
 
+function drawWalls(walls) {
+    ctx.fillStyle = '#000'; // Wall color
+    walls.forEach(wall => {
+        const xStart = wall.x1 * canvas.width; // Scale x1
+        const yStart = wall.y1 * canvas.height; // Scale y1
+        const xEnd = wall.x2 * canvas.width; // Scale x2
+        const yEnd = wall.y2 * canvas.height; // Scale y2
+
+        // Determine width and height for the wall
+        const width = xEnd - xStart || wall.thickness * canvas.width; // Thickness for vertical walls
+        const height = yEnd - yStart || wall.thickness * canvas.height; // Thickness for horizontal walls
+
+        // Draw the wall
+        ctx.fillRect(xStart, yStart, width, height);
+    });
+}
+
 // Draw larger arrows for object movement direction
 function drawArrow(obj) {
     const arrowLength = 20;  // Increased arrow length for visibility
@@ -417,11 +484,17 @@ function updateObjects() {
     // Update positions and bounce for all objects
     const speedMultiplier = fastForward ? 3 : 1;  // Speed up if fast forward is enabled
 
+    const currentWalls = levelData.find(lvl => lvl.level === level).walls || [];
+
     objects.forEach((obj) => {
         obj.x += obj.dx * speedMultiplier;
         obj.y += obj.dy * speedMultiplier;
         bounceOffWalls(obj);
+        if (currentWalls.length != 0) {
+            handleWallCollisions(obj, currentWalls); // Handle wall collisions
+        }
     });
+
 
     // Check collisions after all positions are updated
     objects.forEach((currentObj) => {
@@ -445,6 +518,54 @@ function bounceOffWalls(obj) {
         obj.dy = -obj.dy;
     }
 }
+
+
+function handleWallCollisions(obj, walls) {
+    walls.forEach(wall => {
+        const xStart = wall.x1 * canvas.width;
+        const yStart = wall.y1 * canvas.height;
+        const xEnd = wall.x2 * canvas.width;
+        const yEnd = wall.y2 * canvas.height;
+
+        const isHorizontal = yStart === yEnd; // Check if the wall is horizontal
+        const isVertical = xStart === xEnd;   // Check if the wall is vertical
+
+        if (isVertical) {
+            // Collision with vertical wall
+            if (
+                obj.x + objectRadius > xStart && // Object's right side past wall's x
+                obj.x - objectRadius < xStart && // Object's left side before wall's x
+                obj.y + objectRadius > yStart && // Object's bottom past wall's top
+                obj.y - objectRadius < yEnd      // Object's top before wall's bottom
+            ) {
+                obj.dx = -obj.dx; // Reverse horizontal direction
+                // Adjust position to prevent sticking
+                if (obj.x < xStart) {
+                    obj.x = xStart - objectRadius;
+                } else {
+                    obj.x = xStart + objectRadius;
+                }
+            }
+        } else if (isHorizontal) {
+            // Collision with horizontal wall
+            if (
+                obj.y + objectRadius > yStart && // Object's bottom past wall's y
+                obj.y - objectRadius < yStart && // Object's top before wall's y
+                obj.x + objectRadius > xStart && // Object's right side past wall's left edge
+                obj.x - objectRadius < xEnd      // Object's left side before wall's right edge
+            ) {
+                obj.dy = -obj.dy; // Reverse vertical direction
+                // Adjust position to prevent sticking
+                if (obj.y < yStart) {
+                    obj.y = yStart - objectRadius;
+                } else {
+                    obj.y = yStart + objectRadius;
+                }
+            }
+        }
+    });
+}
+
 
 // Function to resolve collisions and change both objects' type
 function resolveCollision(currentObj, otherObj) {
@@ -628,13 +749,21 @@ let requestId;
 
 // Game loop
 function gameLoop() {
-    
     if (!gameOver) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear canvas
+
+        // Draw walls if they exist for the current level
+        const currentLevel = levelData.find(lvl => lvl.level === level);
+        if (currentLevel.walls && currentLevel.walls.length > 0) {
+            drawWalls(currentLevel.walls);
+        }
+
         drawObjects();    // Draw all objects (rocks, paper, scissors)
+
         if (gameStarted) {
             updateObjects();  // Update positions if the game has started
         }
+
         drawAmmoCount();  // Draw remaining ammo count
         drawTrajectoryLine();  // Show the shooting direction when mouse moves
         drawLevel();  // Show the current level
@@ -648,6 +777,7 @@ function gameLoop() {
 
     requestId = requestAnimationFrame(gameLoop);  // Keep looping the game
 }
+
 
 // Initialize the game
 createInitialObjects();
