@@ -223,7 +223,7 @@ if (isMobileDevice()) {
         clearInterval(streamInterval);  // Stop the stream when touch or mouse is released
     }
 
-    objectRadius = 15;
+    objectRadius = 12;
     initialSpeed = 3;  // Standardized speed for all objects, matching rock speed
     initialRockSpeed = 3;
     buffer = 7;
