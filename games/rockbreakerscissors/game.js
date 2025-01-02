@@ -140,7 +140,86 @@ const levelData = [
         walls: [ // New feature: walls
             { x1: .000, y1: .500, x2: .810, y2: .500, thickness: .010 }  // Horizontal wall
         ]
-    }
+    },
+        {
+            level: 11,
+            maxAmmo: 6,
+            initialSpeedMultipler: 1.0,
+            objects: [
+                { type: 'paper', x: .2, y: .2, dx: 0.6, dy: 0.8 },
+                { type: 'scissors', x: .8, y: .2, dx: -0.6, dy: 0.8 },
+                { type: 'paper', x: .4, y: .8, dx: 0, dy: -0.5 },
+                { type: 'rock', x: .6, y: .5, dx: -0.8, dy: 0 },
+            ],
+            walls: [
+                { x1: .250, y1: .300, x2: .750, y2: .300, thickness: .010 },  // Horizontal wall
+                { x1: .500, y1: .300, x2: .500, y2: .700, thickness: .010 },  // Vertical wall
+            ]
+        },
+        {
+            level: 12,
+            maxAmmo: 5,
+            initialSpeedMultipler: 0.8,
+            objects: [
+                { type: 'scissors', x: .1, y: .9, dx: 1.0, dy: -0.6 },
+                { type: 'paper', x: .9, y: .1, dx: -1.0, dy: 0.6 },
+                { type: 'rock', x: .5, y: .5, dx: 0.5, dy: -0.5 },
+            ],
+            walls: [
+                { x1: .360, y1: .410, x2: .740, y2: .410, thickness: .010 },  // Horizontal wall (middle)
+                { x1: .260, y1: .600, x2: .740, y2: .600, thickness: .010 },  // Horizontal wall (bottom)
+                { x1: .250, y1: .410, x2: .250, y2: .590, thickness: .010 },  // Vertical wall (left)
+                { x1: .750, y1: .410, x2: .750, y2: .590, thickness: .010 },  // Vertical wall (right)
+            ]
+        },
+        {
+            level: 13,
+            maxAmmo: 7,
+            initialSpeedMultipler: 1.0,
+            objects: [
+                { type: 'scissors', x: .2, y: .2, dx: 0.7, dy: 0.3 },
+                { type: 'scissors', x: .8, y: .2, dx: -0.7, dy: 0.3 },
+                { type: 'paper', x: .4, y: .8, dx: 0, dy: -0.6 },
+            ],
+            walls: [
+                { x1: .250, y1: .500, x2: .500, y2: .500, thickness: .010 },  // Horizontal wall (top left)
+                { x1: .500, y1: .500, x2: .500, y2: .800, thickness: .010 },  // Vertical wall (bottom left)
+                { x1: .500, y1: .800, x2: .750, y2: .800, thickness: .010 },  // Horizontal wall (bottom right)
+                { x1: .750, y1: .500, x2: .750, y2: .800, thickness: .010 },  // Vertical wall (top right)
+            ]
+        },
+        {
+            level: 14,
+            maxAmmo: 8,
+            initialSpeedMultipler: 1.0,
+            objects: [
+                { type: 'rock', x: .2, y: .2, dx: 0.6, dy: 0.6 },
+                { type: 'paper', x: .8, y: .2, dx: -0.6, dy: 0.6 },
+                { type: 'scissors', x: .2, y: .8, dx: 0.6, dy: -0.6 },
+                { type: 'rock', x: .8, y: .8, dx: -0.6, dy: -0.6 },
+            ],
+            walls: [
+                { x1: .500, y1: .200, x2: .500, y2: .800, thickness: .020 },  // Vertical wall (middle)
+                { x1: .300, y1: .400, x2: .700, y2: .400, thickness: .010 },  // Horizontal wall (top)
+                { x1: .300, y1: .600, x2: .700, y2: .600, thickness: .010 },  // Horizontal wall (bottom)
+            ]
+        },
+        {
+            level: 15,
+            maxAmmo: 6,
+            initialSpeedMultipler: 0.9,
+            objects: [
+                { type: 'rock', x: .5, y: .5, dx: 0.7, dy: 0 },
+                { type: 'scissors', x: .2, y: .2, dx: 0.5, dy: 0.5 },
+                { type: 'paper', x: .8, y: .2, dx: -0.5, dy: 0.5 },
+                { type: 'rock', x: .2, y: .8, dx: 0.5, dy: -0.5 },
+                { type: 'paper', x: .8, y: .8, dx: -0.5, dy: -0.5 },
+            ],
+            walls: [
+                { x1: .100, y1: .500, x2: .900, y2: .500, thickness: .010 },  // Horizontal wall (middle)
+                { x1: .500, y1: .200, x2: .500, y2: .800, thickness: .010 },  // Vertical wall (middle)
+            ]
+        }
     
 ];
 
@@ -290,7 +369,7 @@ let gameStarted = false;  // Track if the game has started (for movement)
 let fastForward = false;  // Speed up flag
 let level = 1;  // Start at level 1
 let levelWon = false;  // New flag to track whether the player won or lost
-const maxLevels = 10;  // Define how many levels there are
+const maxLevels = 20;  // Define how many levels there are
 let endMessage = ''; // Store end message
 
 // Control buttons
