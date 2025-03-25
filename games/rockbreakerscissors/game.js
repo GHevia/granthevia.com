@@ -251,12 +251,46 @@ if (isMobileDevice()) {
     canvas.addEventListener('mouseup', () => handleInputEnd());
 
     // Touch controls for mobile
+    // canvas.addEventListener('touchstart', function(event) {
+    //     event.preventDefault();  // Prevent scrolling on touch
+    //     handleInputStart(event.touches[0]);  // Handle aiming/shooting
+        
+    //     // Handle clicking for the next level or restarting the game on touch
+    //     if (gameOver) {
+    //         if (levelWon && level < maxLevels) {
+    //             levelUp();
+    //         } else {
+    //             restartGame();
+    //         }
+    //     }
+    // }, { passive: false });
+
     canvas.addEventListener('touchstart', function(event) {
         event.preventDefault();  // Prevent scrolling on touch
-        handleInputStart(event.touches[0]);  // Handle aiming/shooting
+        const touch = event.touches[0];
+        updateShootAngle(touch); // Update aiming based on the touch position
         
-        // Handle clicking for the next level or restarting the game on touch
-        if (gameOver) {
+        if (!gameOver && remainingAmmo > 0) {
+            // Fire one rock immediately on tap
+            objects.push({
+                x: rockStartX,
+                y: rockStartY,
+                dx: initialRockSpeed * Math.cos(shootAngle),
+                dy: initialRockSpeed * Math.sin(shootAngle),
+                type: 'rock'
+            });
+            remainingAmmo--;
+            
+            // Then start the continuous shooting stream if the user holds down
+            startRockStream();
+            
+            // If this is the first touch, start the object movement
+            if (!gameStarted) {
+                startObjectMovement();
+                gameStarted = true;
+            }
+        } else if (gameOver) {
+            // If the game is over, handle level progression or restart
             if (levelWon && level < maxLevels) {
                 levelUp();
             } else {
@@ -264,6 +298,7 @@ if (isMobileDevice()) {
             }
         }
     }, { passive: false });
+    
     
 
     canvas.addEventListener('touchmove', function(event) {

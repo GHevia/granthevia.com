@@ -1,4 +1,4 @@
-/* Global styles */
+/* ===== Global Styles ===== */
 body {
     font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     margin: 0;
@@ -9,10 +9,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 20px; /* Increase the base font size */
+    font-size: 20px; /* Base font size */
 }
 
-/* Header and navigation styles */
+/* ===== Header and Navigation ===== */
 header {
     background: #333;
     color: white;
@@ -25,12 +25,12 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    font-size: 1.5em; /* Increase font size for nav links */
+    font-size: 1.5em; /* Nav links font size */
 }
 
 nav ul li {
     margin: 0 1em;
-    position: relative; /* Required for the dropdown */
+    position: relative; /* For dropdown */
 }
 
 nav ul li a {
@@ -71,7 +71,7 @@ nav ul li .dropbtn:hover {
     display: block;
 }
 
-/* Main content styles */
+/* ===== Main Content Styles ===== */
 main {
     flex: 1;
     display: flex;
@@ -83,18 +83,16 @@ main {
     text-align: center;
 }
 
-/* Footer styles */
+/* ===== Footer Styles ===== */
 footer {
     text-align: center;
     padding: 1em 0;
     background: #333;
     color: white;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
-/* Gallery styles */
+/* ===== Gallery and Photo Set Styles ===== */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -104,10 +102,10 @@ footer {
 }
 
 .gallery img {
-    max-width: 90vw; /* Maximum width as a percentage of viewport width */
-    max-height: 90vh; /* Maximum height as a percentage of viewport height */
-    height: auto; /* Maintain aspect ratio */
-    width: auto; /* Maintain aspect ratio */
+    max-width: 90vw;
+    max-height: 90vh;
+    height: auto;
+    width: auto;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 5px;
@@ -118,7 +116,6 @@ footer {
     transform: scale(1.05);
 }
 
-/* Photo set styles */
 .photo-set {
     width: 33%;
     padding: 0.5%;
@@ -139,11 +136,10 @@ footer {
 
 .photo-set p {
     margin-top: 0.5em;
-    font-size: 1.5em; /* Original font size for captions */
+    font-size: 1.5em;
     color: #333;
 }
 
-/* Homescreen set styles */
 .homescreen-set {
     width: 40%;
     padding: 0.5%;
@@ -164,11 +160,11 @@ footer {
 
 .homescreen-set p {
     margin-top: 0.5em;
-    font-size: 1.5em; /* Original font size for captions */
+    font-size: 1.5em;
     color: #333;
 }
 
-/* Lightbox Modal styles */
+/* ===== Lightbox Modal Styles ===== */
 .lightbox-modal {
     display: none;
     position: fixed;
@@ -189,7 +185,7 @@ footer {
     max-width: 90%;
     height: 90%;
     max-height: 90%;
-    object-fit: contain; /* Maintain aspect ratio */
+    object-fit: contain;
 }
 
 .lightbox-close {
@@ -209,19 +205,123 @@ footer {
     cursor: pointer;
 }
 
-/* Media Queries for Mobile Devices */
-
-/* Reduce font size for top headers and captions on mobile devices */
+/* ===== Media Queries (Global) ===== */
 @media (max-width: 768px) {
     body {
-        font-size: 18px; /* Adjust the base font size for mobile devices */
+        font-size: 18px;
     }
-
+    
+    /* Make header/nav smaller on mobile */
+    nav ul {
+        font-size: 1em;
+    }
+    
+    nav ul li a {
+        padding: 0.3em 0.5em;
+    }
+    
     nav ul li {
-        margin: 0.5em 0; /* Adjust margin for nav items */
+        margin: 0.5em 0;
     }
-
+    
     .photo-set p {
-        font-size: 0.8em; /* Original font size for captions */
+        font-size: 0.8em;
+    }
+}
+
+/* ===== Game-Specific Styles ===== */
+/* These styles apply only on the game page (assume they’re used only there) */
+#game-container {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 800px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#game-container h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#game-container p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#game-section {
+    position: relative;
+}
+
+#gameCanvas {
+    border: 2px solid #000;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#controls button:hover {
+    background-color: #575757;
+}
+
+/* ===== Media Queries for Game Page ===== */
+@media (max-width: 768px) {
+    #gameCanvas {
+        width: 100vw;
+        height: 60vh;
+        border: none;
+        max-width: 90vw;
+        max-height: 60vh;
+    }
+    
+    #controls {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    #controls button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    #game-container h1 {
+        font-size: 18px;
+    }
+    
+    #game-container p {
+        font-size: 14px;
+    }
+    
+    /* Optional: Adjust the overall game container spacing for mobile */
+    #game-container {
+        margin: 5px auto;
+        padding: 5px;
+    }
+    
+    /* Ensure the page doesn’t scroll if not needed */
+    html, body {
+        overflow: hidden;
     }
 }
