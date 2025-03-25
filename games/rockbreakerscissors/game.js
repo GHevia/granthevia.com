@@ -325,26 +325,62 @@ if (isMobileDevice()) {
     buffer = 5;
 }
 
-        // Mouse controls for shooting and angle
+//         // Mouse controls for shooting and angle
+// canvas.addEventListener('mousedown', (event) => {
+//     if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
+//         isShooting = true;
+//         updateShootAngle(event);
+//         startRockStream();
+
+//         if (!gameStarted) {
+//             startObjectMovement();  // Start object movement on first click
+//             gameStarted = true;
+//         }
+//     } else if (gameOver) {
+//         // Handle clicking for next level or restart after the game ends
+//         if (levelWon && level < maxLevels) {  // Only allow level up if the player won
+//             levelUp();
+//         } else {
+//             restartGame();  // Restart entire game if all levels are completed or user lost
+//         }
+//     }
+// });
+
+
 canvas.addEventListener('mousedown', (event) => {
-    if (!gameOver && remainingAmmo > 0) {  // Only shoot if ammo is left and game is not over
+    if (!gameOver && remainingAmmo > 0) {  
         isShooting = true;
         updateShootAngle(event);
+
+        // Fire one rock immediately:
+        if (remainingAmmo > 0) {
+            objects.push({
+                x: rockStartX,
+                y: rockStartY,
+                dx: initialRockSpeed * Math.cos(shootAngle),
+                dy: initialRockSpeed * Math.sin(shootAngle),
+                type: 'rock'
+            });
+            remainingAmmo--;
+        }
+        
+        // Then start the continuous shooting stream if the mouse remains held
         startRockStream();
 
         if (!gameStarted) {
-            startObjectMovement();  // Start object movement on first click
+            startObjectMovement();
             gameStarted = true;
         }
     } else if (gameOver) {
-        // Handle clicking for next level or restart after the game ends
-        if (levelWon && level < maxLevels) {  // Only allow level up if the player won
+        // Handle level progression or restart
+        if (levelWon && level < maxLevels) {
             levelUp();
         } else {
-            restartGame();  // Restart entire game if all levels are completed or user lost
+            restartGame();
         }
     }
 });
+
 
 // Image paths for rock, paper, scissors
 const rockImg = new Image();
