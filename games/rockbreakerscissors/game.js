@@ -236,10 +236,15 @@ function isMobileDevice() {
 
 if (isMobileDevice()) {
         
-    // Set canvas size based on screen size
+    // // Set canvas size based on screen size
+    // function adjustCanvasSize() {
+    //     canvas.width = window.innerWidth * 0.8;  // Set canvas width to 90% of the screen width
+    //     canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
+    // }
+
     function adjustCanvasSize() {
-        canvas.width = window.innerWidth * 0.8;  // Set canvas width to 90% of the screen width
-        canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
+        canvas.width = window.innerWidth * 0.95;  // 95% of the viewport width
+        canvas.height = window.innerHeight * 0.8;   // 80% of the viewport height
     }
 
     window.addEventListener('resize', adjustCanvasSize);  // Adjust canvas size when window is resized
