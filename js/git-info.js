@@ -15,29 +15,17 @@ function formatDate(date) {
 // Function to get the last commit time
 async function getLastCommitTime() {
     try {
-        const response = await fetch('/.git/HEAD');
+        const response = await fetch('/get-git-info.php');
         if (!response.ok) {
-            throw new Error('Git info not available');
+            throw new Error('Failed to fetch git info');
         }
         
-        const head = await response.text();
-        const ref = head.trim().split(' ')[1];
-        
-        const refResponse = await fetch(`/.git/${ref}`);
-        if (!refResponse.ok) {
-            throw new Error('Git ref not available');
+        const data = await response.json();
+        if (!data.success) {
+            throw new Error(data.error || 'Failed to get git info');
         }
         
-        const commitHash = await refResponse.text();
-        const commitResponse = await fetch(`/.git/objects/${commitHash.substring(0, 2)}/${commitHash.substring(2)}`);
-        
-        if (!commitResponse.ok) {
-            throw new Error('Commit object not available');
-        }
-        
-        const commitData = await commitResponse.text();
-        const timestamp = parseInt(commitData.split(' ')[2]);
-        return new Date(timestamp * 1000); // Convert Unix timestamp to Date
+        return new Date(data.timestamp * 1000); // Convert Unix timestamp to Date
     } catch (error) {
         console.error('Error getting git info:', error);
         return null;
