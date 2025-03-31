@@ -243,8 +243,37 @@ if (isMobileDevice()) {
     // }
 
     function adjustCanvasSize() {
-        canvas.width = window.innerWidth * 0.95;  // 95% of the viewport width
-        canvas.height = window.innerHeight * 0.8;   // 80% of the viewport height
+        // Get the viewport dimensions
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        
+        // Calculate dimensions with padding
+        const padding = 20; // Add some padding to prevent cut-off
+        const maxWidth = viewportWidth - padding;
+        const maxHeight = viewportHeight - padding;
+        
+        // Calculate aspect ratio (800x600)
+        const aspectRatio = 800 / 600;
+        
+        // Calculate dimensions maintaining aspect ratio
+        let canvasWidth = maxWidth;
+        let canvasHeight = canvasWidth / aspectRatio;
+        
+        // If height is too large, scale based on height instead
+        if (canvasHeight > maxHeight) {
+            canvasHeight = maxHeight;
+            canvasWidth = canvasHeight * aspectRatio;
+        }
+        
+        // Set canvas dimensions
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+        
+        // Adjust object sizes for mobile
+        objectRadius = Math.min(12, canvasWidth / 80); // Scale object size with screen width
+        initialSpeed = 3;
+        initialRockSpeed = 3;
+        buffer = Math.max(7, objectRadius * 0.5); // Scale buffer with object size
     }
 
     window.addEventListener('resize', adjustCanvasSize);  // Adjust canvas size when window is resized
