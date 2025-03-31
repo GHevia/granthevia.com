@@ -259,14 +259,14 @@ footer {
         margin: 0;
         padding: 2px;
         max-width: 100%;
-        height: calc(100vh - 80px); /* Subtract header height */
+        height: calc(100vh - 40px); /* Subtract header height */
         overflow: hidden;
-        border: thick double #32a1ce;
+        border: none
         box-shadow: none;
     }
 
     h1 {
-        font-size: 14px;
+        font-size: 20px;
         margin: 1px 0;
     }
 
@@ -283,7 +283,7 @@ footer {
         min-height: 0;
         position: relative;
         width: 100%;
-        height: calc(100% - 80px); /* Reserve space for title and controls */
+        height: calc(100% - 180px); /* Reserve space for title and controls */
     }
 
     #gameCanvas {
@@ -292,7 +292,7 @@ footer {
         width: auto;
         height: auto;
         object-fit: contain;
-        border: none;
+        border: thick double #32a1ce;;
     }
 
     #controls {
