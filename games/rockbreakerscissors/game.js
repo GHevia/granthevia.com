@@ -235,20 +235,14 @@ function isMobileDevice() {
 }
 
 if (isMobileDevice()) {
-        
-    // // Set canvas size based on screen size
-    // function adjustCanvasSize() {
-    //     canvas.width = window.innerWidth * 0.8;  // Set canvas width to 90% of the screen width
-    //     canvas.height = window.innerHeight * 0.7;  // Set canvas height to 70% of the screen height
-    // }
-
     function adjustCanvasSize() {
-        // Get the viewport dimensions
+        // Get the viewport dimensions and device pixel ratio
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
+        const dpr = window.devicePixelRatio || 1;
         
         // Calculate dimensions with padding
-        const padding = 20; // Add some padding to prevent cut-off
+        const padding = 40; // Increased padding to prevent cut-off
         const maxWidth = viewportWidth - padding;
         const maxHeight = viewportHeight - padding;
         
@@ -265,15 +259,97 @@ if (isMobileDevice()) {
             canvasWidth = canvasHeight * aspectRatio;
         }
         
-        // Set canvas dimensions
-        canvas.width = canvasWidth;
-        canvas.height = canvasHeight;
+        // Set canvas dimensions with device pixel ratio
+        canvas.width = canvasWidth * dpr;
+        canvas.height = canvasHeight * dpr;
         
-        // Adjust object sizes for mobile
-        objectRadius = Math.min(12, canvasWidth / 80); // Scale object size with screen width
-        initialSpeed = 3;
-        initialRockSpeed = 3;
-        buffer = Math.max(7, objectRadius * 0.5); // Scale buffer with object size
+        // Scale the context to handle device pixel ratio
+        ctx.scale(dpr, dpr);
+        
+        // Adjust object sizes for mobile (scaled down)
+        objectRadius = Math.min(10, canvasWidth / 100); // Smaller objects for mobile
+        initialSpeed = 2.5; // Slightly slower for better control
+        initialRockSpeed = 2.5;
+        buffer = Math.max(5, objectRadius * 0.4);
+        
+        // Update rock start position
+        rockStartX = canvasWidth / 2;
+        rockStartY = canvasHeight - objectRadius;
+    }
+
+    // Update text drawing functions for better mobile display
+    function drawAmmoCount() {
+        ctx.font = `${Math.min(16, canvas.width / 50)}px Verdana`;
+        ctx.fillStyle = '#000';
+        ctx.textAlign = 'left';
+        ctx.fillText(`Rock ammo: ${remainingAmmo}`, 20, 30);
+    }
+
+    function drawLevel() {
+        ctx.font = `${Math.min(16, canvas.width / 50)}px Verdana`;
+        ctx.fillStyle = '#000';
+        ctx.textAlign = 'right';
+        ctx.fillText(`Level: ${level}`, canvas.width - 20, 30);
+    }
+
+    function drawEndMessage() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawObjects();
+
+        // Draw black background for the message
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, canvas.height / 2 - 40, canvas.width, 80);
+
+        // Draw white end game message text with scaled font
+        ctx.font = `${Math.min(14, canvas.width / 60)}px Verdana`;
+        ctx.fillStyle = '#FFF';
+        ctx.textAlign = 'center';
+        ctx.fillText(endMessage, canvas.width / 2, canvas.height / 2 + 10);
+    }
+
+    // Update trajectory line for mobile
+    function drawTrajectoryLine() {
+        if (remainingAmmo > 0) {
+            const rockIconSize = objectRadius * 1.5; // Smaller rock icon
+            ctx.drawImage(rockImg, rockStartX - rockIconSize / 2, rockStartY - rockIconSize / 2, rockIconSize, rockIconSize);
+
+            ctx.beginPath();
+            ctx.setLineDash([3, 3]); // Smaller dash pattern for mobile
+            ctx.moveTo(rockStartX, rockStartY);
+            ctx.lineTo(rockStartX + Math.cos(shootAngle) * 80, rockStartY + Math.sin(shootAngle) * 80);
+            ctx.strokeStyle = '#999';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+    }
+
+    // Update arrow drawing for mobile
+    function drawArrow(obj) {
+        const arrowLength = 15; // Smaller arrows for mobile
+        const arrowHeadLength = 8;
+
+        ctx.beginPath();
+        ctx.moveTo(obj.x, obj.y);
+        ctx.lineTo(obj.x + obj.dx * arrowLength, obj.y + obj.dy * arrowLength);
+        ctx.strokeStyle = '#333';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        const angle = Math.atan2(obj.dy, obj.dx);
+        ctx.beginPath();
+        ctx.moveTo(obj.x + obj.dx * arrowLength, obj.y + obj.dy * arrowLength);
+        ctx.lineTo(
+            obj.x + obj.dx * arrowLength - arrowHeadLength * Math.cos(angle - Math.PI / 6),
+            obj.y + obj.dy * arrowLength - arrowHeadLength * Math.sin(angle - Math.PI / 6)
+        );
+        ctx.lineTo(
+            obj.x + obj.dx * arrowLength - arrowHeadLength * Math.cos(angle + Math.PI / 6),
+            obj.y + obj.dy * arrowLength - arrowHeadLength * Math.sin(angle + Math.PI / 6)
+        );
+        ctx.lineTo(obj.x + obj.dx * arrowLength, obj.y + obj.dy * arrowLength);
+        ctx.fillStyle = '#333';
+        ctx.fill();
     }
 
     window.addEventListener('resize', adjustCanvasSize);  // Adjust canvas size when window is resized
