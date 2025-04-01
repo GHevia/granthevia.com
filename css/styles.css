@@ -258,6 +258,13 @@ footer {
         gap: 0.2em;
     }
 
+    .photo-set p {
+        margin-top: 0.5em;
+        font-size: 1.0em;
+        color: #333;
+        gap: 0.2em;
+    }
+
     /* Game container adjustments */
     #game-container {
         flex: 1;
