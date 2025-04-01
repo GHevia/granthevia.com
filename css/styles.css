@@ -304,7 +304,7 @@ footer {
         max-width: 100%;
         max-height: calc(100vh - 140px);
         /* height: auto; */
-        height: 70vh;
+        height: 60vh;
         object-fit: contain;
         border: 2px solid #000;
         display: block;
