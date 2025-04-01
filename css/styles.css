@@ -253,8 +253,9 @@ footer {
 
     .homescreen-set p {
         margin-top: 0.5em;
-        font-size: 0.8em;
+        font-size: 1.0em;
         color: #333;
+        gap: 0.2em;
     }
 
     /* Game container adjustments */
