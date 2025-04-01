@@ -354,11 +354,12 @@ footer {
 
 #controls {
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 #controls button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     margin-right: 10px;
     background-color: #333;
     color: #fff;
@@ -384,7 +385,7 @@ footer {
     #gameCanvas {
         width: 95vw;
         height: calc(95vh - 120px); /* Use 95% of viewport height minus header/controls */
-        border: none;
+        border: 2px solid #000;
         display: block;
         margin: 0 auto;
     }
