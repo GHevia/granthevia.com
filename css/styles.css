@@ -257,22 +257,26 @@ footer {
         display: flex;
         flex-direction: column;
         margin: 0;
-        padding: 2px;
+        padding: 0;
         max-width: 100%;
-        height: calc(100vh - 40px); /* Subtract header height */
+        width: 90vw;
+        height: calc(100vh - 40px);
         overflow: hidden;
-        border: none
+        border: none;
         box-shadow: none;
+        text-align: center;
     }
 
-    h1 {
-        font-size: 20px;
-        margin: 1px 0;
+    #game-container h1 {
+        font-size: 18px;
+        margin: 0;
+        padding: 2px 0;
     }
 
-    p {
-        font-size: 12px;
-        margin: 1px 0;
+    #game-container p {
+        font-size: 14px;
+        margin: 0;
+        padding: 2px 0;
     }
 
     #game-section {
@@ -283,36 +287,55 @@ footer {
         min-height: 0;
         position: relative;
         width: 100%;
-        height: calc(100% - 180px); /* Reserve space for title and controls */
+        height: calc(100% - 180px);
+        margin: 0;
+        padding: 0;
     }
 
     #gameCanvas {
+        width: 95vw;
         max-width: 100%;
         max-height: 100%;
-        width: auto;
         height: auto;
         object-fit: contain;
-        border: thick double #32a1ce;;
+        border: 2px solid #000;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #fff;
     }
 
     #controls {
-        margin-top: 2px;
+        margin-top: 1px;
+        margin-bottom: 10px;
         display: flex;
         justify-content: center;
-        gap: 2px;
+        gap: 10px;
         flex-wrap: wrap;
         padding: 2px;
-        height: 50px; /* Reduced height for controls */
+        height: 50px;
     }
 
     #controls button {
-        padding: 4px 8px;
-        font-size: 12px;
+        padding: 6px 12px;
+        font-size: 10px;
         margin: 1px;
         min-width: 70px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
     }
 
-    html {
+    #controls button:hover {
+        background-color: #575757;
+    }
+
+    /* Ensure the page doesn't scroll if not needed */
+    html, body {
+        overflow: hidden;
         height: 100%;
     }
 }
@@ -371,50 +394,4 @@ footer {
 
 #controls button:hover {
     background-color: #575757;
-}
-
-/* ===== Media Queries for Game Page ===== */
-@media (max-width: 768px) {
-    #game-container {
-        margin: 1px auto;
-        width: 90vw; /* Use nearly full viewport width */
-        padding: 1px 1px;
-    }
-    
-    #gameCanvas {
-        width: 95vw;
-        /* height: calc(95vh - 120px); Use 95% of viewport height minus header/controls */
-        height: auto;
-        border: 2px solid #000;
-        display: block;
-        margin: 0 auto;
-        padding: 2px 2px;
-    }
-    
-    #controls {
-        margin-top: 1px;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    
-    #controls button {
-        padding: 6px 12px;
-        font-size: 10px;
-    }
-    
-    #game-container h1 {
-        font-size: 18px;
-    }
-    
-    #game-container p {
-        font-size: 14px;
-    }
-    
-    /* Ensure the page doesn't scroll if not needed */
-    html, body {
-        overflow: hidden;
-    }
 }
