@@ -359,7 +359,7 @@ footer {
 
 #controls button {
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 10px;
     margin-right: 10px;
     background-color: #333;
     color: #fff;
@@ -378,7 +378,7 @@ footer {
     #game-container {
         margin: 5px auto;
         padding: 5px;
-        width: 95vw; /* Use nearly full viewport width */
+        width: 90vw; /* Use nearly full viewport width */
         box-sizing: border-box;
     }
     
