@@ -393,6 +393,7 @@ footer {
     
     #controls {
         margin-top: 1px;
+        margin-bottom: 10px;
         display: flex;
         justify-content: center;
         gap: 10px;
