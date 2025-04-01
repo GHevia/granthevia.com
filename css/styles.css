@@ -205,6 +205,65 @@ footer {
     cursor: pointer;
 }
 
+
+/* ===== Game-Specific Styles ===== */
+/* These styles apply only on the game page */
+#game-container {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 800px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#game-container h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#game-container p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#game-section {
+    position: relative;
+}
+
+#gameCanvas {
+    border: 2px solid #000;
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#controls {
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#controls button:hover {
+    background-color: #575757;
+}
+
+
+
 /* ===== Media Queries (Global) ===== */
 @media (max-width: 768px) {
     body {
@@ -352,60 +411,4 @@ footer {
         overflow: hidden;
         height: 100%;
     }
-}
-
-/* ===== Game-Specific Styles ===== */
-/* These styles apply only on the game page */
-#game-container {
-    text-align: center;
-    margin: 10px auto;
-    padding: 10px;
-    max-width: 800px;
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-#game-container h1 {
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-#game-container p {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-#game-section {
-    position: relative;
-}
-
-#gameCanvas {
-    border: 2px solid #000;
-    background-color: #fff;
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-#controls {
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-#controls button {
-    padding: 10px 20px;
-    font-size: 18px;
-    margin-right: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#controls button:hover {
-    background-color: #575757;
 }
