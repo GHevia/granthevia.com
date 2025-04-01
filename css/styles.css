@@ -384,7 +384,8 @@ footer {
     
     #gameCanvas {
         width: 95vw;
-        height: calc(95vh - 120px); /* Use 95% of viewport height minus header/controls */
+        /* height: calc(95vh - 120px); Use 95% of viewport height minus header/controls */
+        height: auto;
         border: 2px solid #000;
         display: block;
         margin: 0 auto;
