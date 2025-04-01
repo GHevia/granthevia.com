@@ -251,6 +251,12 @@ footer {
         text-align: center;
     }
 
+    .homescreen-set p {
+        margin-top: 0.5em;
+        font-size: 0.8em;
+        color: #333;
+    }
+
     /* Game container adjustments */
     #game-container {
         flex: 1;
@@ -295,7 +301,7 @@ footer {
     #gameCanvas {
         width: 95vw;
         max-width: 100%;
-        max-height: 100%;
+        max-height: calc(100vh - 40px);
         height: auto;
         object-fit: contain;
         border: 2px solid #000;
@@ -320,7 +326,6 @@ footer {
         padding: 6px 12px;
         font-size: 10px;
         margin: 1px;
-        min-width: 70px;
         background-color: #333;
         color: #fff;
         border: none;
