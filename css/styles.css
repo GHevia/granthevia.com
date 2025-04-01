@@ -378,7 +378,7 @@ footer {
     #game-container {
         margin: 1px auto;
         width: 90vw; /* Use nearly full viewport width */
-        padding: 1px;
+        padding: 1px 1px;
     }
     
     #gameCanvas {
@@ -388,7 +388,7 @@ footer {
         border: 2px solid #000;
         display: block;
         margin: 0 auto;
-        padding: 2px;
+        padding: 2px 2px;
     }
     
     #controls {
@@ -400,7 +400,7 @@ footer {
     }
     
     #controls button {
-        padding: 12px 24px;
+        padding: 6px 12px;
         font-size: 10px;
     }
     
