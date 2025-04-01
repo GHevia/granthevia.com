@@ -376,8 +376,8 @@ footer {
 /* ===== Media Queries for Game Page ===== */
 @media (max-width: 768px) {
     #game-container {
-        margin: 5px auto;
-        padding: 5px;
+        margin: 1px auto;
+        padding: 1px;
         width: 90vw; /* Use nearly full viewport width */
         box-sizing: border-box;
     }
