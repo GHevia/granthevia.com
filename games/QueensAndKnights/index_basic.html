@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Queen and Knight Puzzle</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    table { border-collapse: collapse; margin: 20px auto; }
+    td {
+      width: 60px; height: 60px;
+      border: 1px solid #333;
+      text-align: center; vertical-align: middle;
+      font-size: 32px; cursor: pointer;
+    }
+    .covered { background-color: #d0ffd0; }
+    .queen { color: red; }
+    .knight { color: blue; }
+  </style>
+</head>
+<body>
+  <h1>Queen and Knight Puzzle</h1>
+  <p>Click a square to cycle: empty → queen → knight → empty</p>
+  <table id="board"></table>
+  <button onclick="checkBoard()">Check Solution</button>
+  <p id="status"></p>
+
+  <script>
+    const size = 5;
+    const board = Array.from({ length: size }, () => Array(size).fill(""));
+    const table = document.getElementById("board");
+    const status = document.getElementById("status");
+
+    const symbols = ["", "♛", "♞"];
+    const classes = ["", "queen", "knight"];
+
+    function render() {
+      table.innerHTML = "";
+      for (let r = 0; r < size; r++) {
+        const row = document.createElement("tr");
+        for (let c = 0; c < size; c++) {
+          const cell = document.createElement("td");
+          const val = board[r][c];
+          const idx = symbols.indexOf(val);
+          cell.textContent = val;
+          cell.className = classes[idx];
+          cell.onclick = () => {
+            board[r][c] = symbols[(idx + 1) % symbols.length];
+            render();
+          };
+          row.appendChild(cell);
+        }
+        table.appendChild(row);
+      }
+    }
+
+    function getCoveredSquares() {
+      const covered = Array.from({ length: size }, () => Array(size).fill(false));
+      const knightMoves = [[-2, -1], [-2, 1], [-1, -2], [-1, 2],
+                           [1, -2], [1, 2], [2, -1], [2, 1]];
+      const queenDirs = [[-1,0], [1,0], [0,-1], [0,1], [-1,-1], [-1,1], [1,-1], [1,1]];
+
+      for (let r = 0; r < size; r++) {
+        for (let c = 0; c < size; c++) {
+          const piece = board[r][c];
+          if (piece === "♞") {
+            knightMoves.forEach(([dr, dc]) => {
+              const nr = r + dr, nc = c + dc;
+              if (nr >= 0 && nr < size && nc >= 0 && nc < size)
+                covered[nr][nc] = true;
+            });
+          } else if (piece === "♛") {
+            for (let [dr, dc] of queenDirs) {
+              let nr = r + dr, nc = c + dc;
+              while (nr >= 0 && nr < size && nc >= 0 && nc < size) {
+                covered[nr][nc] = true;
+                if (board[nr][nc] !== "") break;
+                nr += dr;
+                nc += dc;
+              }
+            }
+          }
+        }
+      }
+      return covered;
+    }
+
+    function checkBoard() {
+      const covered = getCoveredSquares();
+      let allCovered = true;
+      let safe = true;
+
+      for (let r = 0; r < size; r++) {
+        for (let c = 0; c < size; c++) {
+          const cell = table.rows[r].cells[c];
+          const piece = board[r][c];
+
+          if (piece === "") {
+            if (covered[r][c]) {
+              cell.classList.add("covered");
+            } else {
+              cell.classList.remove("covered");
+              allCovered = false;
+            }
+          } else {
+            // Piece shouldn't be under attack
+            if (covered[r][c]) {
+              cell.style.backgroundColor = "#ffcccc";
+              safe = false;
+            } else {
+              cell.style.backgroundColor = "";
+            }
+          }
+        }
+      }
+
+      if (allCovered && safe) {
+        status.textContent = "✅ Puzzle solved!";
+      } else if (!safe) {
+        status.textContent = "⚠️ One or more pieces are under attack!";
+      } else {
+        status.textContent = "🧐 Not all squares are covered.";
+      }
+    }
+
+    render();
+  </script>
+</body>
+</html>
