@@ -323,6 +323,20 @@ footer {
         gap: 0.2em;
     }
 
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    
+    
+
     /* Game container adjustments */
     #game-container {
         flex: 1;
@@ -412,8 +426,8 @@ footer {
     }
 
     /* Ensure the page doesn't scroll if not needed */
-    html, body {
+    /* html, body {
         overflow: hidden;
         height: 100%;
-    }
+    } */
 }
