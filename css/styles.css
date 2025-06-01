@@ -335,7 +335,10 @@ footer {
         margin: 10px 0;
     }
     
-    
+    main h1 {
+        font-size: 1.8em;
+        margin-top: 1em;
+    }
 
     /* Game container adjustments */
     #game-container {
