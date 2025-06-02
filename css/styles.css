@@ -265,15 +265,6 @@ footer {
 
 /* ===== Media Queries (Global) ===== */
 @media (max-width: 768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
-
     /* Compact header for mobile */
     header {
         padding: 0.1em 0;
@@ -309,20 +300,27 @@ footer {
         text-align: center;
     }
 
-    .homescreen-set p {
-        margin-top: 0.5em;
-        font-size: 1.0em;
-        color: #333;
-        gap: 0.2em;
-    }
-
+    .homescreen-set p,
     .photo-set p {
         margin-top: 0.5em;
         font-size: 1.0em;
         color: #333;
-        gap: 0.2em;
     }
 
+    /* Allow scrolling globally */
+    html, body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: auto;
+    }
+
+    /* Restrict overflow only for game layout */
+    body.game-layout {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    /* Improved gallery stacking for mobile */
     .gallery {
         flex-direction: column;
         align-items: center;
@@ -330,15 +328,12 @@ footer {
     }
 
     .gallery img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         margin: 10px 0;
+        max-width: 100%;
+        display: block;
     }
-    
-    /* main h1 {
-        font-size: 1.8em;
-        margin-top: 1em;
-    } */
 
     /* Game container adjustments */
     #game-container {
@@ -359,27 +354,20 @@ footer {
     }
 
     #game-container h1 {
-        font-size: 18px;
-        margin: 0;
-        padding: 2px 0;
-        margin-bottom: 10px;
         font-size: 24px;
+        margin-bottom: 10px;
     }
 
     #game-container p {
         font-size: 18px;
-        padding: 2px 0;
         margin-bottom: 10px;
     }
-    
+
     #game-section {
         flex: 1;
         display: flex;
-        /* align-items: center; */
         justify-content: center;
-        min-height: 0;
         position: relative;
-        /* width: 100%; */
         height: 40%;
         width: auto;
         margin: 0;
@@ -389,14 +377,12 @@ footer {
     #gameCanvas {
         max-width: 100%;
         max-height: 100%;
-        /* height: auto; */
         object-fit: contain;
         border: 2px solid #000;
         display: block;
         margin: 0 auto;
         padding: 0;
         background-color: #fff;
-        border: 2px solid #000;
         width: 100%;
         height: auto;
     }
@@ -427,10 +413,4 @@ footer {
     #controls button:hover {
         background-color: #575757;
     }
-
-    /* Ensure the page doesn't scroll if not needed */
-    /* html, body {
-        overflow: hidden;
-        height: 100%;
-    } */
 }

@@ -41,3 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+window.addEventListener('load', () => {
+    document.body.style.overflowY = 'auto'; // Ensure scroll remains active
+    document.body.offsetHeight; // Trigger reflow
+});
