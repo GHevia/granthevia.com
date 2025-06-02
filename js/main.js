@@ -65,3 +65,5 @@ window.addEventListener('load', () => {
         document.body.offsetHeight;
     }, 200);
 });
+
+window.dispatchEvent(new Event('resize'));
