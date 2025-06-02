@@ -46,3 +46,22 @@ window.addEventListener('load', () => {
     document.body.style.overflowY = 'auto'; // Ensure scroll remains active
     document.body.offsetHeight; // Trigger reflow
 });
+
+window.addEventListener('load', () => {
+    const galleryImages = document.querySelectorAll('.gallery img');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('load', () => {
+            img.style.display = 'none';
+            // Trigger reflow
+            void img.offsetHeight;
+            img.style.display = 'block';
+        });
+    });
+
+    // Fallback: trigger reflow after 200ms
+    setTimeout(() => {
+        document.body.style.overflowY = 'auto';
+        document.body.offsetHeight;
+    }, 200);
+});
