@@ -327,13 +327,21 @@ footer {
         padding: 10px;
     }
 
-    .gallery img {
+    /* .gallery img {
         width: 100%;
         height: auto;
         margin: 10px 0;
         max-width: 100%;
         display: block;
+    } */
+
+    .gallery img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
+    
 
     /* Game container adjustments */
     #game-container {
