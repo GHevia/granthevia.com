@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grant Hevia</title>
+    <meta name="description" content="Grant Hevia's personal website featuring photography, games, and academic work">
+    <meta name="keywords" content="Grant Hevia, photography, games, thesis, portfolio">
+    <title>Grant Hevia - Photography, Games, and Academic Work</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
     <script src="/js/include.js" defer></script>
@@ -15,20 +16,20 @@
         <h1>Welcome to GrantHevia.com</h1>
         <div class="gallery">
             <div class="homescreen-set">
-                <a href="photos.html">
-                    <img src="/photos/capitolreef/CR_SQUARE.jpg" alt="Photos Preview">
+                <a href="photos.html" aria-label="View photo gallery">
+                    <img src="/photos/capitolreef/CR_SQUARE.jpg" alt="Photos Preview" loading="lazy">
                     <p>Photos</p>
                 </a>
             </div>
             <div class="homescreen-set">
-                <a href="games.html">
-                    <img src="/games/rockbreakerscissors/images/Logo.PNG" alt="Games Preview">
+                <a href="games.html" aria-label="View games">
+                    <img src="/games/rockbreakerscissors/images/Logo.PNG" alt="Games Preview" loading="lazy">
                     <p>Games</p>
                 </a>
             </div>
             <div class="homescreen-set">
-                <a href="thesis.html">
-                    <img src="/thesis/Thesis_Square3.PNG" alt="Thesis Preview">
+                <a href="thesis.html" aria-label="View thesis">
+                    <img src="/thesis/Thesis_Square3.PNG" alt="Thesis Preview" loading="lazy">
                     <p>MS Thesis</p>
                 </a>
             </div>
@@ -36,8 +37,11 @@
         </div>
     </main>
     <footer>
-        <p>&copy; Made by Grant Hevia</p>
+        <p>&copy; <span id="current-year"></span> Made by Grant Hevia</p>
     </footer>
     <script src="/js/git-info.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

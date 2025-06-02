@@ -1,15 +1,55 @@
-/* ===== Global Styles ===== */
+/* ===== CSS Variables ===== */
+:root {
+    --primary-color: #333;
+    --secondary-color: #575757;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+    --border-radius: 5px;
+    --transition-speed: 0.3s;
+}
+
+/* ===== Reset & Base Styles ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Helvetica', 'Microsoft Sans Serif', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 20px; /* Base font size */
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* ===== Layout Components ===== */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* ===== Header and Navigation ===== */
@@ -71,18 +111,6 @@ nav ul li .dropbtn:hover {
     display: block;
 }
 
-/* ===== Main Content Styles ===== */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 /* ===== Footer Styles ===== */
 footer {
     text-align: center;
@@ -94,73 +122,42 @@ footer {
 
 /* ===== Gallery and Photo Set Styles ===== */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 
 .gallery img {
-    max-width: 90vw;
-    max-height: 90vh;
+    width: 100%;
     height: auto;
-    width: auto;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 5px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-speed);
 }
 
 .gallery img:hover {
     transform: scale(1.05);
 }
 
-.photo-set {
-    width: 33%;
-    padding: 0.5%;
-    box-sizing: border-box;
+.photo-set, .homescreen-set {
+    width: 100%;
     text-align: center;
 }
 
-.photo-set img {
+.photo-set img, .homescreen-set img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed);
 }
 
-.photo-set img:hover {
-    transform: scale(1.05);
-}
-
-.photo-set p {
+.photo-set p, .homescreen-set p {
     margin-top: 0.5em;
     font-size: 1.5em;
-    color: #333;
-}
-
-.homescreen-set {
-    width: 40%;
-    padding: 0.5%;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.homescreen-set img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.homescreen-set img:hover {
-    transform: scale(1.05);
-}
-
-.homescreen-set p {
-    margin-top: 0.5em;
-    font-size: 1.5em;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* ===== Lightbox Modal Styles ===== */
@@ -203,8 +200,6 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
-
 
 /* ===== Game-Specific Styles ===== */
 /* These styles apply only on the game page */
@@ -262,8 +257,30 @@ footer {
     background-color: #575757;
 }
 
-/* ===== Media Queries (Global) ===== */
+/* ===== Media Queries ===== */
 @media (max-width: 768px) {
+    :root {
+        --gallery-gap: 10px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: var(--gallery-gap);
+        padding: 10px;
+    }
+
+    .photo-set, .homescreen-set {
+        margin-bottom: 20px;
+    }
+
+    .photo-set p, .homescreen-set p {
+        font-size: 1.2em;
+    }
+
     /* Compact header for mobile */
     header {
         padding: 0.1em 0;
@@ -299,13 +316,6 @@ footer {
         text-align: center;
     }
 
-    .homescreen-set p,
-    .photo-set p {
-        margin-top: 0.5em;
-        font-size: 1.0em;
-        color: #333;
-    }
-
     /* Allow scrolling globally */
     html, body {
         overflow-x: hidden;
@@ -317,45 +327,6 @@ footer {
     body.game-layout {
         overflow: hidden;
         height: 100%;
-    }
-
-    /* Improved gallery stacking for mobile */
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .gallery img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 10px 0;
-    }
-
-    .photo-set {
-        width: 100%;
-        padding: 0;
-        margin-bottom: 20px;
-    }
-
-    .photo-set img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .homescreen-set {
-        width: 100%;
-        padding: 0;
-        margin-bottom: 20px;
-    }
-
-    .homescreen-set img {
-        width: 100%;
-        height: auto;
-        display: block;
     }
 
     /* Game container adjustments */
@@ -435,5 +406,22 @@ footer {
 
     #controls button:hover {
         background-color: #575757;
+    }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    body {
+        background: var(--white);
+        color: var(--text-color);
+    }
+
+    .gallery {
+        display: block;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        page-break-inside: avoid;
     }
 }

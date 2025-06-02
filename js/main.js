@@ -1,75 +1,124 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.dropdown');
+// Utility functions
+const utils = {
+    forceReflow: (element) => {
+        void element.offsetHeight;
+    },
+    
+    debounce: (func, wait) => {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+};
 
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', function(event) {
-            event.stopPropagation();
-            closeAllDropdowns();
-            dropdown.classList.toggle('open');
+// Gallery functionality
+const gallery = {
+    init() {
+        this.setupLightbox();
+        this.setupImageLoading();
+    },
+
+    setupLightbox() {
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        if (!lightboxModal || !lightboxImg || !lightboxClose) return;
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                lightboxModal.style.display = 'block';
+                lightboxImg.src = item.src;
+                lightboxImg.alt = item.alt;
+            });
         });
-    });
 
-    document.addEventListener('click', closeAllDropdowns);
+        lightboxClose.addEventListener('click', () => {
+            lightboxModal.style.display = 'none';
+        });
 
-    function closeAllDropdowns() {
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                lightboxModal.style.display = 'none';
+            }
+        });
+    },
+
+    setupImageLoading() {
+        const galleryImages = document.querySelectorAll('.gallery img');
+        
+        galleryImages.forEach(img => {
+            const handleImageLoad = () => {
+                utils.forceReflow(img);
+                img.style.display = 'block';
+                img.style.width = '100%';
+                img.style.height = 'auto';
+            };
+
+            img.addEventListener('load', handleImageLoad);
+            
+            // Handle already loaded images
+            if (img.complete) {
+                handleImageLoad();
+            }
+
+            // Add error handling
+            img.addEventListener('error', () => {
+                console.error(`Failed to load image: ${img.src}`);
+                img.style.display = 'none';
+            });
+        });
+    }
+};
+
+// Navigation functionality
+const navigation = {
+    init() {
+        this.setupDropdowns();
+    },
+
+    setupDropdowns() {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
         dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.closeAllDropdowns();
+                dropdown.classList.toggle('open');
+            });
+        });
+
+        document.addEventListener('click', () => this.closeAllDropdowns());
+    },
+
+    closeAllDropdowns() {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
             dropdown.classList.remove('open');
         });
     }
+};
 
-    // Lightbox functionality
-    const lightboxModal = document.getElementById('lightbox-modal');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
-            lightboxModal.style.display = 'block';
-            lightboxImg.src = this.src;
-            lightboxImg.alt = this.alt;
-        });
-    });
-
-    lightboxClose.addEventListener('click', function() {
-        lightboxModal.style.display = 'none';
-    });
-
-    lightboxModal.addEventListener('click', function(event) {
-        if (event.target === lightboxModal) {
-            lightboxModal.style.display = 'none';
-        }
-    });
-
-    // Improved image loading handling
-    const galleryImages = document.querySelectorAll('.gallery img');
-    
-    galleryImages.forEach(img => {
-        // Force layout recalculation when image loads
-        img.addEventListener('load', () => {
-            // Force a reflow
-            void img.offsetHeight;
-            
-            // Ensure proper display
-            img.style.display = 'block';
-            img.style.width = '100%';
-            img.style.height = 'auto';
-        });
-
-        // Handle images that are already loaded
-        if (img.complete) {
-            img.style.display = 'block';
-            img.style.width = '100%';
-            img.style.height = 'auto';
-        }
-    });
+// Initialize everything when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    gallery.init();
+    navigation.init();
 
     // Ensure proper layout after all images are loaded
     window.addEventListener('load', () => {
         document.body.style.overflowY = 'auto';
-        // Force a reflow
-        void document.body.offsetHeight;
+        utils.forceReflow(document.body);
     });
 });
 
-window.dispatchEvent(new Event('resize'));
+// Handle window resize with debounce
+window.addEventListener('resize', utils.debounce(() => {
+    utils.forceReflow(document.body);
+}, 250));
