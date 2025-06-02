@@ -40,30 +40,36 @@ document.addEventListener('DOMContentLoaded', function() {
             lightboxModal.style.display = 'none';
         }
     });
-});
 
-window.addEventListener('load', () => {
-    document.body.style.overflowY = 'auto'; // Ensure scroll remains active
-    document.body.offsetHeight; // Trigger reflow
-});
-
-window.addEventListener('load', () => {
+    // Improved image loading handling
     const galleryImages = document.querySelectorAll('.gallery img');
-
+    
     galleryImages.forEach(img => {
+        // Force layout recalculation when image loads
         img.addEventListener('load', () => {
-            img.style.display = 'none';
-            // Trigger reflow
+            // Force a reflow
             void img.offsetHeight;
+            
+            // Ensure proper display
             img.style.display = 'block';
+            img.style.width = '100%';
+            img.style.height = 'auto';
         });
+
+        // Handle images that are already loaded
+        if (img.complete) {
+            img.style.display = 'block';
+            img.style.width = '100%';
+            img.style.height = 'auto';
+        }
     });
 
-    // Fallback: trigger reflow after 200ms
-    setTimeout(() => {
+    // Ensure proper layout after all images are loaded
+    window.addEventListener('load', () => {
         document.body.style.overflowY = 'auto';
-        document.body.offsetHeight;
-    }, 200);
+        // Force a reflow
+        void document.body.offsetHeight;
+    });
 });
 
 window.dispatchEvent(new Event('resize'));
