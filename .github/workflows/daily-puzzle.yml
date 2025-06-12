@@ -1,0 +1,42 @@
+name: Generate Daily Puzzle
+
+on:
+  schedule:
+    # Run at 00:00 UTC every day
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  generate-puzzle:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Fetch all history for proper git operations
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    
+    - name: Configure Git
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+    
+    - name: Generate and Push Puzzle
+      run: |
+        cd games/QueensAndKnights
+        python generate_puzzle_json.py
+        
+        # Check if there are any changes
+        if [[ -n "$(git status --porcelain)" ]]; then
+          git add .
+          git commit -m "Update daily puzzle for $(date +'%Y-%m-%d')"
+          git push
+        else
+          echo "No changes to commit"
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
