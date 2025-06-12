@@ -2,45 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Queens & Knights</title>
   <link rel="stylesheet" href="/css/styles.css">
   <script src="/js/include.js" defer></script>
   <style>
-    body { font-family: sans-serif; text-align: center; }
-    table { border-collapse: collapse; margin: 20px auto; }
+    body { 
+      font-family: sans-serif; 
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    #game-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    table { 
+      border-collapse: collapse; 
+      margin: 20px auto;
+      width: 100%;
+      max-width: 500px;
+    }
+
     td {
-      width: 60px; height: 60px;
+      width: 20%;
+      height: 0;
+      padding-bottom: 20%;
+      position: relative;
       border: 1px solid #333;
       text-align: center;
       vertical-align: middle;
-      font-size: 32px;
+      font-size: clamp(24px, 5vw, 32px);
       cursor: pointer;
     }
+
+    td > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+    }
+
     .queen { color: red; }
     .knight { color: blue; }
     .covered { background-color: #d0ffd0; }
     .fixed { background-color: #f0f0f0; pointer-events: none; }
     .invalid { background-color: #ffc0c0; }
+
+    #controls {
+      margin: 20px 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    #controls button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #controls button:hover {
+      background-color: #575757;
+    }
+
+    #status {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      #game-container {
+        padding: 10px;
+      }
+
+      td {
+        font-size: clamp(20px, 8vw, 28px);
+      }
+
+      #controls button {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+      #status {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
-  <h1 style="margin-bottom: 0px; padding-bottom: 0;">Queens & Knights</h1>
-  <p><strong>Instructions:</strong> Click on empty squares to place pieces. You must:</p>
-  <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-    <li>Place the exact number of Queens (♛) and Knights (♞).</li>
-    <li>Ensure every empty square is under attack.</li>
-    <li>Ensure no pieces are attacking each other.</li>
-    <li>Click to cycle: Empty → ♛ → ♞.</li>
-  </ul>
+  <div id="game-container">
+    <h1 style="margin-bottom: 0px; padding-bottom: 0;">Queens & Knights</h1>
+    <p><strong>Instructions:</strong> Click on empty squares to place pieces. You must:</p>
+    <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+      <li>Place the exact number of Queens (♛) and Knights (♞).</li>
+      <li>Ensure every empty square is under attack.</li>
+      <li>Ensure no pieces are attacking each other.</li>
+      <li>Click to cycle: Empty → ♛ → ♞.</li>
+    </ul>
 
-  <p id="instructions">Loading...</p>
-  <table id="board"></table>
-  <div id="controls">
-    <button onclick="checkSolution()">Check Solution</button>
-    <button onclick="showSolution()">Show Solution</button>
-  </div>
+    <p id="instructions">Loading...</p>
+    <table id="board"></table>
+    <div id="controls">
+      <button onclick="checkSolution()">Check Solution</button>
+      <button onclick="showSolution()">Show Solution</button>
+    </div>
     <p id="status"></p>
+  </div>
 
   <script>
     const SIZE = 5;
@@ -79,7 +161,9 @@
           const cell = document.createElement("td");
           const piece = board[r][c];
           const idx = symbols.indexOf(piece);
-          cell.textContent = piece;
+          const span = document.createElement("span");
+          span.textContent = piece;
+          cell.appendChild(span);
           cell.className = (fixedCells[r][c] ? "fixed " : "") + classes[idx];
           if (!fixedCells[r][c]) {
             cell.onclick = () => {
