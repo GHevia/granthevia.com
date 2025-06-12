@@ -1,8 +1,19 @@
-
 import random
 import json
 import os
 from datetime import date
+import logging
+from pathlib import Path
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('puzzle_generation.log'),
+        logging.StreamHandler()
+    ]
+)
 
 BOARD_SIZE = 5
 QUEEN_MOVES = [(-1,0), (1,0), (0,-1), (0,1), (-1,-1), (-1,1), (1,-1), (1,1)]
@@ -64,10 +75,13 @@ def generate_daily_puzzle(overwrite=True):
     solution_file = f"solution_{today}.json"
 
     if not overwrite and os.path.exists(puzzle_file):
-        print("✅ Puzzle already exists.")
+        logging.info("Puzzle already exists for today.")
         return
 
-    for _ in range(100):
+    logging.info(f"Generating puzzle for {today}")
+    
+    for attempt in range(100):
+        logging.debug(f"Attempt {attempt + 1}/100")
         board = [['' for _ in range(BOARD_SIZE)] for _ in range(BOARD_SIZE)]
         num_pieces = random.randint(2, 6)
         num_queens = random.randint(1, min(3, num_pieces - 1))
@@ -103,35 +117,43 @@ def generate_daily_puzzle(overwrite=True):
         if not validate_board(board):
             continue
 
-        with open(solution_file, "w") as f:
-            json.dump({"board": board}, f, indent=2)
+        try:
+            with open(solution_file, "w") as f:
+                json.dump({"board": board}, f, indent=2)
 
-        to_remove = random.sample(placed, k=random.randint(1, max(1, len(placed) // 2)))
-        puzzle_board = [row[:] for row in board]
-        for r, c, _ in to_remove:
-            puzzle_board[r][c] = ''
+            to_remove = random.sample(placed, k=random.randint(1, max(1, len(placed) // 2)))
+            puzzle_board = [row[:] for row in board]
+            for r, c, _ in to_remove:
+                puzzle_board[r][c] = ''
 
-        with open(puzzle_file, "w") as f:
-            json.dump({
-                "board": puzzle_board,
-                "num_queens": sum(1 for _, _, p in to_remove if p == '♛'),
-                "num_knights": sum(1 for _, _, p in to_remove if p == '♞')
-            }, f, indent=2)
+            with open(puzzle_file, "w") as f:
+                json.dump({
+                    "board": puzzle_board,
+                    "num_queens": sum(1 for _, _, p in to_remove if p == '♛'),
+                    "num_knights": sum(1 for _, _, p in to_remove if p == '♞')
+                }, f, indent=2)
 
-        # overwrite current puzzle
-        with open("puzzle.json", "w") as f:
-            json.dump({
-                "board": puzzle_board,
-                "num_queens": sum(1 for _, _, p in to_remove if p == '♛'),
-                "num_knights": sum(1 for _, _, p in to_remove if p == '♞')
-            }, f, indent=2)
-        with open("solution.json", "w") as f:
-            json.dump({"board": board}, f, indent=2)
+            # overwrite current puzzle
+            with open("puzzle.json", "w") as f:
+                json.dump({
+                    "board": puzzle_board,
+                    "num_queens": sum(1 for _, _, p in to_remove if p == '♛'),
+                    "num_knights": sum(1 for _, _, p in to_remove if p == '♞')
+                }, f, indent=2)
+            with open("solution.json", "w") as f:
+                json.dump({"board": board}, f, indent=2)
 
-        print("✅ Daily puzzle generated.")
-        return
+            logging.info(f"Successfully generated puzzle for {today}")
+            return
+        except Exception as e:
+            logging.error(f"Error saving puzzle files: {e}")
+            continue
 
-    print("❌ Failed to generate puzzle.")
+    logging.error("Failed to generate puzzle after 100 attempts")
 
 if __name__ == "__main__":
-    generate_daily_puzzle(overwrite=True)
+    try:
+        generate_daily_puzzle(overwrite=True)
+    except Exception as e:
+        logging.error(f"Unexpected error: {e}")
+        raise
