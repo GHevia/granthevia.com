@@ -29,6 +29,9 @@ jobs:
       run: |
         cd games/QueensAndKnights
         python generate_puzzle_json.py
+
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
         
         # Check if there are any changes
         if [[ -n "$(git status --porcelain)" ]]; then
