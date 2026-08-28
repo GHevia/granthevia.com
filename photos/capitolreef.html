@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Capitol Reef</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Capitol Reef by Grant Hevia.">
+  <title>Capitol Reef Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Capital Reef</h1>
-        <div class="gallery">
-            <img src="capitolreef/CR_1.jpg" alt="Photo 1 of Capitol Reef" class="gallery-item">
-            <img src="capitolreef/CR_2.JPG" alt="Photo 2 of Capitol Reef" class="gallery-item">
-            <img src="capitolreef/CR_3.jpg" alt="Photo 3 of Capitol Reef" class="gallery-item">
-            <img src="capitolreef/CR_4.jpg" alt="Photo 4 of Capitol Reef" class="gallery-item">
-            <img src="capitolreef/CR_5.jpg" alt="Photo 5 of Capitol Reef" class="gallery-item">
-            <img src="capitolreef/CR_6.JPG" alt="Photo 6 of Capitol Reef" class="gallery-item">
-            <img src="capitolreef/CR_7.jpg" alt="Photo 7 of Capitol Reef" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Capitol Reef</h1>
+      <p>7 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/capitolreef/CR_1-1440.webp" data-original-src="/photos/capitolreef/CR_1.jpg" data-index="0" aria-label="Open Capitol Reef photograph 1 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/capitolreef/CR_1-640.webp 640w, /photos/optimized/capitolreef/CR_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/capitolreef/CR_1.jpg" width="3181" height="2642" alt="Capitol Reef photograph 1 of 7" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/capitolreef/CR_2-1440.webp" data-original-src="/photos/capitolreef/CR_2.JPG" data-index="1" aria-label="Open Capitol Reef photograph 2 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/capitolreef/CR_2-640.webp 640w, /photos/optimized/capitolreef/CR_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/capitolreef/CR_2.JPG" width="4032" height="3024" alt="Capitol Reef photograph 2 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/capitolreef/CR_3-1440.webp" data-original-src="/photos/capitolreef/CR_3.jpg" data-index="2" aria-label="Open Capitol Reef photograph 3 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/capitolreef/CR_3-640.webp 640w, /photos/optimized/capitolreef/CR_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/capitolreef/CR_3.jpg" width="4016" height="2751" alt="Capitol Reef photograph 3 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/capitolreef/CR_4-1440.webp" data-original-src="/photos/capitolreef/CR_4.jpg" data-index="3" aria-label="Open Capitol Reef photograph 4 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/capitolreef/CR_4-640.webp 640w, /photos/optimized/capitolreef/CR_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/capitolreef/CR_4.jpg" width="3879" height="2782" alt="Capitol Reef photograph 4 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/capitolreef/CR_5-1440.webp" data-original-src="/photos/capitolreef/CR_5.jpg" data-index="4" aria-label="Open Capitol Reef photograph 5 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/capitolreef/CR_5-640.webp 640w, /photos/optimized/capitolreef/CR_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/capitolreef/CR_5.jpg" width="4032" height="2621" alt="Capitol Reef photograph 5 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/capitolreef/CR_6-1440.webp" data-original-src="/photos/capitolreef/CR_6.JPG" data-index="5" aria-label="Open Capitol Reef photograph 6 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/capitolreef/CR_6-640.webp 640w, /photos/optimized/capitolreef/CR_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/capitolreef/CR_6.JPG" width="4032" height="3024" alt="Capitol Reef photograph 6 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/capitolreef/CR_7-1440.webp" data-original-src="/photos/capitolreef/CR_7.jpg" data-index="6" aria-label="Open Capitol Reef photograph 7 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/capitolreef/CR_7-640.webp 640w, /photos/optimized/capitolreef/CR_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/capitolreef/CR_7.jpg" width="4032" height="3024" alt="Capitol Reef photograph 7 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

@@ -1,65 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Yellowstone</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Yellowstone by Grant Hevia.">
+  <title>Yellowstone Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Yellowstone</h1>
-        <div class="gallery">
-            <img src="yellowstone/Y_01.jpg" alt="Photo 1 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_02.jpg" alt="Photo 2 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_03.jpg" alt="Photo 3 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_04.jpg" alt="Photo 4 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_05.jpg" alt="Photo 5 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_06.jpg" alt="Photo 6 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_07.jpg" alt="Photo 7 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_08.jpg" alt="Photo 8 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_09.jpg" alt="Photo 9 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_10.jpg" alt="Photo 10 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_11.jpg" alt="Photo 11 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_12.jpg" alt="Photo 12 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_13.jpg" alt="Photo 13 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_14.jpg" alt="Photo 14 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_15.jpg" alt="Photo 15 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_16.jpg" alt="Photo 16 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_17.jpg" alt="Photo 17 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_18.jpg" alt="Photo 18 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_19.jpg" alt="Photo 19 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_20.jpg" alt="Photo 20 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_21.jpg" alt="Photo 21 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_22.jpg" alt="Photo 22 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_23.jpg" alt="Photo 23 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_24.jpg" alt="Photo 24 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_25.jpg" alt="Photo 25 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_26.jpg" alt="Photo 26 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_27.jpg" alt="Photo 27 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_28.jpg" alt="Photo 28 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_29.jpg" alt="Photo 29 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_30.jpg" alt="Photo 30 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_31.jpg" alt="Photo 31 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_32.jpg" alt="Photo 32 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_33.jpg" alt="Photo 33 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_34.jpg" alt="Photo 34 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_35.jpg" alt="Photo 35 of Yellowstone" class="gallery-item">
-            <img src="yellowstone/Y_36.jpg" alt="Photo 36 of Yellowstone" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Yellowstone</h1>
+      <p>36 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_01-1440.webp" data-original-src="/photos/yellowstone/Y_01.jpg" data-index="0" aria-label="Open Yellowstone photograph 1 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_01-640.webp 640w, /photos/optimized/yellowstone/Y_01-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_01.jpg" width="4032" height="3024" alt="Yellowstone photograph 1 of 36" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_02-1440.webp" data-original-src="/photos/yellowstone/Y_02.jpg" data-index="1" aria-label="Open Yellowstone photograph 2 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_02-640.webp 640w, /photos/optimized/yellowstone/Y_02-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_02.jpg" width="5110" height="3832" alt="Yellowstone photograph 2 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_03-1440.webp" data-original-src="/photos/yellowstone/Y_03.jpg" data-index="2" aria-label="Open Yellowstone photograph 3 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_03-640.webp 640w, /photos/optimized/yellowstone/Y_03-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_03.jpg" width="5712" height="4284" alt="Yellowstone photograph 3 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_04-1440.webp" data-original-src="/photos/yellowstone/Y_04.jpg" data-index="3" aria-label="Open Yellowstone photograph 4 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_04-640.webp 640w, /photos/optimized/yellowstone/Y_04-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_04.jpg" width="5712" height="4284" alt="Yellowstone photograph 4 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_05-1440.webp" data-original-src="/photos/yellowstone/Y_05.jpg" data-index="4" aria-label="Open Yellowstone photograph 5 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_05-640.webp 640w, /photos/optimized/yellowstone/Y_05-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_05.jpg" width="4284" height="4401" alt="Yellowstone photograph 5 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_06-1440.webp" data-original-src="/photos/yellowstone/Y_06.jpg" data-index="5" aria-label="Open Yellowstone photograph 6 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_06-640.webp 640w, /photos/optimized/yellowstone/Y_06-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_06.jpg" width="4032" height="3024" alt="Yellowstone photograph 6 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_07-1440.webp" data-original-src="/photos/yellowstone/Y_07.jpg" data-index="6" aria-label="Open Yellowstone photograph 7 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_07-640.webp 640w, /photos/optimized/yellowstone/Y_07-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_07.jpg" width="5712" height="4284" alt="Yellowstone photograph 7 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_08-1440.webp" data-original-src="/photos/yellowstone/Y_08.jpg" data-index="7" aria-label="Open Yellowstone photograph 8 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_08-640.webp 640w, /photos/optimized/yellowstone/Y_08-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_08.jpg" width="5712" height="4284" alt="Yellowstone photograph 8 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_09-1440.webp" data-original-src="/photos/yellowstone/Y_09.jpg" data-index="8" aria-label="Open Yellowstone photograph 9 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_09-640.webp 640w, /photos/optimized/yellowstone/Y_09-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_09.jpg" width="5353" height="3477" alt="Yellowstone photograph 9 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_10-1440.webp" data-original-src="/photos/yellowstone/Y_10.jpg" data-index="9" aria-label="Open Yellowstone photograph 10 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_10-640.webp 640w, /photos/optimized/yellowstone/Y_10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_10.jpg" width="5712" height="4284" alt="Yellowstone photograph 10 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_11-1440.webp" data-original-src="/photos/yellowstone/Y_11.jpg" data-index="10" aria-label="Open Yellowstone photograph 11 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_11-640.webp 640w, /photos/optimized/yellowstone/Y_11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_11.jpg" width="3360" height="3024" alt="Yellowstone photograph 11 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_12-1440.webp" data-original-src="/photos/yellowstone/Y_12.jpg" data-index="11" aria-label="Open Yellowstone photograph 12 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_12-640.webp 640w, /photos/optimized/yellowstone/Y_12-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_12.jpg" width="3809" height="2636" alt="Yellowstone photograph 12 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 12</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_13-1440.webp" data-original-src="/photos/yellowstone/Y_13.jpg" data-index="12" aria-label="Open Yellowstone photograph 13 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_13-640.webp 640w, /photos/optimized/yellowstone/Y_13-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_13.jpg" width="3024" height="4032" alt="Yellowstone photograph 13 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 13</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_14-1440.webp" data-original-src="/photos/yellowstone/Y_14.jpg" data-index="13" aria-label="Open Yellowstone photograph 14 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_14-640.webp 640w, /photos/optimized/yellowstone/Y_14-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_14.jpg" width="3862" height="2733" alt="Yellowstone photograph 14 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 14</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_15-1440.webp" data-original-src="/photos/yellowstone/Y_15.jpg" data-index="14" aria-label="Open Yellowstone photograph 15 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_15-640.webp 640w, /photos/optimized/yellowstone/Y_15-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_15.jpg" width="5210" height="4001" alt="Yellowstone photograph 15 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 15</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_16-1440.webp" data-original-src="/photos/yellowstone/Y_16.jpg" data-index="15" aria-label="Open Yellowstone photograph 16 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_16-640.webp 640w, /photos/optimized/yellowstone/Y_16-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_16.jpg" width="5712" height="4284" alt="Yellowstone photograph 16 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 16</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_17-1440.webp" data-original-src="/photos/yellowstone/Y_17.jpg" data-index="16" aria-label="Open Yellowstone photograph 17 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_17-640.webp 640w, /photos/optimized/yellowstone/Y_17-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_17.jpg" width="5712" height="4284" alt="Yellowstone photograph 17 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 17</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_18-1440.webp" data-original-src="/photos/yellowstone/Y_18.jpg" data-index="17" aria-label="Open Yellowstone photograph 18 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_18-640.webp 640w, /photos/optimized/yellowstone/Y_18-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_18.jpg" width="5712" height="4284" alt="Yellowstone photograph 18 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 18</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_19-1440.webp" data-original-src="/photos/yellowstone/Y_19.jpg" data-index="18" aria-label="Open Yellowstone photograph 19 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_19-640.webp 640w, /photos/optimized/yellowstone/Y_19-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_19.jpg" width="5712" height="4284" alt="Yellowstone photograph 19 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 19</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_20-1440.webp" data-original-src="/photos/yellowstone/Y_20.jpg" data-index="19" aria-label="Open Yellowstone photograph 20 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_20-640.webp 640w, /photos/optimized/yellowstone/Y_20-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_20.jpg" width="4498" height="4284" alt="Yellowstone photograph 20 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 20</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_21-1440.webp" data-original-src="/photos/yellowstone/Y_21.jpg" data-index="20" aria-label="Open Yellowstone photograph 21 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_21-640.webp 640w, /photos/optimized/yellowstone/Y_21-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_21.jpg" width="3520" height="2605" alt="Yellowstone photograph 21 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 21</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_22-1440.webp" data-original-src="/photos/yellowstone/Y_22.jpg" data-index="21" aria-label="Open Yellowstone photograph 22 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_22-640.webp 640w, /photos/optimized/yellowstone/Y_22-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_22.jpg" width="5712" height="4284" alt="Yellowstone photograph 22 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 22</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_23-1440.webp" data-original-src="/photos/yellowstone/Y_23.jpg" data-index="22" aria-label="Open Yellowstone photograph 23 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_23-640.webp 640w, /photos/optimized/yellowstone/Y_23-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_23.jpg" width="5177" height="3314" alt="Yellowstone photograph 23 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 23</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_24-1440.webp" data-original-src="/photos/yellowstone/Y_24.jpg" data-index="23" aria-label="Open Yellowstone photograph 24 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_24-640.webp 640w, /photos/optimized/yellowstone/Y_24-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_24.jpg" width="5509" height="4284" alt="Yellowstone photograph 24 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 24</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_25-1440.webp" data-original-src="/photos/yellowstone/Y_25.jpg" data-index="24" aria-label="Open Yellowstone photograph 25 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_25-640.webp 640w, /photos/optimized/yellowstone/Y_25-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_25.jpg" width="4284" height="4956" alt="Yellowstone photograph 25 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 25</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_26-1440.webp" data-original-src="/photos/yellowstone/Y_26.jpg" data-index="25" aria-label="Open Yellowstone photograph 26 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_26-640.webp 640w, /photos/optimized/yellowstone/Y_26-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_26.jpg" width="5712" height="4284" alt="Yellowstone photograph 26 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 26</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_27-1440.webp" data-original-src="/photos/yellowstone/Y_27.jpg" data-index="26" aria-label="Open Yellowstone photograph 27 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_27-640.webp 640w, /photos/optimized/yellowstone/Y_27-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_27.jpg" width="5248" height="3283" alt="Yellowstone photograph 27 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 27</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_28-1440.webp" data-original-src="/photos/yellowstone/Y_28.jpg" data-index="27" aria-label="Open Yellowstone photograph 28 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_28-640.webp 640w, /photos/optimized/yellowstone/Y_28-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_28.jpg" width="5712" height="4284" alt="Yellowstone photograph 28 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 28</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_29-1440.webp" data-original-src="/photos/yellowstone/Y_29.jpg" data-index="28" aria-label="Open Yellowstone photograph 29 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_29-640.webp 640w, /photos/optimized/yellowstone/Y_29-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_29.jpg" width="5293" height="4099" alt="Yellowstone photograph 29 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 29</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_30-1440.webp" data-original-src="/photos/yellowstone/Y_30.jpg" data-index="29" aria-label="Open Yellowstone photograph 30 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_30-640.webp 640w, /photos/optimized/yellowstone/Y_30-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_30.jpg" width="5712" height="3301" alt="Yellowstone photograph 30 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 30</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_31-1440.webp" data-original-src="/photos/yellowstone/Y_31.jpg" data-index="30" aria-label="Open Yellowstone photograph 31 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_31-640.webp 640w, /photos/optimized/yellowstone/Y_31-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_31.jpg" width="5712" height="3290" alt="Yellowstone photograph 31 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 31</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_32-1440.webp" data-original-src="/photos/yellowstone/Y_32.jpg" data-index="31" aria-label="Open Yellowstone photograph 32 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_32-640.webp 640w, /photos/optimized/yellowstone/Y_32-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_32.jpg" width="5712" height="4284" alt="Yellowstone photograph 32 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 32</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_33-1440.webp" data-original-src="/photos/yellowstone/Y_33.jpg" data-index="32" aria-label="Open Yellowstone photograph 33 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_33-640.webp 640w, /photos/optimized/yellowstone/Y_33-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_33.jpg" width="3280" height="1453" alt="Yellowstone photograph 33 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 33</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_34-1440.webp" data-original-src="/photos/yellowstone/Y_34.jpg" data-index="33" aria-label="Open Yellowstone photograph 34 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_34-640.webp 640w, /photos/optimized/yellowstone/Y_34-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_34.jpg" width="4278" height="4284" alt="Yellowstone photograph 34 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 34</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_35-1440.webp" data-original-src="/photos/yellowstone/Y_35.jpg" data-index="34" aria-label="Open Yellowstone photograph 35 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_35-640.webp 640w, /photos/optimized/yellowstone/Y_35-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_35.jpg" width="5712" height="4284" alt="Yellowstone photograph 35 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 35</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yellowstone/Y_36-1440.webp" data-original-src="/photos/yellowstone/Y_36.jpg" data-index="35" aria-label="Open Yellowstone photograph 36 of 36">
+            <picture><source type="image/webp" srcset="/photos/optimized/yellowstone/Y_36-640.webp 640w, /photos/optimized/yellowstone/Y_36-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yellowstone/Y_36.jpg" width="3192" height="2388" alt="Yellowstone photograph 36 of 36" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 36</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

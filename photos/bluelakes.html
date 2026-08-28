@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Blue Lakes</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Blue Lakes by Grant Hevia.">
+  <title>Blue Lakes Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Blue Lakes</h1>
-        <div class="gallery">
-            <img src="bluelakes/BL_1.JPEG" alt="Photo 1 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_2.JPEG" alt="Photo 2 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_3.JPEG" alt="Photo 3 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_4.JPEG" alt="Photo 4 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_5.JPEG" alt="Photo 5 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_6.JPEG" alt="Photo 6 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_7.JPEG" alt="Photo 7 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_8.JPEG" alt="Photo 8 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_9.JPEG" alt="Photo 9 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_10.JPEG" alt="Photo 10 of Blue Lakes" class="gallery-item">
-            <img src="bluelakes/BL_11.JPEG" alt="Photo 11 of Blue Lakes" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Blue Lakes</h1>
+      <p>11 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_1-1440.webp" data-original-src="/photos/bluelakes/BL_1.JPEG" data-index="0" aria-label="Open Blue Lakes photograph 1 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_1-640.webp 640w, /photos/optimized/bluelakes/BL_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_1.JPEG" width="5712" height="4087" alt="Blue Lakes photograph 1 of 11" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_2-1440.webp" data-original-src="/photos/bluelakes/BL_2.JPEG" data-index="1" aria-label="Open Blue Lakes photograph 2 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_2-640.webp 640w, /photos/optimized/bluelakes/BL_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_2.JPEG" width="5712" height="4054" alt="Blue Lakes photograph 2 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_3-1440.webp" data-original-src="/photos/bluelakes/BL_3.JPEG" data-index="2" aria-label="Open Blue Lakes photograph 3 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_3-640.webp 640w, /photos/optimized/bluelakes/BL_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_3.JPEG" width="4032" height="3024" alt="Blue Lakes photograph 3 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_4-1440.webp" data-original-src="/photos/bluelakes/BL_4.JPEG" data-index="3" aria-label="Open Blue Lakes photograph 4 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_4-640.webp 640w, /photos/optimized/bluelakes/BL_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_4.JPEG" width="5712" height="4284" alt="Blue Lakes photograph 4 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_5-1440.webp" data-original-src="/photos/bluelakes/BL_5.JPEG" data-index="4" aria-label="Open Blue Lakes photograph 5 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_5-640.webp 640w, /photos/optimized/bluelakes/BL_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_5.JPEG" width="5712" height="4284" alt="Blue Lakes photograph 5 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_6-1440.webp" data-original-src="/photos/bluelakes/BL_6.JPEG" data-index="5" aria-label="Open Blue Lakes photograph 6 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_6-640.webp 640w, /photos/optimized/bluelakes/BL_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_6.JPEG" width="4032" height="3024" alt="Blue Lakes photograph 6 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_7-1440.webp" data-original-src="/photos/bluelakes/BL_7.JPEG" data-index="6" aria-label="Open Blue Lakes photograph 7 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_7-640.webp 640w, /photos/optimized/bluelakes/BL_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_7.JPEG" width="5712" height="4284" alt="Blue Lakes photograph 7 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_8-1440.webp" data-original-src="/photos/bluelakes/BL_8.JPEG" data-index="7" aria-label="Open Blue Lakes photograph 8 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_8-640.webp 640w, /photos/optimized/bluelakes/BL_8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_8.JPEG" width="5712" height="4284" alt="Blue Lakes photograph 8 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_9-1440.webp" data-original-src="/photos/bluelakes/BL_9.JPEG" data-index="8" aria-label="Open Blue Lakes photograph 9 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_9-640.webp 640w, /photos/optimized/bluelakes/BL_9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_9.JPEG" width="4284" height="4501" alt="Blue Lakes photograph 9 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_10-1440.webp" data-original-src="/photos/bluelakes/BL_10.JPEG" data-index="9" aria-label="Open Blue Lakes photograph 10 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_10-640.webp 640w, /photos/optimized/bluelakes/BL_10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_10.JPEG" width="5712" height="3772" alt="Blue Lakes photograph 10 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/bluelakes/BL_11-1440.webp" data-original-src="/photos/bluelakes/BL_11.JPEG" data-index="10" aria-label="Open Blue Lakes photograph 11 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/bluelakes/BL_11-640.webp 640w, /photos/optimized/bluelakes/BL_11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/bluelakes/BL_11.JPEG" width="5712" height="4284" alt="Blue Lakes photograph 11 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

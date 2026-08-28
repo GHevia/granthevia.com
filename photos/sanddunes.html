@@ -1,46 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Sand Dunes</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Great Sand Dunes by Grant Hevia.">
+  <title>Great Sand Dunes Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Sand Dunes</h1>
-        <div class="gallery">
-            <img src="sanddunes/SD_0.JPG" alt="Photo 1 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_1.JPG" alt="Photo 2 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_2.JPG" alt="Photo 3 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_3.JPG" alt="Photo 4 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_4.JPG" alt="Photo 5 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_5.JPG" alt="Photo 6 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_6.JPG" alt="Photo 7 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_7.JPG" alt="Photo 8 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_8.JPG" alt="Photo 9 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_9.JPG" alt="Photo 10 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_10.JPG" alt="Photo 11 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_11.JPG" alt="Photo 12 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_12.JPG" alt="Photo 13 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_13.JPG" alt="Photo 14 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_14.JPG" alt="Photo 15 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_15.JPG" alt="Photo 16 of Sand Dunes" class="gallery-item">
-            <img src="sanddunes/SD_16.JPG" alt="Photo 17 of Sand Dunes" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Great Sand Dunes</h1>
+      <p>17 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_0-1440.webp" data-original-src="/photos/sanddunes/SD_0.JPG" data-index="0" aria-label="Open Great Sand Dunes photograph 1 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_0-640.webp 640w, /photos/optimized/sanddunes/SD_0-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_0.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 1 of 17" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_1-1440.webp" data-original-src="/photos/sanddunes/SD_1.JPG" data-index="1" aria-label="Open Great Sand Dunes photograph 2 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_1-640.webp 640w, /photos/optimized/sanddunes/SD_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_1.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 2 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_2-1440.webp" data-original-src="/photos/sanddunes/SD_2.JPG" data-index="2" aria-label="Open Great Sand Dunes photograph 3 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_2-640.webp 640w, /photos/optimized/sanddunes/SD_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_2.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 3 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_3-1440.webp" data-original-src="/photos/sanddunes/SD_3.JPG" data-index="3" aria-label="Open Great Sand Dunes photograph 4 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_3-640.webp 640w, /photos/optimized/sanddunes/SD_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_3.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 4 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_4-1440.webp" data-original-src="/photos/sanddunes/SD_4.JPG" data-index="4" aria-label="Open Great Sand Dunes photograph 5 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_4-640.webp 640w, /photos/optimized/sanddunes/SD_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_4.JPG" width="3852" height="3024" alt="Great Sand Dunes photograph 5 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_5-1440.webp" data-original-src="/photos/sanddunes/SD_5.JPG" data-index="5" aria-label="Open Great Sand Dunes photograph 6 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_5-640.webp 640w, /photos/optimized/sanddunes/SD_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_5.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 6 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_6-1440.webp" data-original-src="/photos/sanddunes/SD_6.JPG" data-index="6" aria-label="Open Great Sand Dunes photograph 7 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_6-640.webp 640w, /photos/optimized/sanddunes/SD_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_6.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 7 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_7-1440.webp" data-original-src="/photos/sanddunes/SD_7.JPG" data-index="7" aria-label="Open Great Sand Dunes photograph 8 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_7-640.webp 640w, /photos/optimized/sanddunes/SD_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_7.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 8 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_8-1440.webp" data-original-src="/photos/sanddunes/SD_8.JPG" data-index="8" aria-label="Open Great Sand Dunes photograph 9 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_8-640.webp 640w, /photos/optimized/sanddunes/SD_8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_8.JPG" width="4668" height="4284" alt="Great Sand Dunes photograph 9 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_9-1440.webp" data-original-src="/photos/sanddunes/SD_9.JPG" data-index="9" aria-label="Open Great Sand Dunes photograph 10 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_9-640.webp 640w, /photos/optimized/sanddunes/SD_9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_9.JPG" width="5491" height="3519" alt="Great Sand Dunes photograph 10 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_10-1440.webp" data-original-src="/photos/sanddunes/SD_10.JPG" data-index="10" aria-label="Open Great Sand Dunes photograph 11 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_10-640.webp 640w, /photos/optimized/sanddunes/SD_10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_10.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 11 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_11-1440.webp" data-original-src="/photos/sanddunes/SD_11.JPG" data-index="11" aria-label="Open Great Sand Dunes photograph 12 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_11-640.webp 640w, /photos/optimized/sanddunes/SD_11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_11.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 12 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 12</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_12-1440.webp" data-original-src="/photos/sanddunes/SD_12.JPG" data-index="12" aria-label="Open Great Sand Dunes photograph 13 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_12-640.webp 640w, /photos/optimized/sanddunes/SD_12-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_12.JPG" width="4032" height="3024" alt="Great Sand Dunes photograph 13 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 13</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_13-1440.webp" data-original-src="/photos/sanddunes/SD_13.JPG" data-index="13" aria-label="Open Great Sand Dunes photograph 14 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_13-640.webp 640w, /photos/optimized/sanddunes/SD_13-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_13.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 14 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 14</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_14-1440.webp" data-original-src="/photos/sanddunes/SD_14.JPG" data-index="14" aria-label="Open Great Sand Dunes photograph 15 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_14-640.webp 640w, /photos/optimized/sanddunes/SD_14-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_14.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 15 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 15</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_15-1440.webp" data-original-src="/photos/sanddunes/SD_15.JPG" data-index="15" aria-label="Open Great Sand Dunes photograph 16 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_15-640.webp 640w, /photos/optimized/sanddunes/SD_15-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_15.JPG" width="4032" height="3024" alt="Great Sand Dunes photograph 16 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 16</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/sanddunes/SD_16-1440.webp" data-original-src="/photos/sanddunes/SD_16.JPG" data-index="16" aria-label="Open Great Sand Dunes photograph 17 of 17">
+            <picture><source type="image/webp" srcset="/photos/optimized/sanddunes/SD_16-640.webp 640w, /photos/optimized/sanddunes/SD_16-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/sanddunes/SD_16.JPG" width="5712" height="4284" alt="Great Sand Dunes photograph 17 of 17" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 17</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

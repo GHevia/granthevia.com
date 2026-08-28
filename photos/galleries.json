@@ -1,0 +1,4986 @@
+{
+  "galleries": [
+    {
+      "slug": "rockymountain",
+      "title": "Rocky Mountain",
+      "cover": {
+        "src": "/photos/rockymountain/RM1.jpg",
+        "width": 3024,
+        "height": 3024,
+        "webp": [
+          {
+            "src": "/photos/optimized/rockymountain/RM1-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/rockymountain/RM1-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/rockymountain/RM1.jpg",
+          "width": 3024,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM1-640.webp",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM1-1440.webp",
+              "width": 1440,
+              "height": 1440
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM2.jpg",
+          "width": 5178,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM2-640.webp",
+              "width": 640,
+              "height": 530
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM2-1440.webp",
+              "width": 1440,
+              "height": 1191
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM3.jpg",
+          "width": 5712,
+          "height": 4106,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM3-640.webp",
+              "width": 640,
+              "height": 460
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM3-1440.webp",
+              "width": 1440,
+              "height": 1035
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM4.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM5.jpg",
+          "width": 5712,
+          "height": 4161,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM5-640.webp",
+              "width": 640,
+              "height": 466
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM5-1440.webp",
+              "width": 1440,
+              "height": 1049
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM6.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM7.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM8.jpg",
+          "width": 3258,
+          "height": 2690,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM8-640.webp",
+              "width": 640,
+              "height": 528
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM8-1440.webp",
+              "width": 1440,
+              "height": 1189
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM9.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM9-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM9-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM10.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM10-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM10-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM11.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM11-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM11-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/rockymountain/RM12.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/rockymountain/RM12-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/rockymountain/RM12-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "arches",
+      "title": "Arches",
+      "cover": {
+        "src": "/photos/arches/ARCHES_SQ.jpg",
+        "width": 4033,
+        "height": 4033,
+        "webp": [
+          {
+            "src": "/photos/optimized/arches/ARCHES_SQ-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/arches/ARCHES_SQ-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/arches/ARCHES_1.jpg",
+          "width": 5320,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_1-640.webp",
+              "width": 640,
+              "height": 515
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_1-1440.webp",
+              "width": 1440,
+              "height": 1160
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_2.jpg",
+          "width": 4284,
+          "height": 5712,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_2-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_2-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_3.jpg",
+          "width": 4032,
+          "height": 2933,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_3-640.webp",
+              "width": 640,
+              "height": 466
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_3-1440.webp",
+              "width": 1440,
+              "height": 1048
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_4.jpg",
+          "width": 4284,
+          "height": 5712,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_4-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_4-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_5.jpg",
+          "width": 5168,
+          "height": 3338,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_5-640.webp",
+              "width": 640,
+              "height": 413
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_5-1440.webp",
+              "width": 1440,
+              "height": 930
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_6.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_7.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_8.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_8-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_8-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/arches/ARCHES_9.jpg",
+          "width": 3984,
+          "height": 3984,
+          "webp": [
+            {
+              "src": "/photos/optimized/arches/ARCHES_9-640.webp",
+              "width": 640,
+              "height": 640
+            },
+            {
+              "src": "/photos/optimized/arches/ARCHES_9-1440.webp",
+              "width": 1440,
+              "height": 1440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "yellowstone",
+      "title": "Yellowstone",
+      "cover": {
+        "src": "/photos/yellowstone/Y_SQ.jpg",
+        "width": 3024,
+        "height": 3024,
+        "webp": [
+          {
+            "src": "/photos/optimized/yellowstone/Y_SQ-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/yellowstone/Y_SQ-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/yellowstone/Y_01.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_01-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_01-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_02.jpg",
+          "width": 5110,
+          "height": 3832,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_02-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_02-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_03.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_03-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_03-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_04.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_04-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_04-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_05.jpg",
+          "width": 4284,
+          "height": 4401,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_05-640.webp",
+              "width": 640,
+              "height": 657
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_05-1440.webp",
+              "width": 1440,
+              "height": 1479
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_06.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_06-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_06-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_07.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_07-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_07-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_08.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_08-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_08-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_09.jpg",
+          "width": 5353,
+          "height": 3477,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_09-640.webp",
+              "width": 640,
+              "height": 416
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_09-1440.webp",
+              "width": 1440,
+              "height": 935
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_10.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_10-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_10-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_11.jpg",
+          "width": 3360,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_11-640.webp",
+              "width": 640,
+              "height": 576
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_11-1440.webp",
+              "width": 1440,
+              "height": 1296
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_12.jpg",
+          "width": 3809,
+          "height": 2636,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_12-640.webp",
+              "width": 640,
+              "height": 443
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_12-1440.webp",
+              "width": 1440,
+              "height": 997
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_13.jpg",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_13-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_13-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_14.jpg",
+          "width": 3862,
+          "height": 2733,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_14-640.webp",
+              "width": 640,
+              "height": 453
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_14-1440.webp",
+              "width": 1440,
+              "height": 1019
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_15.jpg",
+          "width": 5210,
+          "height": 4001,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_15-640.webp",
+              "width": 640,
+              "height": 491
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_15-1440.webp",
+              "width": 1440,
+              "height": 1106
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_16.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_16-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_16-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_17.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_17-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_17-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_18.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_18-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_18-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_19.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_19-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_19-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_20.jpg",
+          "width": 4498,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_20-640.webp",
+              "width": 640,
+              "height": 610
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_20-1440.webp",
+              "width": 1440,
+              "height": 1371
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_21.jpg",
+          "width": 3520,
+          "height": 2605,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_21-640.webp",
+              "width": 640,
+              "height": 474
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_21-1440.webp",
+              "width": 1440,
+              "height": 1066
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_22.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_22-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_22-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_23.jpg",
+          "width": 5177,
+          "height": 3314,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_23-640.webp",
+              "width": 640,
+              "height": 410
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_23-1440.webp",
+              "width": 1440,
+              "height": 922
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_24.jpg",
+          "width": 5509,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_24-640.webp",
+              "width": 640,
+              "height": 498
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_24-1440.webp",
+              "width": 1440,
+              "height": 1120
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_25.jpg",
+          "width": 4284,
+          "height": 4956,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_25-640.webp",
+              "width": 640,
+              "height": 740
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_25-1440.webp",
+              "width": 1440,
+              "height": 1666
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_26.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_26-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_26-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_27.jpg",
+          "width": 5248,
+          "height": 3283,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_27-640.webp",
+              "width": 640,
+              "height": 400
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_27-1440.webp",
+              "width": 1440,
+              "height": 901
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_28.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_28-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_28-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_29.jpg",
+          "width": 5293,
+          "height": 4099,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_29-640.webp",
+              "width": 640,
+              "height": 496
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_29-1440.webp",
+              "width": 1440,
+              "height": 1115
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_30.jpg",
+          "width": 5712,
+          "height": 3301,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_30-640.webp",
+              "width": 640,
+              "height": 370
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_30-1440.webp",
+              "width": 1440,
+              "height": 832
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_31.jpg",
+          "width": 5712,
+          "height": 3290,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_31-640.webp",
+              "width": 640,
+              "height": 369
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_31-1440.webp",
+              "width": 1440,
+              "height": 829
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_32.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_32-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_32-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_33.jpg",
+          "width": 3280,
+          "height": 1453,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_33-640.webp",
+              "width": 640,
+              "height": 284
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_33-1440.webp",
+              "width": 1440,
+              "height": 638
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_34.jpg",
+          "width": 4278,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_34-640.webp",
+              "width": 640,
+              "height": 641
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_34-1440.webp",
+              "width": 1440,
+              "height": 1442
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_35.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_35-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_35-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yellowstone/Y_36.jpg",
+          "width": 3192,
+          "height": 2388,
+          "webp": [
+            {
+              "src": "/photos/optimized/yellowstone/Y_36-640.webp",
+              "width": 640,
+              "height": 479
+            },
+            {
+              "src": "/photos/optimized/yellowstone/Y_36-1440.webp",
+              "width": 1440,
+              "height": 1077
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "grandteton",
+      "title": "Grand Teton",
+      "cover": {
+        "src": "/photos/grandteton/GT_SQ.jpg",
+        "width": 2885,
+        "height": 2884,
+        "webp": [
+          {
+            "src": "/photos/optimized/grandteton/GT_SQ-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/grandteton/GT_SQ-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/grandteton/GT_1.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_2.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_3.jpg",
+          "width": 5712,
+          "height": 1202,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_3-640.webp",
+              "width": 640,
+              "height": 135
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_3-1440.webp",
+              "width": 1440,
+              "height": 303
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_4.jpg",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_5.jpg",
+          "width": 5712,
+          "height": 3186,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_5-640.webp",
+              "width": 640,
+              "height": 357
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_5-1440.webp",
+              "width": 1440,
+              "height": 803
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_6.jpg",
+          "width": 5439,
+          "height": 4079,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_7.jpg",
+          "width": 4284,
+          "height": 4791,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_7-640.webp",
+              "width": 640,
+              "height": 716
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_7-1440.webp",
+              "width": 1440,
+              "height": 1610
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_8.jpg",
+          "width": 5415,
+          "height": 3836,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_8-640.webp",
+              "width": 640,
+              "height": 453
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_8-1440.webp",
+              "width": 1440,
+              "height": 1020
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_9.jpg",
+          "width": 5081,
+          "height": 3811,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_9-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_9-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_10.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_10-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_10-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandteton/GT_11.jpg",
+          "width": 3931,
+          "height": 2948,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandteton/GT_11-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandteton/GT_11-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sanddunes",
+      "title": "Great Sand Dunes",
+      "cover": {
+        "src": "/photos/sanddunes/SD_SQUARE.JPG",
+        "width": 4284,
+        "height": 4284,
+        "webp": [
+          {
+            "src": "/photos/optimized/sanddunes/SD_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/sanddunes/SD_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/sanddunes/SD_0.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_0-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_0-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_1.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_2.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_3.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_3-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_3-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_4.JPG",
+          "width": 3852,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_4-640.webp",
+              "width": 640,
+              "height": 502
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_4-1440.webp",
+              "width": 1440,
+              "height": 1130
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_5.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_6.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_7.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_8.JPG",
+          "width": 4668,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_8-640.webp",
+              "width": 640,
+              "height": 587
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_8-1440.webp",
+              "width": 1440,
+              "height": 1322
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_9.JPG",
+          "width": 5491,
+          "height": 3519,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_9-640.webp",
+              "width": 640,
+              "height": 410
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_9-1440.webp",
+              "width": 1440,
+              "height": 923
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_10.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_10-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_10-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_11.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_11-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_11-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_12.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_12-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_12-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_13.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_13-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_13-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_14.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_14-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_14-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_15.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_15-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_15-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/sanddunes/SD_16.JPG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/sanddunes/SD_16-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/sanddunes/SD_16-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "grottos",
+      "title": "The Grottos",
+      "cover": {
+        "src": "/photos/grottos/GROTTOS_SQUARE.jpg",
+        "width": 3024,
+        "height": 3024,
+        "webp": [
+          {
+            "src": "/photos/optimized/grottos/GROTTOS_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/grottos/GROTTOS_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/grottos/GROTTOS_1.jpg",
+          "width": 3023,
+          "height": 3054,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_1-640.webp",
+              "width": 640,
+              "height": 647
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_1-1440.webp",
+              "width": 1440,
+              "height": 1455
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_2.JPG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_2-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_2-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_3.jpg",
+          "width": 3024,
+          "height": 3190,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_3-640.webp",
+              "width": 640,
+              "height": 675
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_3-1440.webp",
+              "width": 1440,
+              "height": 1519
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_4.jpg",
+          "width": 3024,
+          "height": 2578,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_4-640.webp",
+              "width": 640,
+              "height": 546
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_4-1440.webp",
+              "width": 1440,
+              "height": 1228
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_5.jpg",
+          "width": 3024,
+          "height": 3157,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_5-640.webp",
+              "width": 640,
+              "height": 668
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_5-1440.webp",
+              "width": 1440,
+              "height": 1503
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_6.JPG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_6-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_6-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_7.JPG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_7-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_7-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_8.JPG",
+          "width": 3024,
+          "height": 3232,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_8-640.webp",
+              "width": 640,
+              "height": 684
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_8-1440.webp",
+              "width": 1440,
+              "height": 1539
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_9.JPG",
+          "width": 3024,
+          "height": 3583,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_9-640.webp",
+              "width": 640,
+              "height": 758
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_9-1440.webp",
+              "width": 1440,
+              "height": 1706
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_10.jpg",
+          "width": 3024,
+          "height": 2459,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_10-640.webp",
+              "width": 640,
+              "height": 520
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_10-1440.webp",
+              "width": 1440,
+              "height": 1171
+            }
+          ]
+        },
+        {
+          "src": "/photos/grottos/GROTTOS_11.JPG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_11-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/grottos/GROTTOS_11-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "canyonlands",
+      "title": "Canyonlands",
+      "cover": {
+        "src": "/photos/canyonlands/CL_SQUARE.JPG",
+        "width": 3024,
+        "height": 3024,
+        "webp": [
+          {
+            "src": "/photos/optimized/canyonlands/CL_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/canyonlands/CL_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/canyonlands/CL_1.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_2.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_3.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_3-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_3-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_4.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_5.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_6.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_7.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_8.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_8-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_8-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_9.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_9-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_9-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_10.JPG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_10-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_10-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_11.JPG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_11-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_11-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/canyonlands/CL_12.JPG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/canyonlands/CL_12-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/canyonlands/CL_12-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "badlands",
+      "title": "Badlands",
+      "cover": {
+        "src": "/photos/badlands/BADLANDS_SQUARE3.JPG",
+        "width": 2978,
+        "height": 2839,
+        "webp": [
+          {
+            "src": "/photos/optimized/badlands/BADLANDS_SQUARE3-640.webp",
+            "width": 640,
+            "height": 610
+          },
+          {
+            "src": "/photos/optimized/badlands/BADLANDS_SQUARE3-1440.webp",
+            "width": 1440,
+            "height": 1373
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/badlands/BADLANDS_1.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_1.5.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_1.5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_1.5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_2.JPG",
+          "width": 3378,
+          "height": 2951,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_2-640.webp",
+              "width": 640,
+              "height": 559
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_2-1440.webp",
+              "width": 1440,
+              "height": 1258
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_3.JPG",
+          "width": 3729,
+          "height": 2948,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_3-640.webp",
+              "width": 640,
+              "height": 506
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_3-1440.webp",
+              "width": 1440,
+              "height": 1138
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_4.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_5.JPG",
+          "width": 3356,
+          "height": 2444,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_5-640.webp",
+              "width": 640,
+              "height": 466
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_5-1440.webp",
+              "width": 1440,
+              "height": 1049
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_6.jpg",
+          "width": 7257,
+          "height": 2784,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_6-640.webp",
+              "width": 640,
+              "height": 246
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_6-1440.webp",
+              "width": 1440,
+              "height": 552
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_7.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_8.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_8-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_8-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_8.5.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_8.5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_8.5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_9.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_9-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_9-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_10.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_10-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_10-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_11.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_11-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_11-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_12.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_12-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_12-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_13.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_13-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_13-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_14.JPG",
+          "width": 3870,
+          "height": 2991,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_14-640.webp",
+              "width": 640,
+              "height": 495
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_14-1440.webp",
+              "width": 1440,
+              "height": 1113
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_15.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_15-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_15-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_16.JPG",
+          "width": 10105,
+          "height": 3458,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_16-640.webp",
+              "width": 640,
+              "height": 219
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_16-1440.webp",
+              "width": 1440,
+              "height": 493
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_17.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_17-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_17-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_18.JPG",
+          "width": 3556,
+          "height": 2772,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_18-640.webp",
+              "width": 640,
+              "height": 499
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_18-1440.webp",
+              "width": 1440,
+              "height": 1123
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_19.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_19-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_19-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_20.JPG",
+          "width": 3851,
+          "height": 2341,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_20-640.webp",
+              "width": 640,
+              "height": 389
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_20-1440.webp",
+              "width": 1440,
+              "height": 875
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_21.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_21-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_21-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_22.JPG",
+          "width": 3860,
+          "height": 2895,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_22-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_22-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_23.JPG",
+          "width": 3024,
+          "height": 3155,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_23-640.webp",
+              "width": 640,
+              "height": 668
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_23-1440.webp",
+              "width": 1440,
+              "height": 1502
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_24.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_24-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_24-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_25.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_25-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_25-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/badlands/BADLANDS_26.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_26-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/badlands/BADLANDS_26-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "custer",
+      "title": "Custer State Park",
+      "cover": {
+        "src": "/photos/custer/CUSTER_SQUARE2.JPG",
+        "width": 3024,
+        "height": 3024,
+        "webp": [
+          {
+            "src": "/photos/optimized/custer/CUSTER_SQUARE2-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/custer/CUSTER_SQUARE2-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/custer/CUSTER_1.JPG",
+          "width": 12323,
+          "height": 3852,
+          "webp": [
+            {
+              "src": "/photos/optimized/custer/CUSTER_1-640.webp",
+              "width": 640,
+              "height": 200
+            },
+            {
+              "src": "/photos/optimized/custer/CUSTER_1-1440.webp",
+              "width": 1440,
+              "height": 450
+            }
+          ]
+        },
+        {
+          "src": "/photos/custer/CUSTER_2.JPG",
+          "width": 3024,
+          "height": 2641,
+          "webp": [
+            {
+              "src": "/photos/optimized/custer/CUSTER_2-640.webp",
+              "width": 640,
+              "height": 559
+            },
+            {
+              "src": "/photos/optimized/custer/CUSTER_2-1440.webp",
+              "width": 1440,
+              "height": 1258
+            }
+          ]
+        },
+        {
+          "src": "/photos/custer/CUSTER_3.JPG",
+          "width": 7116,
+          "height": 3912,
+          "webp": [
+            {
+              "src": "/photos/optimized/custer/CUSTER_3-640.webp",
+              "width": 640,
+              "height": 352
+            },
+            {
+              "src": "/photos/optimized/custer/CUSTER_3-1440.webp",
+              "width": 1440,
+              "height": 792
+            }
+          ]
+        },
+        {
+          "src": "/photos/custer/CUSTER_4.JPG",
+          "width": 3581,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/custer/CUSTER_4-640.webp",
+              "width": 640,
+              "height": 540
+            },
+            {
+              "src": "/photos/optimized/custer/CUSTER_4-1440.webp",
+              "width": 1440,
+              "height": 1216
+            }
+          ]
+        },
+        {
+          "src": "/photos/custer/CUSTER_5.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/custer/CUSTER_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/custer/CUSTER_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/custer/CUSTER_6.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/custer/CUSTER_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/custer/CUSTER_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/custer/CUSTER_7.JPG",
+          "width": 14770,
+          "height": 3812,
+          "webp": [
+            {
+              "src": "/photos/optimized/custer/CUSTER_7-640.webp",
+              "width": 640,
+              "height": 165
+            },
+            {
+              "src": "/photos/optimized/custer/CUSTER_7-1440.webp",
+              "width": 1440,
+              "height": 372
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zion",
+      "title": "Zion",
+      "cover": {
+        "src": "/photos/zion/ZION_SQUARE.jpg",
+        "width": 3022,
+        "height": 3022,
+        "webp": [
+          {
+            "src": "/photos/optimized/zion/ZION_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/zion/ZION_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/zion/ZION_1.jpg",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/zion/ZION_1-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/zion/ZION_1-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/zion/ZION_2.jpg",
+          "width": 3024,
+          "height": 3434,
+          "webp": [
+            {
+              "src": "/photos/optimized/zion/ZION_2-640.webp",
+              "width": 640,
+              "height": 727
+            },
+            {
+              "src": "/photos/optimized/zion/ZION_2-1440.webp",
+              "width": 1440,
+              "height": 1635
+            }
+          ]
+        },
+        {
+          "src": "/photos/zion/ZION_3.jpg",
+          "width": 2992,
+          "height": 3298,
+          "webp": [
+            {
+              "src": "/photos/optimized/zion/ZION_3-640.webp",
+              "width": 640,
+              "height": 705
+            },
+            {
+              "src": "/photos/optimized/zion/ZION_3-1440.webp",
+              "width": 1440,
+              "height": 1587
+            }
+          ]
+        },
+        {
+          "src": "/photos/zion/ZION_4.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/zion/ZION_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/zion/ZION_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/zion/ZION_5.jpg",
+          "width": 3024,
+          "height": 3592,
+          "webp": [
+            {
+              "src": "/photos/optimized/zion/ZION_5-640.webp",
+              "width": 640,
+              "height": 760
+            },
+            {
+              "src": "/photos/optimized/zion/ZION_5-1440.webp",
+              "width": 1440,
+              "height": 1710
+            }
+          ]
+        },
+        {
+          "src": "/photos/zion/ZION_6.jpg",
+          "width": 2563,
+          "height": 3942,
+          "webp": [
+            {
+              "src": "/photos/optimized/zion/ZION_6-640.webp",
+              "width": 640,
+              "height": 984
+            },
+            {
+              "src": "/photos/optimized/zion/ZION_6-1440.webp",
+              "width": 1440,
+              "height": 2215
+            }
+          ]
+        },
+        {
+          "src": "/photos/zion/ZION_7.jpg",
+          "width": 3024,
+          "height": 3322,
+          "webp": [
+            {
+              "src": "/photos/optimized/zion/ZION_7-640.webp",
+              "width": 640,
+              "height": 703
+            },
+            {
+              "src": "/photos/optimized/zion/ZION_7-1440.webp",
+              "width": 1440,
+              "height": 1582
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "grandcanyon",
+      "title": "Grand Canyon",
+      "cover": {
+        "src": "/photos/grandcanyon/GC_SQUARE.jpg",
+        "width": 2838,
+        "height": 2837,
+        "webp": [
+          {
+            "src": "/photos/optimized/grandcanyon/GC_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/grandcanyon/GC_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1439
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/grandcanyon/GC_1.jpg",
+          "width": 3807,
+          "height": 2855,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandcanyon/GC_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandcanyon/GC_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandcanyon/GC_2.jpg",
+          "width": 3015,
+          "height": 3342,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandcanyon/GC_2-640.webp",
+              "width": 640,
+              "height": 709
+            },
+            {
+              "src": "/photos/optimized/grandcanyon/GC_2-1440.webp",
+              "width": 1440,
+              "height": 1596
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandcanyon/GC_3.jpg",
+          "width": 4888,
+          "height": 2544,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandcanyon/GC_3-640.webp",
+              "width": 640,
+              "height": 333
+            },
+            {
+              "src": "/photos/optimized/grandcanyon/GC_3-1440.webp",
+              "width": 1440,
+              "height": 749
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandcanyon/GC_4.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandcanyon/GC_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/grandcanyon/GC_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandcanyon/GC_5.jpg",
+          "width": 3114,
+          "height": 2879,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandcanyon/GC_5-640.webp",
+              "width": 640,
+              "height": 592
+            },
+            {
+              "src": "/photos/optimized/grandcanyon/GC_5-1440.webp",
+              "width": 1440,
+              "height": 1331
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandcanyon/GC_6.jpg",
+          "width": 2527,
+          "height": 2456,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandcanyon/GC_6-640.webp",
+              "width": 640,
+              "height": 622
+            },
+            {
+              "src": "/photos/optimized/grandcanyon/GC_6-1440.webp",
+              "width": 1440,
+              "height": 1400
+            }
+          ]
+        },
+        {
+          "src": "/photos/grandcanyon/GC_7.jpg",
+          "width": 3735,
+          "height": 2599,
+          "webp": [
+            {
+              "src": "/photos/optimized/grandcanyon/GC_7-640.webp",
+              "width": 640,
+              "height": 445
+            },
+            {
+              "src": "/photos/optimized/grandcanyon/GC_7-1440.webp",
+              "width": 1440,
+              "height": 1002
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "yosemite",
+      "title": "Yosemite",
+      "cover": {
+        "src": "/photos/yosemite/YSMT_SQUARE.JPG",
+        "width": 3024,
+        "height": 3024,
+        "webp": [
+          {
+            "src": "/photos/optimized/yosemite/YSMT_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/yosemite/YSMT_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/yosemite/YSMT_1.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_2.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_3.jpg",
+          "width": 3023,
+          "height": 2900,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_3-640.webp",
+              "width": 640,
+              "height": 614
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_3-1440.webp",
+              "width": 1440,
+              "height": 1381
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_4.jpg",
+          "width": 3023,
+          "height": 3125,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_4-640.webp",
+              "width": 640,
+              "height": 662
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_4-1440.webp",
+              "width": 1440,
+              "height": 1489
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_5.jpg",
+          "width": 3023,
+          "height": 3064,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_5-640.webp",
+              "width": 640,
+              "height": 649
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_5-1440.webp",
+              "width": 1440,
+              "height": 1460
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_6.jpg",
+          "width": 4032,
+          "height": 2226,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_6-640.webp",
+              "width": 640,
+              "height": 353
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_6-1440.webp",
+              "width": 1440,
+              "height": 795
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_7.jpg",
+          "width": 3024,
+          "height": 3325,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_7-640.webp",
+              "width": 640,
+              "height": 704
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_7-1440.webp",
+              "width": 1440,
+              "height": 1583
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_8.jpg",
+          "width": 3024,
+          "height": 2857,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_8-640.webp",
+              "width": 640,
+              "height": 605
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_8-1440.webp",
+              "width": 1440,
+              "height": 1360
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_9.jpg",
+          "width": 2869,
+          "height": 2752,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_9-640.webp",
+              "width": 640,
+              "height": 614
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_9-1440.webp",
+              "width": 1440,
+              "height": 1381
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_10.jpg",
+          "width": 3415,
+          "height": 2604,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_10-640.webp",
+              "width": 640,
+              "height": 488
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_10-1440.webp",
+              "width": 1440,
+              "height": 1098
+            }
+          ]
+        },
+        {
+          "src": "/photos/yosemite/YSMT_11.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/yosemite/YSMT_11-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/yosemite/YSMT_11-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "capitolreef",
+      "title": "Capitol Reef",
+      "cover": {
+        "src": "/photos/capitolreef/CR_SQUARE.jpg",
+        "width": 2642,
+        "height": 2642,
+        "webp": [
+          {
+            "src": "/photos/optimized/capitolreef/CR_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/capitolreef/CR_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/capitolreef/CR_1.jpg",
+          "width": 3181,
+          "height": 2642,
+          "webp": [
+            {
+              "src": "/photos/optimized/capitolreef/CR_1-640.webp",
+              "width": 640,
+              "height": 532
+            },
+            {
+              "src": "/photos/optimized/capitolreef/CR_1-1440.webp",
+              "width": 1440,
+              "height": 1196
+            }
+          ]
+        },
+        {
+          "src": "/photos/capitolreef/CR_2.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/capitolreef/CR_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/capitolreef/CR_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/capitolreef/CR_3.jpg",
+          "width": 4016,
+          "height": 2751,
+          "webp": [
+            {
+              "src": "/photos/optimized/capitolreef/CR_3-640.webp",
+              "width": 640,
+              "height": 438
+            },
+            {
+              "src": "/photos/optimized/capitolreef/CR_3-1440.webp",
+              "width": 1440,
+              "height": 986
+            }
+          ]
+        },
+        {
+          "src": "/photos/capitolreef/CR_4.jpg",
+          "width": 3879,
+          "height": 2782,
+          "webp": [
+            {
+              "src": "/photos/optimized/capitolreef/CR_4-640.webp",
+              "width": 640,
+              "height": 459
+            },
+            {
+              "src": "/photos/optimized/capitolreef/CR_4-1440.webp",
+              "width": 1440,
+              "height": 1033
+            }
+          ]
+        },
+        {
+          "src": "/photos/capitolreef/CR_5.jpg",
+          "width": 4032,
+          "height": 2621,
+          "webp": [
+            {
+              "src": "/photos/optimized/capitolreef/CR_5-640.webp",
+              "width": 640,
+              "height": 416
+            },
+            {
+              "src": "/photos/optimized/capitolreef/CR_5-1440.webp",
+              "width": 1440,
+              "height": 936
+            }
+          ]
+        },
+        {
+          "src": "/photos/capitolreef/CR_6.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/capitolreef/CR_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/capitolreef/CR_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/capitolreef/CR_7.jpg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/capitolreef/CR_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/capitolreef/CR_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "royalgorge",
+      "title": "Royal Gorge",
+      "cover": {
+        "src": "/photos/royalgorge/RG_SQUARE.JPG",
+        "width": 2619,
+        "height": 2619,
+        "webp": [
+          {
+            "src": "/photos/optimized/royalgorge/RG_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/royalgorge/RG_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/royalgorge/RG_1.jpg",
+          "width": 3178,
+          "height": 2619,
+          "webp": [
+            {
+              "src": "/photos/optimized/royalgorge/RG_1-640.webp",
+              "width": 640,
+              "height": 527
+            },
+            {
+              "src": "/photos/optimized/royalgorge/RG_1-1440.webp",
+              "width": 1440,
+              "height": 1187
+            }
+          ]
+        },
+        {
+          "src": "/photos/royalgorge/RG_2.JPG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/royalgorge/RG_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/royalgorge/RG_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/royalgorge/RG_3.jpg",
+          "width": 3023,
+          "height": 3778,
+          "webp": [
+            {
+              "src": "/photos/optimized/royalgorge/RG_3-640.webp",
+              "width": 640,
+              "height": 800
+            },
+            {
+              "src": "/photos/optimized/royalgorge/RG_3-1440.webp",
+              "width": 1440,
+              "height": 1800
+            }
+          ]
+        },
+        {
+          "src": "/photos/royalgorge/RG_4.jpg",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/royalgorge/RG_4-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/royalgorge/RG_4-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/royalgorge/RG_5.jpg",
+          "width": 3023,
+          "height": 3352,
+          "webp": [
+            {
+              "src": "/photos/optimized/royalgorge/RG_5-640.webp",
+              "width": 640,
+              "height": 710
+            },
+            {
+              "src": "/photos/optimized/royalgorge/RG_5-1440.webp",
+              "width": 1440,
+              "height": 1597
+            }
+          ]
+        },
+        {
+          "src": "/photos/royalgorge/RG_6.jpg",
+          "width": 3567,
+          "height": 2684,
+          "webp": [
+            {
+              "src": "/photos/optimized/royalgorge/RG_6-640.webp",
+              "width": 640,
+              "height": 482
+            },
+            {
+              "src": "/photos/optimized/royalgorge/RG_6-1440.webp",
+              "width": 1440,
+              "height": 1084
+            }
+          ]
+        },
+        {
+          "src": "/photos/royalgorge/RG_7.jpg",
+          "width": 3768,
+          "height": 2767,
+          "webp": [
+            {
+              "src": "/photos/optimized/royalgorge/RG_7-640.webp",
+              "width": 640,
+              "height": 470
+            },
+            {
+              "src": "/photos/optimized/royalgorge/RG_7-1440.webp",
+              "width": 1440,
+              "height": 1057
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "blackcanyon",
+      "title": "Black Canyon of the Gunnison",
+      "cover": {
+        "src": "/photos/blackcanyon/BC_SQUARE.JPEG",
+        "width": 4258,
+        "height": 4284,
+        "webp": [
+          {
+            "src": "/photos/optimized/blackcanyon/BC_SQUARE-640.webp",
+            "width": 640,
+            "height": 644
+          },
+          {
+            "src": "/photos/optimized/blackcanyon/BC_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1449
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/blackcanyon/BC_1.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_2.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_3.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_3-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_3-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_4.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_5.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_6.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_7.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_8.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_8-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_8-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_9.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_9-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_9-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_10.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_10-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_10-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_11.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_11-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_11-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/blackcanyon/BC_12.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/blackcanyon/BC_12-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/blackcanyon/BC_12-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bluelakes",
+      "title": "Blue Lakes",
+      "cover": {
+        "src": "/photos/bluelakes/BL_SQUARE.JPEG",
+        "width": 4087,
+        "height": 4087,
+        "webp": [
+          {
+            "src": "/photos/optimized/bluelakes/BL_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/bluelakes/BL_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/bluelakes/BL_1.JPEG",
+          "width": 5712,
+          "height": 4087,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_1-640.webp",
+              "width": 640,
+              "height": 458
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_1-1440.webp",
+              "width": 1440,
+              "height": 1030
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_2.JPEG",
+          "width": 5712,
+          "height": 4054,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_2-640.webp",
+              "width": 640,
+              "height": 454
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_2-1440.webp",
+              "width": 1440,
+              "height": 1022
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_3.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_3-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_3-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_4.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_5.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_6.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_7.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_8.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_8-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_8-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_9.JPEG",
+          "width": 4284,
+          "height": 4501,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_9-640.webp",
+              "width": 640,
+              "height": 672
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_9-1440.webp",
+              "width": 1440,
+              "height": 1513
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_10.JPEG",
+          "width": 5712,
+          "height": 3772,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_10-640.webp",
+              "width": 640,
+              "height": 423
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_10-1440.webp",
+              "width": 1440,
+              "height": 951
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluelakes/BL_11.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluelakes/BL_11-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluelakes/BL_11-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bluesky",
+      "title": "Mount Blue Sky",
+      "cover": {
+        "src": "/photos/bluesky/BS_SQUARE.JPEG",
+        "width": 4284,
+        "height": 4284,
+        "webp": [
+          {
+            "src": "/photos/optimized/bluesky/BS_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/bluesky/BS_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/bluesky/BS_1.JPEG",
+          "width": 9398,
+          "height": 3838,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_1-640.webp",
+              "width": 640,
+              "height": 261
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_1-1440.webp",
+              "width": 1440,
+              "height": 588
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_2.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_3.JPEG",
+          "width": 5712,
+          "height": 4080,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_3-640.webp",
+              "width": 640,
+              "height": 457
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_3-1440.webp",
+              "width": 1440,
+              "height": 1029
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_4.JPEG",
+          "width": 953,
+          "height": 1071,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_4-640.webp",
+              "width": 640,
+              "height": 719
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_4-1440.webp",
+              "width": 953,
+              "height": 1071
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_5.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_5.5.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_5.5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_5.5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_6.JPEG",
+          "width": 5712,
+          "height": 3779,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_6-640.webp",
+              "width": 640,
+              "height": 423
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_6-1440.webp",
+              "width": 1440,
+              "height": 953
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_7.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_8.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_8-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_8-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_9.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_9-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_9-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_10.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_10-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_10-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_11.JPEG",
+          "width": 3024,
+          "height": 3041,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_11-640.webp",
+              "width": 640,
+              "height": 644
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_11-1440.webp",
+              "width": 1440,
+              "height": 1448
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_12.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_12-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_12-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_13.JPEG",
+          "width": 5712,
+          "height": 3741,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_13-640.webp",
+              "width": 640,
+              "height": 419
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_13-1440.webp",
+              "width": 1440,
+              "height": 943
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_14.JPEG",
+          "width": 5712,
+          "height": 4095,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_14-640.webp",
+              "width": 640,
+              "height": 459
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_14-1440.webp",
+              "width": 1440,
+              "height": 1032
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_15.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_15-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_15-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_16.jpeg",
+          "width": 5712,
+          "height": 4023,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_16-640.webp",
+              "width": 640,
+              "height": 451
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_16-1440.webp",
+              "width": 1440,
+              "height": 1014
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_17.JPEG",
+          "width": 5712,
+          "height": 4184,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_17-640.webp",
+              "width": 640,
+              "height": 469
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_17-1440.webp",
+              "width": 1440,
+              "height": 1055
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_18.JPEG",
+          "width": 5712,
+          "height": 4020,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_18-640.webp",
+              "width": 640,
+              "height": 450
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_18-1440.webp",
+              "width": 1440,
+              "height": 1013
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_19.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_19-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_19-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_20.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_20-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_20-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_21.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_21-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_21-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_22.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_22-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_22-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/bluesky/BS_23.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/bluesky/BS_23-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/bluesky/BS_23-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "maroonbells",
+      "title": "Maroon Bells",
+      "cover": {
+        "src": "/photos/maroonbells/MB_SQUARE.JPEG",
+        "width": 3412,
+        "height": 3412,
+        "webp": [
+          {
+            "src": "/photos/optimized/maroonbells/MB_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/maroonbells/MB_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/maroonbells/MB_1.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/maroonbells/MB_1-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/maroonbells/MB_1-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/maroonbells/MB_2.JPEG",
+          "width": 4284,
+          "height": 3770,
+          "webp": [
+            {
+              "src": "/photos/optimized/maroonbells/MB_2-640.webp",
+              "width": 640,
+              "height": 563
+            },
+            {
+              "src": "/photos/optimized/maroonbells/MB_2-1440.webp",
+              "width": 1440,
+              "height": 1267
+            }
+          ]
+        },
+        {
+          "src": "/photos/maroonbells/MB_3.JPEG",
+          "width": 5712,
+          "height": 3627,
+          "webp": [
+            {
+              "src": "/photos/optimized/maroonbells/MB_3-640.webp",
+              "width": 640,
+              "height": 406
+            },
+            {
+              "src": "/photos/optimized/maroonbells/MB_3-1440.webp",
+              "width": 1440,
+              "height": 914
+            }
+          ]
+        },
+        {
+          "src": "/photos/maroonbells/MB_4.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/maroonbells/MB_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/maroonbells/MB_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/maroonbells/MB_5.JPEG",
+          "width": 4284,
+          "height": 4227,
+          "webp": [
+            {
+              "src": "/photos/optimized/maroonbells/MB_5-640.webp",
+              "width": 640,
+              "height": 631
+            },
+            {
+              "src": "/photos/optimized/maroonbells/MB_5-1440.webp",
+              "width": 1440,
+              "height": 1421
+            }
+          ]
+        },
+        {
+          "src": "/photos/maroonbells/MB_6.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/maroonbells/MB_6-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/maroonbells/MB_6-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/maroonbells/MB_7.JPEG",
+          "width": 4284,
+          "height": 4946,
+          "webp": [
+            {
+              "src": "/photos/optimized/maroonbells/MB_7-640.webp",
+              "width": 640,
+              "height": 739
+            },
+            {
+              "src": "/photos/optimized/maroonbells/MB_7-1440.webp",
+              "width": 1440,
+              "height": 1663
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "misccolorado",
+      "title": "Colorado Collection",
+      "cover": {
+        "src": "/photos/misccolorado/MC_SQUARE.JPEG",
+        "width": 3634,
+        "height": 3634,
+        "webp": [
+          {
+            "src": "/photos/optimized/misccolorado/MC_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/misccolorado/MC_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/misccolorado/MC_1.JPEG",
+          "width": 5069,
+          "height": 3634,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_1-640.webp",
+              "width": 640,
+              "height": 459
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_1-1440.webp",
+              "width": 1440,
+              "height": 1032
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_2.JPEG",
+          "width": 3023,
+          "height": 3001,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_2-640.webp",
+              "width": 640,
+              "height": 635
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_2-1440.webp",
+              "width": 1440,
+              "height": 1430
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_3.jpeg",
+          "width": 2305,
+          "height": 2870,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_3-640.webp",
+              "width": 640,
+              "height": 797
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_3-1440.webp",
+              "width": 1440,
+              "height": 1793
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_4.JPEG",
+          "width": 4032,
+          "height": 2556,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_4-640.webp",
+              "width": 640,
+              "height": 406
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_4-1440.webp",
+              "width": 1440,
+              "height": 913
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_4.5.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_4.5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_4.5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_5.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_5.5.jpeg",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_5.5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_5.5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_6.JPEG",
+          "width": 3024,
+          "height": 3604,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_6-640.webp",
+              "width": 640,
+              "height": 763
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_6-1440.webp",
+              "width": 1440,
+              "height": 1716
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_6.5.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_6.5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_6.5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_7.JPEG",
+          "width": 5197,
+          "height": 3127,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_7-640.webp",
+              "width": 640,
+              "height": 385
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_7-1440.webp",
+              "width": 1440,
+              "height": 866
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_8.JPEG",
+          "width": 3024,
+          "height": 4032,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_8-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_8-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_8.5.JPEG",
+          "width": 3931,
+          "height": 2648,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_8.5-640.webp",
+              "width": 640,
+              "height": 431
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_8.5-1440.webp",
+              "width": 1440,
+              "height": 970
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_9.JPEG",
+          "width": 4032,
+          "height": 2895,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_9-640.webp",
+              "width": 640,
+              "height": 460
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_9-1440.webp",
+              "width": 1440,
+              "height": 1034
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_10.JPEG",
+          "width": 5712,
+          "height": 3895,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_10-640.webp",
+              "width": 640,
+              "height": 436
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_10-1440.webp",
+              "width": 1440,
+              "height": 982
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_11.JPEG",
+          "width": 3024,
+          "height": 3483,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_11-640.webp",
+              "width": 640,
+              "height": 737
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_11-1440.webp",
+              "width": 1440,
+              "height": 1659
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_11.5.JPEG",
+          "width": 3020,
+          "height": 1977,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_11.5-640.webp",
+              "width": 640,
+              "height": 419
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_11.5-1440.webp",
+              "width": 1440,
+              "height": 943
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_12.JPEG",
+          "width": 4284,
+          "height": 5712,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_12-640.webp",
+              "width": 640,
+              "height": 853
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_12-1440.webp",
+              "width": 1440,
+              "height": 1920
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_13.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_13-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_13-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_14.JPEG",
+          "width": 4277,
+          "height": 5697,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_14-640.webp",
+              "width": 640,
+              "height": 852
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_14-1440.webp",
+              "width": 1440,
+              "height": 1918
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_15.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_15-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_15-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_16.JPEG",
+          "width": 2785,
+          "height": 3003,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_16-640.webp",
+              "width": 640,
+              "height": 690
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_16-1440.webp",
+              "width": 1440,
+              "height": 1553
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_17.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_17-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_17-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/misccolorado/MC_18.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/misccolorado/MC_18-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/misccolorado/MC_18-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "stmarysglacier",
+      "title": "St. Mary's Glacier",
+      "cover": {
+        "src": "/photos/stmarysglacier/SMG_SQUARE.JPEG",
+        "width": 3939,
+        "height": 3939,
+        "webp": [
+          {
+            "src": "/photos/optimized/stmarysglacier/SMG_SQUARE-640.webp",
+            "width": 640,
+            "height": 640
+          },
+          {
+            "src": "/photos/optimized/stmarysglacier/SMG_SQUARE-1440.webp",
+            "width": 1440,
+            "height": 1440
+          }
+        ]
+      },
+      "photos": [
+        {
+          "src": "/photos/stmarysglacier/SMG_1.JPEG",
+          "width": 5579,
+          "height": 3939,
+          "webp": [
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_1-640.webp",
+              "width": 640,
+              "height": 452
+            },
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_1-1440.webp",
+              "width": 1440,
+              "height": 1017
+            }
+          ]
+        },
+        {
+          "src": "/photos/stmarysglacier/SMG_2.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_2-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_2-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/stmarysglacier/SMG_3.JPEG",
+          "width": 3532,
+          "height": 2934,
+          "webp": [
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_3-640.webp",
+              "width": 640,
+              "height": 532
+            },
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_3-1440.webp",
+              "width": 1440,
+              "height": 1196
+            }
+          ]
+        },
+        {
+          "src": "/photos/stmarysglacier/SMG_4.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_4-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_4-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/stmarysglacier/SMG_5.JPEG",
+          "width": 4032,
+          "height": 3024,
+          "webp": [
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_5-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_5-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "src": "/photos/stmarysglacier/SMG_6.JPEG",
+          "width": 3932,
+          "height": 2987,
+          "webp": [
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_6-640.webp",
+              "width": 640,
+              "height": 486
+            },
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_6-1440.webp",
+              "width": 1440,
+              "height": 1094
+            }
+          ]
+        },
+        {
+          "src": "/photos/stmarysglacier/SMG_7.JPEG",
+          "width": 5712,
+          "height": 4284,
+          "webp": [
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_7-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "/photos/optimized/stmarysglacier/SMG_7-1440.webp",
+              "width": 1440,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

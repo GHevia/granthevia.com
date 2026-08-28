@@ -1,41 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Rocky Mountain</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Rocky Mountain by Grant Hevia.">
+  <title>Rocky Mountain Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Rocky Mountain</h1>
-        <div class="gallery">
-            <img src="rockymountain/RM1.jpg" alt="Photo 1 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM2.jpg" alt="Photo 2 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM3.jpg" alt="Photo 3 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM4.jpg" alt="Photo 4 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM5.jpg" alt="Photo 5 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM6.jpg" alt="Photo 6 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM7.jpg" alt="Photo 7 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM8.jpg" alt="Photo 7 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM9.jpg" alt="Photo 7 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM10.jpg" alt="Photo 7 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM11.jpg" alt="Photo 7 of Rocky Mountain" class="gallery-item">
-            <img src="rockymountain/RM12.jpg" alt="Photo 7 of Rocky Mountain" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Rocky Mountain</h1>
+      <p>12 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM1-1440.webp" data-original-src="/photos/rockymountain/RM1.jpg" data-index="0" aria-label="Open Rocky Mountain photograph 1 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM1-640.webp 640w, /photos/optimized/rockymountain/RM1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM1.jpg" width="3024" height="3024" alt="Rocky Mountain photograph 1 of 12" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM2-1440.webp" data-original-src="/photos/rockymountain/RM2.jpg" data-index="1" aria-label="Open Rocky Mountain photograph 2 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM2-640.webp 640w, /photos/optimized/rockymountain/RM2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM2.jpg" width="5178" height="4284" alt="Rocky Mountain photograph 2 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM3-1440.webp" data-original-src="/photos/rockymountain/RM3.jpg" data-index="2" aria-label="Open Rocky Mountain photograph 3 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM3-640.webp 640w, /photos/optimized/rockymountain/RM3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM3.jpg" width="5712" height="4106" alt="Rocky Mountain photograph 3 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM4-1440.webp" data-original-src="/photos/rockymountain/RM4.jpg" data-index="3" aria-label="Open Rocky Mountain photograph 4 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM4-640.webp 640w, /photos/optimized/rockymountain/RM4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM4.jpg" width="4032" height="3024" alt="Rocky Mountain photograph 4 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM5-1440.webp" data-original-src="/photos/rockymountain/RM5.jpg" data-index="4" aria-label="Open Rocky Mountain photograph 5 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM5-640.webp 640w, /photos/optimized/rockymountain/RM5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM5.jpg" width="5712" height="4161" alt="Rocky Mountain photograph 5 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM6-1440.webp" data-original-src="/photos/rockymountain/RM6.jpg" data-index="5" aria-label="Open Rocky Mountain photograph 6 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM6-640.webp 640w, /photos/optimized/rockymountain/RM6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM6.jpg" width="4032" height="3024" alt="Rocky Mountain photograph 6 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM7-1440.webp" data-original-src="/photos/rockymountain/RM7.jpg" data-index="6" aria-label="Open Rocky Mountain photograph 7 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM7-640.webp 640w, /photos/optimized/rockymountain/RM7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM7.jpg" width="5712" height="4284" alt="Rocky Mountain photograph 7 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM8-1440.webp" data-original-src="/photos/rockymountain/RM8.jpg" data-index="7" aria-label="Open Rocky Mountain photograph 8 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM8-640.webp 640w, /photos/optimized/rockymountain/RM8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM8.jpg" width="3258" height="2690" alt="Rocky Mountain photograph 8 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM9-1440.webp" data-original-src="/photos/rockymountain/RM9.jpg" data-index="8" aria-label="Open Rocky Mountain photograph 9 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM9-640.webp 640w, /photos/optimized/rockymountain/RM9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM9.jpg" width="5712" height="4284" alt="Rocky Mountain photograph 9 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM10-1440.webp" data-original-src="/photos/rockymountain/RM10.jpg" data-index="9" aria-label="Open Rocky Mountain photograph 10 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM10-640.webp 640w, /photos/optimized/rockymountain/RM10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM10.jpg" width="5712" height="4284" alt="Rocky Mountain photograph 10 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM11-1440.webp" data-original-src="/photos/rockymountain/RM11.jpg" data-index="10" aria-label="Open Rocky Mountain photograph 11 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM11-640.webp 640w, /photos/optimized/rockymountain/RM11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM11.jpg" width="5712" height="4284" alt="Rocky Mountain photograph 11 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/rockymountain/RM12-1440.webp" data-original-src="/photos/rockymountain/RM12.jpg" data-index="11" aria-label="Open Rocky Mountain photograph 12 of 12">
+            <picture><source type="image/webp" srcset="/photos/optimized/rockymountain/RM12-640.webp 640w, /photos/optimized/rockymountain/RM12-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/rockymountain/RM12.jpg" width="5712" height="4284" alt="Rocky Mountain photograph 12 of 12" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 12</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

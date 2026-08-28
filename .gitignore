@@ -1,2 +1,4 @@
 desktop.ini
 games/rockbreakerscissors/my-app/
+__pycache__/
+*.py[cod]

@@ -1,56 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Badlands</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Badlands by Grant Hevia.">
+  <title>Badlands Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Badlands</h1>
-        <div class="gallery">
-            <img src="badlands/BADLANDS_1.JPG" alt="Photo 1 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_1.5.JPG" alt="Photo 2 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_2.JPG" alt="Photo 3 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_3.JPG" alt="Photo 4 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_4.JPG" alt="Photo 5 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_5.JPG" alt="Photo 6 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_6.jpg" alt="Photo 7 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_7.JPG" alt="Photo 8 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_8.JPG" alt="Photo 9 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_9.JPG" alt="Photo 10 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_10.JPG" alt="Photo 11 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_11.JPG" alt="Photo 12 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_12.JPG" alt="Photo 13 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_13.JPG" alt="Photo 14 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_14.JPG" alt="Photo 15 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_15.JPG" alt="Photo 16 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_16.JPG" alt="Photo 17 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_17.JPG" alt="Photo 18 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_18.JPG" alt="Photo 19 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_19.JPG" alt="Photo 20 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_20.JPG" alt="Photo 21 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_21.JPG" alt="Photo 22 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_22.JPG" alt="Photo 23 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_23.JPG" alt="Photo 24 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_24.JPG" alt="Photo 25 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_25.JPG" alt="Photo 26 of Badlands" class="gallery-item">
-            <img src="badlands/BADLANDS_26.JPG" alt="Photo 27 of Badlands" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Badlands</h1>
+      <p>28 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_1-1440.webp" data-original-src="/photos/badlands/BADLANDS_1.JPG" data-index="0" aria-label="Open Badlands photograph 1 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_1-640.webp 640w, /photos/optimized/badlands/BADLANDS_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_1.JPG" width="4032" height="3024" alt="Badlands photograph 1 of 28" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_1.5-1440.webp" data-original-src="/photos/badlands/BADLANDS_1.5.JPG" data-index="1" aria-label="Open Badlands photograph 2 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_1.5-640.webp 640w, /photos/optimized/badlands/BADLANDS_1.5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_1.5.JPG" width="4032" height="3024" alt="Badlands photograph 2 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_2-1440.webp" data-original-src="/photos/badlands/BADLANDS_2.JPG" data-index="2" aria-label="Open Badlands photograph 3 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_2-640.webp 640w, /photos/optimized/badlands/BADLANDS_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_2.JPG" width="3378" height="2951" alt="Badlands photograph 3 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_3-1440.webp" data-original-src="/photos/badlands/BADLANDS_3.JPG" data-index="3" aria-label="Open Badlands photograph 4 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_3-640.webp 640w, /photos/optimized/badlands/BADLANDS_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_3.JPG" width="3729" height="2948" alt="Badlands photograph 4 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_4-1440.webp" data-original-src="/photos/badlands/BADLANDS_4.JPG" data-index="4" aria-label="Open Badlands photograph 5 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_4-640.webp 640w, /photos/optimized/badlands/BADLANDS_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_4.JPG" width="4032" height="3024" alt="Badlands photograph 5 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_5-1440.webp" data-original-src="/photos/badlands/BADLANDS_5.JPG" data-index="5" aria-label="Open Badlands photograph 6 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_5-640.webp 640w, /photos/optimized/badlands/BADLANDS_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_5.JPG" width="3356" height="2444" alt="Badlands photograph 6 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_6-1440.webp" data-original-src="/photos/badlands/BADLANDS_6.jpg" data-index="6" aria-label="Open Badlands photograph 7 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_6-640.webp 640w, /photos/optimized/badlands/BADLANDS_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_6.jpg" width="7257" height="2784" alt="Badlands photograph 7 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_7-1440.webp" data-original-src="/photos/badlands/BADLANDS_7.JPG" data-index="7" aria-label="Open Badlands photograph 8 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_7-640.webp 640w, /photos/optimized/badlands/BADLANDS_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_7.JPG" width="4032" height="3024" alt="Badlands photograph 8 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_8-1440.webp" data-original-src="/photos/badlands/BADLANDS_8.JPG" data-index="8" aria-label="Open Badlands photograph 9 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_8-640.webp 640w, /photos/optimized/badlands/BADLANDS_8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_8.JPG" width="4032" height="3024" alt="Badlands photograph 9 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_8.5-1440.webp" data-original-src="/photos/badlands/BADLANDS_8.5.JPG" data-index="9" aria-label="Open Badlands photograph 10 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_8.5-640.webp 640w, /photos/optimized/badlands/BADLANDS_8.5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_8.5.JPG" width="4032" height="3024" alt="Badlands photograph 10 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_9-1440.webp" data-original-src="/photos/badlands/BADLANDS_9.JPG" data-index="10" aria-label="Open Badlands photograph 11 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_9-640.webp 640w, /photos/optimized/badlands/BADLANDS_9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_9.JPG" width="4032" height="3024" alt="Badlands photograph 11 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_10-1440.webp" data-original-src="/photos/badlands/BADLANDS_10.JPG" data-index="11" aria-label="Open Badlands photograph 12 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_10-640.webp 640w, /photos/optimized/badlands/BADLANDS_10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_10.JPG" width="4032" height="3024" alt="Badlands photograph 12 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 12</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_11-1440.webp" data-original-src="/photos/badlands/BADLANDS_11.JPG" data-index="12" aria-label="Open Badlands photograph 13 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_11-640.webp 640w, /photos/optimized/badlands/BADLANDS_11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_11.JPG" width="4032" height="3024" alt="Badlands photograph 13 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 13</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_12-1440.webp" data-original-src="/photos/badlands/BADLANDS_12.JPG" data-index="13" aria-label="Open Badlands photograph 14 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_12-640.webp 640w, /photos/optimized/badlands/BADLANDS_12-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_12.JPG" width="4032" height="3024" alt="Badlands photograph 14 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 14</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_13-1440.webp" data-original-src="/photos/badlands/BADLANDS_13.JPG" data-index="14" aria-label="Open Badlands photograph 15 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_13-640.webp 640w, /photos/optimized/badlands/BADLANDS_13-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_13.JPG" width="4032" height="3024" alt="Badlands photograph 15 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 15</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_14-1440.webp" data-original-src="/photos/badlands/BADLANDS_14.JPG" data-index="15" aria-label="Open Badlands photograph 16 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_14-640.webp 640w, /photos/optimized/badlands/BADLANDS_14-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_14.JPG" width="3870" height="2991" alt="Badlands photograph 16 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 16</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_15-1440.webp" data-original-src="/photos/badlands/BADLANDS_15.JPG" data-index="16" aria-label="Open Badlands photograph 17 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_15-640.webp 640w, /photos/optimized/badlands/BADLANDS_15-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_15.JPG" width="4032" height="3024" alt="Badlands photograph 17 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 17</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_16-1440.webp" data-original-src="/photos/badlands/BADLANDS_16.JPG" data-index="17" aria-label="Open Badlands photograph 18 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_16-640.webp 640w, /photos/optimized/badlands/BADLANDS_16-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_16.JPG" width="10105" height="3458" alt="Badlands photograph 18 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 18</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_17-1440.webp" data-original-src="/photos/badlands/BADLANDS_17.JPG" data-index="18" aria-label="Open Badlands photograph 19 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_17-640.webp 640w, /photos/optimized/badlands/BADLANDS_17-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_17.JPG" width="4032" height="3024" alt="Badlands photograph 19 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 19</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_18-1440.webp" data-original-src="/photos/badlands/BADLANDS_18.JPG" data-index="19" aria-label="Open Badlands photograph 20 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_18-640.webp 640w, /photos/optimized/badlands/BADLANDS_18-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_18.JPG" width="3556" height="2772" alt="Badlands photograph 20 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 20</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_19-1440.webp" data-original-src="/photos/badlands/BADLANDS_19.JPG" data-index="20" aria-label="Open Badlands photograph 21 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_19-640.webp 640w, /photos/optimized/badlands/BADLANDS_19-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_19.JPG" width="4032" height="3024" alt="Badlands photograph 21 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 21</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_20-1440.webp" data-original-src="/photos/badlands/BADLANDS_20.JPG" data-index="21" aria-label="Open Badlands photograph 22 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_20-640.webp 640w, /photos/optimized/badlands/BADLANDS_20-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_20.JPG" width="3851" height="2341" alt="Badlands photograph 22 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 22</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_21-1440.webp" data-original-src="/photos/badlands/BADLANDS_21.JPG" data-index="22" aria-label="Open Badlands photograph 23 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_21-640.webp 640w, /photos/optimized/badlands/BADLANDS_21-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_21.JPG" width="4032" height="3024" alt="Badlands photograph 23 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 23</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_22-1440.webp" data-original-src="/photos/badlands/BADLANDS_22.JPG" data-index="23" aria-label="Open Badlands photograph 24 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_22-640.webp 640w, /photos/optimized/badlands/BADLANDS_22-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_22.JPG" width="3860" height="2895" alt="Badlands photograph 24 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 24</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_23-1440.webp" data-original-src="/photos/badlands/BADLANDS_23.JPG" data-index="24" aria-label="Open Badlands photograph 25 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_23-640.webp 640w, /photos/optimized/badlands/BADLANDS_23-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_23.JPG" width="3024" height="3155" alt="Badlands photograph 25 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 25</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_24-1440.webp" data-original-src="/photos/badlands/BADLANDS_24.JPG" data-index="25" aria-label="Open Badlands photograph 26 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_24-640.webp 640w, /photos/optimized/badlands/BADLANDS_24-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_24.JPG" width="4032" height="3024" alt="Badlands photograph 26 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 26</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_25-1440.webp" data-original-src="/photos/badlands/BADLANDS_25.JPG" data-index="26" aria-label="Open Badlands photograph 27 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_25-640.webp 640w, /photos/optimized/badlands/BADLANDS_25-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_25.JPG" width="4032" height="3024" alt="Badlands photograph 27 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 27</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/badlands/BADLANDS_26-1440.webp" data-original-src="/photos/badlands/BADLANDS_26.JPG" data-index="27" aria-label="Open Badlands photograph 28 of 28">
+            <picture><source type="image/webp" srcset="/photos/optimized/badlands/BADLANDS_26-640.webp 640w, /photos/optimized/badlands/BADLANDS_26-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/badlands/BADLANDS_26.JPG" width="4032" height="3024" alt="Badlands photograph 28 of 28" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 28</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

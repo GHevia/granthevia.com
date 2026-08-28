@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Breaker Scissors</title>
-    <!-- Use the global stylesheet -->
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play Rock Breaker Scissors, an arcade-style browser game by Grant Hevia.">
+  <title>Rock Breaker Scissors | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
 </head>
-<body class="game-layout"></body>
-    <div id="header-placeholder"></div>
-    <!-- Game container -->
-    <div id="game-container">
-        <h1>Rock Breaker Scissors</h1>
-        <div id="game-section">
-            <canvas id="gameCanvas"></canvas>
-        </div>
-
-        <!-- Buttons for fast forward and restart -->
-        <div id="controls">
-            <button id="fastForwardBtn" style="display: none;">Fast Forward</button>
-            <button id="restartBtn">Restart</button>
-            <button id="restartLevelBtn">Restart Level</button>
-            <button id="nextLevelBtn">Next Level</button>
-        </div>
-
-        <p>Shoot the rocks to eliminate all the paper and scissors!</p>
+<body class="game-layout">
+  <div id="header-placeholder"></div>
+  <main id="game-container">
+    <h1>Rock Breaker Scissors</h1>
+    <div id="game-section">
+      <canvas id="gameCanvas" aria-label="Rock Breaker Scissors game board"></canvas>
     </div>
-
-    <script src="game.js"></script>
+    <div id="controls" aria-label="Game controls">
+      <button id="fastForwardBtn" type="button" style="display: none;">Fast Forward</button>
+      <button id="restartBtn" type="button">Restart</button>
+      <button id="restartLevelBtn" type="button">Restart Level</button>
+      <button id="nextLevelBtn" type="button">Next Level</button>
+    </div>
+    <p>Shoot the rocks to eliminate all the paper and scissors.</p>
+  </main>
+  <footer></footer>
+  <script src="./game.js"></script>
 </body>
 </html>

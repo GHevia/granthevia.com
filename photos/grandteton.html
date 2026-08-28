@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Grand Teton</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Grand Teton by Grant Hevia.">
+  <title>Grand Teton Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Grand Teton</h1>
-        <div class="gallery">
-            <img src="grandteton/GT_1.jpg" alt="Photo 1 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_2.jpg" alt="Photo 2 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_3.jpg" alt="Photo 3 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_4.jpg" alt="Photo 4 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_5.jpg" alt="Photo 5 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_6.jpg" alt="Photo 6 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_7.jpg" alt="Photo 7 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_8.jpg" alt="Photo 8 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_9.jpg" alt="Photo 9 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_10.jpg" alt="Photo 10 of Grand Teton" class="gallery-item">
-            <img src="grandteton/GT_11.jpg" alt="Photo 11 of Grand Teton" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Grand Teton</h1>
+      <p>11 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_1-1440.webp" data-original-src="/photos/grandteton/GT_1.jpg" data-index="0" aria-label="Open Grand Teton photograph 1 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_1-640.webp 640w, /photos/optimized/grandteton/GT_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_1.jpg" width="4032" height="3024" alt="Grand Teton photograph 1 of 11" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_2-1440.webp" data-original-src="/photos/grandteton/GT_2.jpg" data-index="1" aria-label="Open Grand Teton photograph 2 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_2-640.webp 640w, /photos/optimized/grandteton/GT_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_2.jpg" width="4032" height="3024" alt="Grand Teton photograph 2 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_3-1440.webp" data-original-src="/photos/grandteton/GT_3.jpg" data-index="2" aria-label="Open Grand Teton photograph 3 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_3-640.webp 640w, /photos/optimized/grandteton/GT_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_3.jpg" width="5712" height="1202" alt="Grand Teton photograph 3 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_4-1440.webp" data-original-src="/photos/grandteton/GT_4.jpg" data-index="3" aria-label="Open Grand Teton photograph 4 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_4-640.webp 640w, /photos/optimized/grandteton/GT_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_4.jpg" width="5712" height="4284" alt="Grand Teton photograph 4 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_5-1440.webp" data-original-src="/photos/grandteton/GT_5.jpg" data-index="4" aria-label="Open Grand Teton photograph 5 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_5-640.webp 640w, /photos/optimized/grandteton/GT_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_5.jpg" width="5712" height="3186" alt="Grand Teton photograph 5 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_6-1440.webp" data-original-src="/photos/grandteton/GT_6.jpg" data-index="5" aria-label="Open Grand Teton photograph 6 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_6-640.webp 640w, /photos/optimized/grandteton/GT_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_6.jpg" width="5439" height="4079" alt="Grand Teton photograph 6 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_7-1440.webp" data-original-src="/photos/grandteton/GT_7.jpg" data-index="6" aria-label="Open Grand Teton photograph 7 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_7-640.webp 640w, /photos/optimized/grandteton/GT_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_7.jpg" width="4284" height="4791" alt="Grand Teton photograph 7 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_8-1440.webp" data-original-src="/photos/grandteton/GT_8.jpg" data-index="7" aria-label="Open Grand Teton photograph 8 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_8-640.webp 640w, /photos/optimized/grandteton/GT_8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_8.jpg" width="5415" height="3836" alt="Grand Teton photograph 8 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_9-1440.webp" data-original-src="/photos/grandteton/GT_9.jpg" data-index="8" aria-label="Open Grand Teton photograph 9 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_9-640.webp 640w, /photos/optimized/grandteton/GT_9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_9.jpg" width="5081" height="3811" alt="Grand Teton photograph 9 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_10-1440.webp" data-original-src="/photos/grandteton/GT_10.jpg" data-index="9" aria-label="Open Grand Teton photograph 10 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_10-640.webp 640w, /photos/optimized/grandteton/GT_10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_10.jpg" width="4032" height="3024" alt="Grand Teton photograph 10 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grandteton/GT_11-1440.webp" data-original-src="/photos/grandteton/GT_11.jpg" data-index="10" aria-label="Open Grand Teton photograph 11 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grandteton/GT_11-640.webp 640w, /photos/optimized/grandteton/GT_11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grandteton/GT_11.jpg" width="3931" height="2948" alt="Grand Teton photograph 11 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

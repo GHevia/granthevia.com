@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MS Thesis</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grant Hevia's MS thesis on low-thrust optimal trajectories in the circular restricted three-body problem.">
+  <title>MS Thesis | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
+  <main class="page-shell">
+    <header class="page-intro page-intro--wide">
+      <p class="eyebrow">Aerospace engineering</p>
+      <h1>MS Thesis</h1>
+      <p>Research in trajectory design and optimization for multi-body dynamical systems.</p>
+    </header>
 
-    <main>
-        <h1>MS Thesis</h1>
-        <h2>Low Thrust Optimal Trajectories in the Circular Restricted Three-Body Problem</h2>
-        <p>This is a preview. You can also <a href="/thesis/Hevia_Thesis_2023.pdf" target="_blank">download the full PDF</a>.</p>
-        
-        <div style="height: 80vh; width: 80vw; border: 1px solid #ccc;">
-            <iframe src="/thesis/Hevia_Thesis_2023.pdf#toolbar=1&navpanes=0&scrollbar=1" 
-                    width="100%" height="100%" 
-                    style="border: none;">
-            </iframe>
+    <div class="thesis-layout">
+      <section class="thesis-summary" aria-labelledby="thesis-title">
+        <h2 id="thesis-title">Low-Thrust Optimal Trajectories in the Circular Restricted Three-Body Problem</h2>
+        <p>The full thesis is available as a PDF. Desktop visitors can also read it in the embedded preview.</p>
+        <div class="thesis-actions">
+          <a class="button-link" href="/thesis/Hevia_Thesis_2023.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+          <a class="button-link button-link--secondary" href="/thesis/Hevia_Thesis_2023.pdf" download>Download</a>
         </div>
-    </main>
+      </section>
 
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
+      <section class="pdf-preview" aria-label="Thesis PDF preview">
+        <iframe src="/thesis/Hevia_Thesis_2023.pdf#toolbar=1&amp;navpanes=0&amp;scrollbar=1" title="Grant Hevia MS thesis PDF"></iframe>
+      </section>
+    </div>
+  </main>
+  <footer></footer>
 </body>
 </html>

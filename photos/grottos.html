@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Grottos</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from The Grottos by Grant Hevia.">
+  <title>The Grottos Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Grottos</h1>
-        <div class="gallery">
-            <img src="grottos/GROTTOS_1.jpg" alt="Photo 1 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_2.JPG" alt="Photo 2 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_3.jpg" alt="Photo 3 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_4.jpg" alt="Photo 4 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_5.jpg" alt="Photo 5 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_6.JPG" alt="Photo 6 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_7.JPG" alt="Photo 7 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_8.JPG" alt="Photo 8 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_9.JPG" alt="Photo 9 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_10.jpg" alt="Photo 10 of Grottos" class="gallery-item">
-            <img src="grottos/GROTTOS_11.JPG" alt="Photo 11 of Grottos" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>The Grottos</h1>
+      <p>11 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_1-1440.webp" data-original-src="/photos/grottos/GROTTOS_1.jpg" data-index="0" aria-label="Open The Grottos photograph 1 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_1-640.webp 640w, /photos/optimized/grottos/GROTTOS_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_1.jpg" width="3023" height="3054" alt="The Grottos photograph 1 of 11" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_2-1440.webp" data-original-src="/photos/grottos/GROTTOS_2.JPG" data-index="1" aria-label="Open The Grottos photograph 2 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_2-640.webp 640w, /photos/optimized/grottos/GROTTOS_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_2.JPG" width="3024" height="4032" alt="The Grottos photograph 2 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_3-1440.webp" data-original-src="/photos/grottos/GROTTOS_3.jpg" data-index="2" aria-label="Open The Grottos photograph 3 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_3-640.webp 640w, /photos/optimized/grottos/GROTTOS_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_3.jpg" width="3024" height="3190" alt="The Grottos photograph 3 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_4-1440.webp" data-original-src="/photos/grottos/GROTTOS_4.jpg" data-index="3" aria-label="Open The Grottos photograph 4 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_4-640.webp 640w, /photos/optimized/grottos/GROTTOS_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_4.jpg" width="3024" height="2578" alt="The Grottos photograph 4 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_5-1440.webp" data-original-src="/photos/grottos/GROTTOS_5.jpg" data-index="4" aria-label="Open The Grottos photograph 5 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_5-640.webp 640w, /photos/optimized/grottos/GROTTOS_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_5.jpg" width="3024" height="3157" alt="The Grottos photograph 5 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_6-1440.webp" data-original-src="/photos/grottos/GROTTOS_6.JPG" data-index="5" aria-label="Open The Grottos photograph 6 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_6-640.webp 640w, /photos/optimized/grottos/GROTTOS_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_6.JPG" width="3024" height="4032" alt="The Grottos photograph 6 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_7-1440.webp" data-original-src="/photos/grottos/GROTTOS_7.JPG" data-index="6" aria-label="Open The Grottos photograph 7 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_7-640.webp 640w, /photos/optimized/grottos/GROTTOS_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_7.JPG" width="3024" height="4032" alt="The Grottos photograph 7 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_8-1440.webp" data-original-src="/photos/grottos/GROTTOS_8.JPG" data-index="7" aria-label="Open The Grottos photograph 8 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_8-640.webp 640w, /photos/optimized/grottos/GROTTOS_8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_8.JPG" width="3024" height="3232" alt="The Grottos photograph 8 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_9-1440.webp" data-original-src="/photos/grottos/GROTTOS_9.JPG" data-index="8" aria-label="Open The Grottos photograph 9 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_9-640.webp 640w, /photos/optimized/grottos/GROTTOS_9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_9.JPG" width="3024" height="3583" alt="The Grottos photograph 9 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_10-1440.webp" data-original-src="/photos/grottos/GROTTOS_10.jpg" data-index="9" aria-label="Open The Grottos photograph 10 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_10-640.webp 640w, /photos/optimized/grottos/GROTTOS_10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_10.jpg" width="3024" height="2459" alt="The Grottos photograph 10 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/grottos/GROTTOS_11-1440.webp" data-original-src="/photos/grottos/GROTTOS_11.JPG" data-index="10" aria-label="Open The Grottos photograph 11 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/grottos/GROTTOS_11-640.webp 640w, /photos/optimized/grottos/GROTTOS_11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/grottos/GROTTOS_11.JPG" width="3024" height="4032" alt="The Grottos photograph 11 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

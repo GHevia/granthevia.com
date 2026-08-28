@@ -101,6 +101,10 @@
         } catch (error) {
             // Keep a cached date or the page's static footer when GitHub is unavailable.
             console.warn("Could not load the latest commit date:", error);
+            if (!cached) {
+                const fallback = document.querySelector(".footer-update");
+                if (fallback) fallback.textContent = "Latest update unavailable";
+            }
         }
     }
 

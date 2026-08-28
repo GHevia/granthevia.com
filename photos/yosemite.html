@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Yosemite</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Yosemite by Grant Hevia.">
+  <title>Yosemite Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Yosemite</h1>
-        <div class="gallery">
-            <img src="yosemite/YSMT_1.JPG" alt="Photo 1 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_2.JPG" alt="Photo 2 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_3.jpg" alt="Photo 3 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_4.jpg" alt="Photo 4 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_5.jpg" alt="Photo 5 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_6.jpg" alt="Photo 6 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_7.jpg" alt="Photo 7 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_8.jpg" alt="Photo 8 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_9.jpg" alt="Photo 9 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_10.jpg" alt="Photo 10 of Yosemite" class="gallery-item">
-            <img src="yosemite/YSMT_11.JPG" alt="Photo 11 of Yosemite" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Yosemite</h1>
+      <p>11 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_1-1440.webp" data-original-src="/photos/yosemite/YSMT_1.JPG" data-index="0" aria-label="Open Yosemite photograph 1 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_1-640.webp 640w, /photos/optimized/yosemite/YSMT_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_1.JPG" width="4032" height="3024" alt="Yosemite photograph 1 of 11" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_2-1440.webp" data-original-src="/photos/yosemite/YSMT_2.JPG" data-index="1" aria-label="Open Yosemite photograph 2 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_2-640.webp 640w, /photos/optimized/yosemite/YSMT_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_2.JPG" width="4032" height="3024" alt="Yosemite photograph 2 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_3-1440.webp" data-original-src="/photos/yosemite/YSMT_3.jpg" data-index="2" aria-label="Open Yosemite photograph 3 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_3-640.webp 640w, /photos/optimized/yosemite/YSMT_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_3.jpg" width="3023" height="2900" alt="Yosemite photograph 3 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_4-1440.webp" data-original-src="/photos/yosemite/YSMT_4.jpg" data-index="3" aria-label="Open Yosemite photograph 4 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_4-640.webp 640w, /photos/optimized/yosemite/YSMT_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_4.jpg" width="3023" height="3125" alt="Yosemite photograph 4 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_5-1440.webp" data-original-src="/photos/yosemite/YSMT_5.jpg" data-index="4" aria-label="Open Yosemite photograph 5 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_5-640.webp 640w, /photos/optimized/yosemite/YSMT_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_5.jpg" width="3023" height="3064" alt="Yosemite photograph 5 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_6-1440.webp" data-original-src="/photos/yosemite/YSMT_6.jpg" data-index="5" aria-label="Open Yosemite photograph 6 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_6-640.webp 640w, /photos/optimized/yosemite/YSMT_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_6.jpg" width="4032" height="2226" alt="Yosemite photograph 6 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_7-1440.webp" data-original-src="/photos/yosemite/YSMT_7.jpg" data-index="6" aria-label="Open Yosemite photograph 7 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_7-640.webp 640w, /photos/optimized/yosemite/YSMT_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_7.jpg" width="3024" height="3325" alt="Yosemite photograph 7 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_8-1440.webp" data-original-src="/photos/yosemite/YSMT_8.jpg" data-index="7" aria-label="Open Yosemite photograph 8 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_8-640.webp 640w, /photos/optimized/yosemite/YSMT_8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_8.jpg" width="3024" height="2857" alt="Yosemite photograph 8 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_9-1440.webp" data-original-src="/photos/yosemite/YSMT_9.jpg" data-index="8" aria-label="Open Yosemite photograph 9 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_9-640.webp 640w, /photos/optimized/yosemite/YSMT_9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_9.jpg" width="2869" height="2752" alt="Yosemite photograph 9 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_10-1440.webp" data-original-src="/photos/yosemite/YSMT_10.jpg" data-index="9" aria-label="Open Yosemite photograph 10 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_10-640.webp 640w, /photos/optimized/yosemite/YSMT_10-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_10.jpg" width="3415" height="2604" alt="Yosemite photograph 10 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 10</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/yosemite/YSMT_11-1440.webp" data-original-src="/photos/yosemite/YSMT_11.JPG" data-index="10" aria-label="Open Yosemite photograph 11 of 11">
+            <picture><source type="image/webp" srcset="/photos/optimized/yosemite/YSMT_11-640.webp 640w, /photos/optimized/yosemite/YSMT_11-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/yosemite/YSMT_11.JPG" width="4032" height="3024" alt="Yosemite photograph 11 of 11" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 11</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - Arches</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from Arches by Grant Hevia.">
+  <title>Arches Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Arches</h1>
-        <div class="gallery">
-            <img src="arches/ARCHES_1.jpg" alt="Photo 1 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_2.jpg" alt="Photo 2 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_3.jpg" alt="Photo 3 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_4.jpg" alt="Photo 4 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_5.jpg" alt="Photo 5 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_6.jpg" alt="Photo 6 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_7.jpg" alt="Photo 7 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_8.jpg" alt="Photo 8 of Arches" class="gallery-item">
-            <img src="arches/ARCHES_9.jpg" alt="Photo 9 of Arches" class="gallery-item">
-   
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>Arches</h1>
+      <p>9 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_1-1440.webp" data-original-src="/photos/arches/ARCHES_1.jpg" data-index="0" aria-label="Open Arches photograph 1 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_1-640.webp 640w, /photos/optimized/arches/ARCHES_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_1.jpg" width="5320" height="4284" alt="Arches photograph 1 of 9" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_2-1440.webp" data-original-src="/photos/arches/ARCHES_2.jpg" data-index="1" aria-label="Open Arches photograph 2 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_2-640.webp 640w, /photos/optimized/arches/ARCHES_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_2.jpg" width="4284" height="5712" alt="Arches photograph 2 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_3-1440.webp" data-original-src="/photos/arches/ARCHES_3.jpg" data-index="2" aria-label="Open Arches photograph 3 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_3-640.webp 640w, /photos/optimized/arches/ARCHES_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_3.jpg" width="4032" height="2933" alt="Arches photograph 3 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_4-1440.webp" data-original-src="/photos/arches/ARCHES_4.jpg" data-index="3" aria-label="Open Arches photograph 4 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_4-640.webp 640w, /photos/optimized/arches/ARCHES_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_4.jpg" width="4284" height="5712" alt="Arches photograph 4 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_5-1440.webp" data-original-src="/photos/arches/ARCHES_5.jpg" data-index="4" aria-label="Open Arches photograph 5 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_5-640.webp 640w, /photos/optimized/arches/ARCHES_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_5.jpg" width="5168" height="3338" alt="Arches photograph 5 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_6-1440.webp" data-original-src="/photos/arches/ARCHES_6.jpg" data-index="5" aria-label="Open Arches photograph 6 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_6-640.webp 640w, /photos/optimized/arches/ARCHES_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_6.jpg" width="5712" height="4284" alt="Arches photograph 6 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_7-1440.webp" data-original-src="/photos/arches/ARCHES_7.jpg" data-index="6" aria-label="Open Arches photograph 7 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_7-640.webp 640w, /photos/optimized/arches/ARCHES_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_7.jpg" width="5712" height="4284" alt="Arches photograph 7 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_8-1440.webp" data-original-src="/photos/arches/ARCHES_8.jpg" data-index="7" aria-label="Open Arches photograph 8 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_8-640.webp 640w, /photos/optimized/arches/ARCHES_8-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_8.jpg" width="5712" height="4284" alt="Arches photograph 8 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 8</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/arches/ARCHES_9-1440.webp" data-original-src="/photos/arches/ARCHES_9.jpg" data-index="8" aria-label="Open Arches photograph 9 of 9">
+            <picture><source type="image/webp" srcset="/photos/optimized/arches/ARCHES_9-640.webp 640w, /photos/optimized/arches/ARCHES_9-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/arches/ARCHES_9.jpg" width="3984" height="3984" alt="Arches photograph 9 of 9" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 9</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

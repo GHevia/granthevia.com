@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play interactive games and daily puzzles created by Grant Hevia.">
+  <title>Games | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Games</h1>
-        <div class="homegallery">
-            <div class="photo-set">
-                <a href="/games/rockbreakerscissors/index.html">
-                    <img src="/games/rockbreakerscissors/images/Logo.PNG" alt="RockBreakerScissors Preview">
-                    <p>Rock Breaker Scissors</p>
-                </a>
-            </div>
-            <div class="photo-set">
-                <a href="/games/QueensAndKnights/index.html">
-                    <img src="/games/QueensAndKnights/logo.PNG" alt="Queens & Knights Preview">
-                    <p>Queens & Knights</p>
-                </a>
-            </div>
-            <!-- Add more sets as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <script src="js/main.js"></script>
+  <div id="header-placeholder"></div>
+  <main class="page-shell">
+    <header class="page-intro">
+      <p class="eyebrow">Interactive projects</p>
+      <h1>Games</h1>
+      <p>Small experiments built to be played in the browser.</p>
+    </header>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <a href="/games/QueensAndKnights/index.html">
+          <div class="feature-card__media">
+            <img src="/games/QueensAndKnights/logo.PNG" width="646" height="648" alt="Queens and Knights puzzle board" loading="eager" decoding="async">
+          </div>
+          <div class="feature-card__body">
+            <h2>Queens &amp; Knights</h2>
+            <p>A new coverage puzzle every day, plus an archive of past boards.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="feature-card">
+        <a href="/games/rockbreakerscissors/index.html">
+          <div class="feature-card__media">
+            <img src="/games/rockbreakerscissors/images/Logo.PNG" width="981" height="980" alt="Rock Breaker Scissors game artwork" loading="lazy" decoding="async">
+          </div>
+          <div class="feature-card__body">
+            <h2>Rock Breaker Scissors</h2>
+            <p>An arcade-style twist on the familiar three-way matchup.</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </main>
+  <footer></footer>
 </body>
 </html>

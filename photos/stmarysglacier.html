@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos - St. Mary's Glacier</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography from St. Mary&#x27;s Glacier by Grant Hevia.">
+  <title>St. Mary&#x27;s Glacier Photos | Grant Hevia</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
+  <script src="/js/photo-gallery.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>St. Mary's Glacier</h1>
-        <div class="gallery">
-            <img src="stmarysglacier/SMG_1.JPEG" alt="Photo 1 of St. Mary's Glacier" class="gallery-item">
-            <img src="stmarysglacier/SMG_2.JPEG" alt="Photo 2 of St. Mary's Glacier" class="gallery-item">
-            <img src="stmarysglacier/SMG_3.JPEG" alt="Photo 3 of St. Mary's Glacier" class="gallery-item">
-            <img src="stmarysglacier/SMG_4.JPEG" alt="Photo 4 of St. Mary's Glacier" class="gallery-item">
-            <img src="stmarysglacier/SMG_5.JPEG" alt="Photo 5 of St. Mary's Glacier" class="gallery-item">
-            <img src="stmarysglacier/SMG_6.JPEG" alt="Photo 6 of St. Mary's Glacier" class="gallery-item">
-            <img src="stmarysglacier/SMG_7.JPEG" alt="Photo 7 of St. Mary's Glacier" class="gallery-item">
-            <!-- Add more photos as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Made by Grant Hevia</p>
-    </footer>
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+  <div id="header-placeholder"></div>
+  <main class="page-shell photo-gallery-page">
+    <a class="back-link" href="/photos.html"><span aria-hidden="true">&#8592;</span> All photo collections</a>
+    <header class="page-intro">
+      <p class="eyebrow">Photography collection</p>
+      <h1>St. Mary&#x27;s Glacier</h1>
+      <p>7 photographs. Select any image to view it full screen.</p>
+    </header>
+    <div class="gallery" data-photo-gallery>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/stmarysglacier/SMG_1-1440.webp" data-original-src="/photos/stmarysglacier/SMG_1.JPEG" data-index="0" aria-label="Open St. Mary&#x27;s Glacier photograph 1 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/stmarysglacier/SMG_1-640.webp 640w, /photos/optimized/stmarysglacier/SMG_1-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/stmarysglacier/SMG_1.JPEG" width="5579" height="3939" alt="St. Mary&#x27;s Glacier photograph 1 of 7" loading="eager" decoding="async" fetchpriority="high"></picture>
+          </button>
+          <figcaption>Photo 1</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/stmarysglacier/SMG_2-1440.webp" data-original-src="/photos/stmarysglacier/SMG_2.JPEG" data-index="1" aria-label="Open St. Mary&#x27;s Glacier photograph 2 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/stmarysglacier/SMG_2-640.webp 640w, /photos/optimized/stmarysglacier/SMG_2-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/stmarysglacier/SMG_2.JPEG" width="5712" height="4284" alt="St. Mary&#x27;s Glacier photograph 2 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 2</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/stmarysglacier/SMG_3-1440.webp" data-original-src="/photos/stmarysglacier/SMG_3.JPEG" data-index="2" aria-label="Open St. Mary&#x27;s Glacier photograph 3 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/stmarysglacier/SMG_3-640.webp 640w, /photos/optimized/stmarysglacier/SMG_3-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/stmarysglacier/SMG_3.JPEG" width="3532" height="2934" alt="St. Mary&#x27;s Glacier photograph 3 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 3</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/stmarysglacier/SMG_4-1440.webp" data-original-src="/photos/stmarysglacier/SMG_4.JPEG" data-index="3" aria-label="Open St. Mary&#x27;s Glacier photograph 4 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/stmarysglacier/SMG_4-640.webp 640w, /photos/optimized/stmarysglacier/SMG_4-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/stmarysglacier/SMG_4.JPEG" width="5712" height="4284" alt="St. Mary&#x27;s Glacier photograph 4 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 4</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/stmarysglacier/SMG_5-1440.webp" data-original-src="/photos/stmarysglacier/SMG_5.JPEG" data-index="4" aria-label="Open St. Mary&#x27;s Glacier photograph 5 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/stmarysglacier/SMG_5-640.webp 640w, /photos/optimized/stmarysglacier/SMG_5-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/stmarysglacier/SMG_5.JPEG" width="4032" height="3024" alt="St. Mary&#x27;s Glacier photograph 5 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 5</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/stmarysglacier/SMG_6-1440.webp" data-original-src="/photos/stmarysglacier/SMG_6.JPEG" data-index="5" aria-label="Open St. Mary&#x27;s Glacier photograph 6 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/stmarysglacier/SMG_6-640.webp 640w, /photos/optimized/stmarysglacier/SMG_6-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/stmarysglacier/SMG_6.JPEG" width="3932" height="2987" alt="St. Mary&#x27;s Glacier photograph 6 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 6</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <button class="gallery-trigger" type="button" data-display-src="/photos/optimized/stmarysglacier/SMG_7-1440.webp" data-original-src="/photos/stmarysglacier/SMG_7.JPEG" data-index="6" aria-label="Open St. Mary&#x27;s Glacier photograph 7 of 7">
+            <picture><source type="image/webp" srcset="/photos/optimized/stmarysglacier/SMG_7-640.webp 640w, /photos/optimized/stmarysglacier/SMG_7-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1200px) 46vw, 560px"><img src="/photos/stmarysglacier/SMG_7.JPEG" width="5712" height="4284" alt="St. Mary&#x27;s Glacier photograph 7 of 7" loading="lazy" decoding="async"></picture>
+          </button>
+          <figcaption>Photo 7</figcaption>
+        </figure>
     </div>
-    <script src="/js/main.js"></script>
+  </main>
+  <footer></footer>
 </body>
 </html>

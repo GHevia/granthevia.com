@@ -1,69 +1,107 @@
-// /js/include.js
-function setupHeaderDropdowns(header) {
-    const dropdowns = Array.from(header.querySelectorAll(".dropdown"));
+// Shared header, navigation, and footer components.
+(() => {
+    "use strict";
 
-    const closeDropdowns = () => {
-        dropdowns.forEach(dropdown => {
-            dropdown.classList.remove("open");
-            dropdown.querySelector(".dropbtn")?.setAttribute("aria-expanded", "false");
+    async function fetchPartial(path) {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`${path} returned ${response.status}`);
+        return response.text();
+    }
+
+    function currentSection() {
+        const path = window.location.pathname.toLowerCase();
+        if (path.includes("/photos") || path.endsWith("/photos.html")) return "photos";
+        if (path.includes("/games") || path.endsWith("/games.html")) return "games";
+        if (path.includes("/thesis") || path.endsWith("/thesis.html")) return "thesis";
+        return "home";
+    }
+
+    function setupNavigation(header) {
+        const toggle = header.querySelector(".nav-toggle");
+        const list = header.querySelector(".nav-list");
+        if (!toggle || !list) return;
+
+        const closeMenu = () => {
+            toggle.setAttribute("aria-expanded", "false");
+            list.classList.remove("is-open");
+        };
+
+        toggle.addEventListener("click", () => {
+            const willOpen = toggle.getAttribute("aria-expanded") !== "true";
+            toggle.setAttribute("aria-expanded", String(willOpen));
+            list.classList.toggle("is-open", willOpen);
         });
-    };
 
-    dropdowns.forEach(dropdown => {
-        const trigger = dropdown.querySelector(".dropbtn");
-        if (!trigger) return;
+        list.addEventListener("click", event => {
+            if (event.target.closest("a")) closeMenu();
+        });
 
-        trigger.setAttribute("aria-haspopup", "true");
-        trigger.setAttribute("aria-expanded", "false");
-        trigger.addEventListener("click", event => {
-            const wasOpen = dropdown.classList.contains("open");
-            const hasPreciseHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+        document.addEventListener("click", event => {
+            if (!header.contains(event.target)) closeMenu();
+        });
 
-            // On touch devices, the first tap opens the menu and the second follows the link.
-            if (!hasPreciseHover && !wasOpen) event.preventDefault();
-            event.stopPropagation();
-            closeDropdowns();
-
-            if (!wasOpen) {
-                dropdown.classList.add("open");
-                trigger.setAttribute("aria-expanded", "true");
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                closeMenu();
+                toggle.focus();
             }
         });
-    });
 
-    document.addEventListener("click", closeDropdowns);
-    document.addEventListener("keydown", event => {
-        if (event.key === "Escape") closeDropdowns();
-    });
-}
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 720) closeMenu();
+        });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const includeHeader = document.getElementById("header-placeholder");
+        const section = currentSection();
+        header.querySelector(`[data-section="${section}"]`)?.setAttribute("aria-current", "page");
+    }
 
-    if (includeHeader) {
-        fetch("/partials/header.html")
-            .then(res => res.text())
+    function loadCommitDate() {
+        const alreadyLoaded = Array.from(document.scripts).some(script => {
+            try {
+                return new URL(script.src, window.location.href).pathname === "/js/git-info.js";
+            } catch {
+                return false;
+            }
+        });
+        if (alreadyLoaded) return;
+
+        const script = document.createElement("script");
+        script.src = "/js/git-info.js";
+        document.head.appendChild(script);
+    }
+
+    async function initializeIncludes() {
+        const headerHost = document.getElementById("header-placeholder");
+        const existingFooter = document.querySelector("footer");
+
+        const headerPromise = headerHost
+            ? fetchPartial("/partials/header.html")
+                .then(html => {
+                    headerHost.innerHTML = html;
+                    const header = headerHost.querySelector(".site-header");
+                    if (header) setupNavigation(header);
+                })
+                .catch(error => console.error("Could not load the site header:", error))
+            : Promise.resolve();
+
+        const footer = existingFooter || document.body.appendChild(document.createElement("footer"));
+        footer.classList.add("site-footer");
+        const footerPromise = fetchPartial("/partials/footer.html")
             .then(html => {
-                includeHeader.innerHTML = html;
-                setupHeaderDropdowns(includeHeader);
+                footer.innerHTML = html;
+                loadCommitDate();
             })
-            .catch(err => {
-                console.error("Could not load header:", err);
+            .catch(error => {
+                console.error("Could not load the site footer:", error);
+                loadCommitDate();
             });
+
+        await Promise.all([headerPromise, footerPromise]);
     }
 
-    // Load the shared commit-date footer on every page that uses the header include.
-    const hasGitInfoScript = Array.from(document.scripts).some(script => {
-        try {
-            return new URL(script.src, window.location.href).pathname === "/js/git-info.js";
-        } catch {
-            return false;
-        }
-    });
-
-    if (!hasGitInfoScript) {
-        const gitInfoScript = document.createElement("script");
-        gitInfoScript.src = "/js/git-info.js";
-        document.head.appendChild(gitInfoScript);
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeIncludes, { once: true });
+    } else {
+        initializeIncludes();
     }
-});
+})();

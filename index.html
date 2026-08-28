@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Grant Hevia's personal website featuring photography, games, and academic work">
-    <meta name="keywords" content="Grant Hevia, photography, games, thesis, portfolio">
-    <title>Grant Hevia - Photography, Games, and Academic Work</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
-    <script src="/js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grant Hevia's photography, interactive games, and aerospace engineering work.">
+  <title>Grant Hevia | Photography, Games &amp; Aerospace</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
+  <script src="/js/include.js" defer></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <main>
-        <h1>Welcome to GrantHevia.com</h1>
-        <div class="homegallery">
-            <div class="homescreen-set">
-                <a href="photos.html" aria-label="View photo gallery">
-                    <img src="/photos/capitolreef/CR_SQUARE.jpg" alt="Photos Preview" loading="lazy">
-                    <p>Photos</p>
-                </a>
+  <div id="header-placeholder"></div>
+  <main class="page-shell">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero__content">
+        <p class="eyebrow">Photography &middot; puzzles &middot; aerospace</p>
+        <h1 id="home-title">Welcome. I&rsquo;m Grant.</h1>
+        <p class="home-hero__lede">A collection of landscapes, small interactive projects, and the research behind my work in astrodynamics.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="explore-title">
+      <h2 id="explore-title" class="sr-only">Explore the website</h2>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <a href="/photos.html">
+            <div class="feature-card__media">
+              <picture>
+                <source type="image/webp" srcset="/photos/optimized/capitolreef/CR_SQUARE-640.webp 640w, /photos/optimized/capitolreef/CR_SQUARE-1440.webp 1440w" sizes="(max-width: 560px) calc(100vw - 1rem), (max-width: 900px) 48vw, 380px">
+                <img src="/photos/capitolreef/CR_SQUARE.jpg" width="2642" height="2642" alt="Sunset landscape in Capitol Reef" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <div class="homescreen-set">
-                <a href="games.html" aria-label="View games">
-                    <img src="/games/rockbreakerscissors/images/Logo.PNG" alt="Games Preview" loading="lazy">
-                    <p>Games</p>
-                </a>
+            <div class="feature-card__body">
+              <h2>Photography</h2>
+              <p>Twenty collections from national parks, trails, and Colorado.</p>
             </div>
-            <div class="homescreen-set">
-                <a href="thesis.html" aria-label="View thesis">
-                    <img src="/thesis/Thesis_Square4.PNG" alt="Thesis Preview" loading="lazy">
-                    <p>MS Thesis</p>
-                </a>
+          </a>
+        </article>
+
+        <article class="feature-card">
+          <a href="/games.html">
+            <div class="feature-card__media">
+              <img src="/games/rockbreakerscissors/images/Logo.PNG" width="981" height="980" alt="Rock Breaker Scissors game artwork" loading="lazy" decoding="async">
             </div>
-            <!-- Add more sets as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; Grant Hevia</p>
-    </footer>
+            <div class="feature-card__body">
+              <h2>Games</h2>
+              <p>Playable experiments, including a daily chess-piece logic puzzle.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="feature-card">
+          <a href="/thesis.html">
+            <div class="feature-card__media">
+              <img src="/thesis/Thesis_Square4.PNG" width="1400" height="1401" alt="Orbital trajectory visualization from Grant Hevia's thesis" loading="lazy" decoding="async">
+            </div>
+            <div class="feature-card__body">
+              <h2>MS Thesis</h2>
+              <p>Low-thrust optimal trajectories in the circular restricted three-body problem.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
 </body>
 </html>
