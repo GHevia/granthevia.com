@@ -20,6 +20,31 @@ QUEEN_MOVES = [(-1,0), (1,0), (0,-1), (0,1), (-1,-1), (-1,1), (1,-1), (1,1)]
 KNIGHT_MOVES = [(-2,-1), (-2,1), (-1,-2), (-1,2), (1,-2), (1,2), (2,-1), (2,1)]
 PIECE_SYMBOLS = {'Q': '♛', 'N': '♞'}
 
+def write_puzzle_index(directory=Path('.')):
+    """Write the dated puzzle/solution pairs used by the website archive."""
+    dates = []
+
+    for puzzle_path in directory.glob('puzzle_*.json'):
+        date_string = puzzle_path.stem.removeprefix('puzzle_')
+        try:
+            date.fromisoformat(date_string)
+        except ValueError:
+            continue
+
+        if (directory / f'solution_{date_string}.json').exists():
+            dates.append(date_string)
+
+    dates.sort()
+    if not dates:
+        raise RuntimeError('No dated puzzle and solution pairs were found')
+
+    with open(directory / 'puzzles.json', 'w') as index_file:
+        json.dump({
+            'latest': dates[-1],
+            'dates': dates,
+        }, index_file, indent=2)
+
+
 def in_bounds(r, c):
     return 0 <= r < BOARD_SIZE and 0 <= c < BOARD_SIZE
 
@@ -142,6 +167,9 @@ def generate_daily_puzzle(overwrite=True):
                 }, f, indent=2)
             with open("solution.json", "w") as f:
                 json.dump({"board": board}, f, indent=2)
+
+            # Keep the static website archive in sync with the generated files.
+            write_puzzle_index()
 
             logging.info(f"Successfully generated puzzle for {today}")
             return

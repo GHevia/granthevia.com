@@ -1,26 +1,112 @@
-// Function to format the date in a readable way
-function formatDate(date) {
-    const options = { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        timeZoneName: 'short'
-    };
-    
-    return date.toLocaleDateString('en-US', options);
-}
+(() => {
+    "use strict";
 
-// Function to update the footer with the current time
-function updateFooterWithTime() {
-    const footer = document.querySelector('footer p');
-    if (!footer) return;
+    const COMMITS_URL = "https://api.github.com/repos/GHevia/granthevia.com/commits?per_page=1";
+    const CACHE_KEY = "granthevia-latest-commit";
+    const CACHE_DURATION_MS = 30 * 60 * 1000;
 
-    const currentTime = new Date();
-    const formattedDate = formatDate(currentTime);
-    footer.innerHTML = `&copy; Made by Grant Hevia | Last updated: ${formattedDate}`;
-}
+    function formatCommitDate(value) {
+        return new Intl.DateTimeFormat("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timeZone: "UTC",
+        }).format(new Date(value));
+    }
 
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', updateFooterWithTime); 
+    function renderFooter(commit) {
+        const footer = document.querySelector("footer");
+        if (!footer || !commit?.date) return;
+
+        let paragraph = footer.querySelector("p");
+        if (!paragraph) {
+            paragraph = document.createElement("p");
+            footer.appendChild(paragraph);
+        }
+
+        const year = new Date().getFullYear();
+        const time = document.createElement("time");
+        time.dateTime = commit.date;
+        time.textContent = formatCommitDate(commit.date);
+
+        paragraph.replaceChildren(document.createTextNode(`\u00a9 ${year} Grant Hevia \u00b7 Last updated `));
+
+        if (commit.url) {
+            const link = document.createElement("a");
+            link.href = commit.url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.appendChild(time);
+            link.setAttribute("aria-label", `View the latest website commit from ${time.textContent}`);
+            paragraph.appendChild(link);
+        } else {
+            paragraph.appendChild(time);
+        }
+    }
+
+    function readCachedCommit() {
+        try {
+            const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+            if (cached?.commit?.date) return cached;
+        } catch {
+            // Storage can be unavailable in privacy-focused browser modes.
+        }
+        return null;
+    }
+
+    function cacheCommit(commit) {
+        try {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({
+                cachedAt: Date.now(),
+                commit,
+            }));
+        } catch {
+            // The live result can still be displayed when storage is unavailable.
+        }
+    }
+
+    async function fetchLatestCommit() {
+        const response = await fetch(COMMITS_URL, {
+            headers: {
+                Accept: "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error(`GitHub returned ${response.status}`);
+        }
+
+        const [latest] = await response.json();
+        const date = latest?.commit?.committer?.date || latest?.commit?.author?.date;
+        if (!date) throw new Error("The latest commit did not include a date");
+
+        return { date, url: latest.html_url || "" };
+    }
+
+    async function initializeCommitDate() {
+        if (window.__grantHeviaCommitDateInitialized) return;
+        window.__grantHeviaCommitDateInitialized = true;
+
+        const cached = readCachedCommit();
+        if (cached) renderFooter(cached.commit);
+
+        const cacheIsFresh = cached && Date.now() - cached.cachedAt < CACHE_DURATION_MS;
+        if (cacheIsFresh) return;
+
+        try {
+            const commit = await fetchLatestCommit();
+            cacheCommit(commit);
+            renderFooter(commit);
+        } catch (error) {
+            // Keep a cached date or the page's static footer when GitHub is unavailable.
+            console.warn("Could not load the latest commit date:", error);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeCommitDate, { once: true });
+    } else {
+        initializeCommitDate();
+    }
+})();

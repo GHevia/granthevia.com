@@ -3,286 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Queens & Knights</title>
+  <meta name="description" content="Play a new Queens & Knights logic puzzle each day or browse the puzzle archive.">
+  <title>Queens &amp; Knights</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="./game.css">
+  <link rel="icon" type="image/x-icon" href="/Logo_Icon.ico">
   <script src="/js/include.js" defer></script>
-  <style>
-    body { 
-      font-family: sans-serif; 
-      text-align: center;
-      padding: 0;
-      margin: 0;
-    }
-
-    #game-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    table { 
-      border-collapse: collapse; 
-      margin: 20px auto;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    td {
-      width: 20%;
-      height: 0;
-      padding-bottom: 20%;
-      position: relative;
-      border: 1px solid #333;
-      text-align: center;
-      vertical-align: middle;
-      font-size: clamp(24px, 5vw, 32px);
-      cursor: pointer;
-    }
-
-    td > span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      text-align: center;
-    }
-
-    .queen { color: red; }
-    .knight { color: blue; }
-    .covered { background-color: #d0ffd0; }
-    .fixed { background-color: #f0f0f0; pointer-events: none; }
-    .invalid { background-color: #ffc0c0; }
-
-    #controls {
-      margin: 20px 0;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    #controls button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    #controls button:hover {
-      background-color: #575757;
-    }
-
-    #status {
-      margin: 20px 0;
-      font-size: 16px;
-    }
-
-    @media (max-width: 768px) {
-      #game-container {
-        padding: 10px;
-      }
-
-      td {
-        font-size: clamp(20px, 8vw, 28px);
-      }
-
-      #controls button {
-        padding: 8px 16px;
-        font-size: 14px;
-      }
-
-      #status {
-        font-size: 14px;
-        padding: 0 10px;
-      }
-    }
-  </style>
+  <script src="./game.js" defer></script>
 </head>
-<body>
+<body class="queens-knights-page">
   <div id="header-placeholder"></div>
-  <div id="game-container">
-    <h1 style="margin-bottom: 0px; padding-bottom: 0;">Queens & Knights</h1>
-    <p><strong>Instructions:</strong> Click on empty squares to place pieces. You must:</p>
-    <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-      <li>Place the exact number of Queens (♛) and Knights (♞).</li>
-      <li>Ensure every empty square is under attack.</li>
-      <li>Ensure no pieces are attacking each other.</li>
-      <li>Click to cycle: Empty → ♛ → ♞.</li>
-    </ul>
 
-    <p id="instructions">Loading...</p>
-    <table id="board"></table>
-    <div id="controls">
-      <button onclick="checkSolution()">Check Solution</button>
-      <button onclick="showSolution()">Show Solution</button>
+  <main class="puzzle-main">
+    <header class="puzzle-hero">
+      <p class="puzzle-hero__eyebrow">Daily logic puzzle</p>
+      <h1>Queens <span aria-hidden="true">&amp;</span><span class="sr-only">and</span> Knights</h1>
+      <p>Cover the board without letting any piece attack another.</p>
+    </header>
+
+    <div class="puzzle-layout">
+      <section class="game-card" aria-labelledby="puzzle-date-heading">
+        <nav class="archive-nav" aria-label="Puzzle archive">
+          <button id="older-puzzle" class="archive-nav__button" type="button" aria-label="Play the previous, older puzzle">
+            <span aria-hidden="true">&#8592;</span> Older
+          </button>
+
+          <div class="puzzle-picker">
+            <label for="puzzle-date">Puzzle date</label>
+            <select id="puzzle-date" aria-describedby="archive-summary"></select>
+          </div>
+
+          <button id="newer-puzzle" class="archive-nav__button" type="button" aria-label="Play the next, newer puzzle">
+            Newer <span aria-hidden="true">&#8594;</span>
+          </button>
+        </nav>
+
+        <p id="archive-summary" class="archive-summary">Loading the puzzle archive&hellip;</p>
+        <h2 id="puzzle-date-heading" class="puzzle-date-heading">Today&rsquo;s puzzle</h2>
+
+        <div class="piece-goals" aria-label="Piece placement progress">
+          <div class="piece-goal piece-goal--queen">
+            <span class="piece-goal__symbol" aria-hidden="true">&#9819;</span>
+            <span><strong id="queen-count">0 / 0</strong><small>Queens</small></span>
+          </div>
+          <div class="piece-goal piece-goal--knight">
+            <span class="piece-goal__symbol" aria-hidden="true">&#9822;</span>
+            <span><strong id="knight-count">0 / 0</strong><small>Knights</small></span>
+          </div>
+        </div>
+
+        <div id="board" class="puzzle-board" aria-label="Five by five Queens and Knights board" aria-busy="true"></div>
+
+        <div class="board-legend" aria-label="Board key">
+          <span><i class="board-legend__swatch board-legend__swatch--given"></i> Given piece</span>
+          <span><i class="board-legend__swatch board-legend__swatch--covered"></i> Covered</span>
+          <span><i class="board-legend__swatch board-legend__swatch--conflict"></i> Conflict</span>
+        </div>
+
+        <div class="game-actions">
+          <button id="check-solution" class="button button--primary" type="button">Check board</button>
+          <button id="reset-puzzle" class="button button--secondary" type="button">Reset</button>
+          <button id="show-solution" class="button button--quiet" type="button">Reveal solution</button>
+        </div>
+
+        <p id="status" class="game-status" role="status" aria-live="polite">Loading puzzle&hellip;</p>
+      </section>
+
+      <aside class="rules-card" aria-labelledby="how-to-play">
+        <h2 id="how-to-play">How to play</h2>
+        <ol>
+          <li>Tap an open square to cycle through empty, queen, and knight.</li>
+          <li>Place exactly the number of pieces shown above the board.</li>
+          <li>Every empty square must be attacked by at least one piece.</li>
+          <li>No queen or knight may attack another piece.</li>
+        </ol>
+
+        <details>
+          <summary>How the pieces move</summary>
+          <p><strong>Queens</strong> attack along rows, columns, and diagonals until another piece blocks them.</p>
+          <p><strong>Knights</strong> attack in an L shape: two squares in one direction and one to the side.</p>
+        </details>
+
+        <p class="rules-card__tip"><strong>Tip:</strong> Use the date controls to revisit any archived puzzle. The selected date is also saved in the page URL.</p>
+      </aside>
     </div>
-    <p id="status"></p>
-  </div>
+  </main>
 
-  <script>
-    const SIZE = 5;
-    const symbols = ["", "♛", "♞"];
-    const classes = ["", "queen", "knight"];
-    let board = [];
-    let fixedCells = [];
-    let requiredQueens = 0;
-    let requiredKnights = 0;
-    let solution = [];
-
-    async function loadPuzzle() {
-      const res = await fetch("puzzle.json");
-      const data = await res.json();
-      board = data.board.map(row => [...row]);
-      fixedCells = data.board.map(row => row.map(cell => cell !== ""));
-      requiredQueens = data.num_queens;
-      requiredKnights = data.num_knights;
-
-      const solutionRes = await fetch("solution.json");
-      const solutionData = await solutionRes.json();
-      solution = solutionData.board;
-
-      document.getElementById("instructions").textContent =
-        `Place ${requiredQueens} Queen(s) and ${requiredKnights} Knight(s) to help cover the board.`;
-
-      render();
-    }
-
-    function render() {
-      const table = document.getElementById("board");
-      table.innerHTML = "";
-      for (let r = 0; r < SIZE; r++) {
-        const row = document.createElement("tr");
-        for (let c = 0; c < SIZE; c++) {
-          const cell = document.createElement("td");
-          const piece = board[r][c];
-          const idx = symbols.indexOf(piece);
-          const span = document.createElement("span");
-          span.textContent = piece;
-          cell.appendChild(span);
-          cell.className = (fixedCells[r][c] ? "fixed " : "") + classes[idx];
-          if (!fixedCells[r][c]) {
-            cell.onclick = () => {
-              const current = symbols.indexOf(board[r][c]);
-              board[r][c] = symbols[(current + 1) % symbols.length];
-              render();
-            };
-          }
-          row.appendChild(cell);
-        }
-        table.appendChild(row);
-      }
-    }
-
-    function getAttacksFrom(r, c, piece) {
-      const attacks = [];
-      if (piece === "♛") {
-        const directions = [[-1,0], [1,0], [0,-1], [0,1], [-1,-1], [-1,1], [1,-1], [1,1]];
-        for (let [dr, dc] of directions) {
-          let nr = r + dr, nc = c + dc;
-          while (nr >= 0 && nr < SIZE && nc >= 0 && nc < SIZE) {
-            attacks.push([nr, nc]);
-            if (board[nr][nc] !== "") break;
-            nr += dr;
-            nc += dc;
-          }
-        }
-      } else if (piece === "♞") {
-        const moves = [[-2,-1], [-2,1], [-1,-2], [-1,2], [1,-2], [1,2], [2,-1], [2,1]];
-        for (let [dr, dc] of moves) {
-          const nr = r + dr, nc = c + dc;
-          if (nr >= 0 && nr < SIZE && nc >= 0 && nc < SIZE) attacks.push([nr, nc]);
-        }
-      }
-      return attacks;
-    }
-
-    function getCoveredSquares(board) {
-      const covered = Array.from({ length: SIZE }, () => Array(SIZE).fill(false));
-      for (let r = 0; r < SIZE; r++) {
-        for (let c = 0; c < SIZE; c++) {
-          const piece = board[r][c];
-          if (piece !== "") {
-            const attacks = getAttacksFrom(r, c, piece);
-            for (let [ar, ac] of attacks) covered[ar][ac] = true;
-          }
-        }
-      }
-      return covered;
-    }
-
-    function checkSolution() {
-      const covered = getCoveredSquares(board);
-      let allCovered = true;
-      let safe = true;
-      let placedQueens = 0, placedKnights = 0;
-
-      for (let r = 0; r < SIZE; r++) {
-        for (let c = 0; c < SIZE; c++) {
-          const cell = document.getElementById("board").rows[r].cells[c];
-          cell.classList.remove("covered", "invalid");
-          const piece = board[r][c];
-
-          if (!fixedCells[r][c]) {
-            if (piece === "♛") placedQueens++;
-            if (piece === "♞") placedKnights++;
-          }
-
-          if (piece === "") {
-            if (covered[r][c]) {
-              cell.classList.add("covered");
-            } else {
-              allCovered = false;
-            }
-          } else {
-            const attacks = getAttacksFrom(r, c, piece);
-            for (let [ar, ac] of attacks) {
-              if (board[ar][ac] !== "") {
-                cell.classList.add("invalid");
-                safe = false;
-              }
-            }
-            for (let i = 0; i < SIZE; i++) {
-              for (let j = 0; j < SIZE; j++) {
-                if ((i !== r || j !== c) && board[i][j] !== "") {
-                  const reverse = getAttacksFrom(i, j, board[i][j]);
-                  for (let [rr, cc] of reverse) {
-                    if (rr === r && cc === c) {
-                      cell.classList.add("invalid");
-                      safe = false;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-      const status = document.getElementById("status");
-      if (placedQueens !== requiredQueens || placedKnights !== requiredKnights) {
-        status.textContent = `⚠️ You must place exactly ${requiredQueens} Queen(s) and ${requiredKnights} Knight(s).`;
-      } else if (!safe) {
-        status.textContent = "❌ Some pieces are attacking or being attacked!";
-      } else if (!allCovered) {
-        status.textContent = "❌ Not all squares are covered.";
-      } else {
-        status.textContent = "✅ Success! All squares are covered and no pieces are in check.";
-      }
-    }
-
-    function showSolution() {
-      board = solution.map(row => [...row]);
-      fixedCells = board.map(row => row.map(() => true));
-      render();
-      document.getElementById("status").textContent = "🔍 Solution displayed.";
-    }
-
-    loadPuzzle();
-  </script>
+  <footer>
+    <p>&copy; Grant Hevia</p>
+  </footer>
 </body>
 </html>

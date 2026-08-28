@@ -46,6 +46,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -74,6 +75,7 @@ nav ul li {
 }
 
 nav ul li a {
+    display: block;
     color: white;
     text-decoration: none;
     padding: 0.5em 1em;
@@ -111,6 +113,11 @@ nav ul li .dropbtn:hover {
     display: block;
 }
 
+.dropdown.open .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
 /* ===== Footer Styles ===== */
 footer {
     text-align: center;
@@ -118,6 +125,15 @@ footer {
     background: #333;
     color: white;
     width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: inherit;
 }
 
 /* ===== Gallery and Photo Set Styles ===== */
@@ -314,10 +330,10 @@ footer {
     }
 
     nav ul {
-        font-size: 1.4em;
+        font-size: 1rem;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.2em;
+        gap: 0.1rem;
     }
 
     nav ul li {
@@ -325,12 +341,14 @@ footer {
     }
 
     nav ul li a {
-        padding: 0.2em 0.4em;
+        padding: 0.45rem 0.55rem;
     }
 
     /* Fix dropdown menu positioning and size */
     .dropdown-content {
         min-width: 120px;
+        max-height: min(70vh, 28rem);
+        overflow-y: auto;
         left: 50%;
         transform: translateX(-50%);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
