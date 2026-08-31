@@ -1,16 +1,20 @@
 (() => {
     "use strict";
 
-    const COMMITS_URL = "https://api.github.com/repos/GHevia/granthevia.com/commits?per_page=1";
-    const CACHE_KEY = "granthevia-latest-commit";
-    const CACHE_DURATION_MS = 30 * 60 * 1000;
+    const COMMITS_URL = "https://api.github.com/repos/GHevia/granthevia.com/commits";
+    const CACHE_KEY = "granthevia-latest-site-commit-v2";
+    const CACHE_DURATION_MS = 6 * 60 * 60 * 1000;
+    const COMMITS_PER_PAGE = 100;
+    const MAX_PAGES = 5;
+    const SITE_TIME_ZONE = "America/Denver";
+    const DAILY_PUZZLE_MESSAGE = /^Update daily puzzle for \d{4}-\d{2}-\d{2}\b/i;
 
     function formatCommitDate(value) {
         return new Intl.DateTimeFormat("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
-            timeZone: "UTC",
+            timeZone: SITE_TIME_ZONE,
         }).format(new Date(value));
     }
 
@@ -29,7 +33,7 @@
         time.dateTime = commit.date;
         time.textContent = formatCommitDate(commit.date);
 
-        paragraph.replaceChildren(document.createTextNode(`\u00a9 ${year} Grant Hevia \u00b7 Last updated `));
+        paragraph.replaceChildren(document.createTextNode(`\u00a9 ${year} Grant Hevia \u00b7 Site updated `));
 
         if (commit.url) {
             const link = document.createElement("a");
@@ -65,8 +69,12 @@
         }
     }
 
-    async function fetchLatestCommit() {
-        const response = await fetch(COMMITS_URL, {
+    async function fetchCommitPage(page) {
+        const url = new URL(COMMITS_URL);
+        url.searchParams.set("per_page", String(COMMITS_PER_PAGE));
+        url.searchParams.set("page", String(page));
+
+        const response = await fetch(url, {
             headers: {
                 Accept: "application/vnd.github+json",
                 "X-GitHub-Api-Version": "2022-11-28",
@@ -77,11 +85,29 @@
             throw new Error(`GitHub returned ${response.status}`);
         }
 
-        const [latest] = await response.json();
-        const date = latest?.commit?.committer?.date || latest?.commit?.author?.date;
-        if (!date) throw new Error("The latest commit did not include a date");
+        return response.json();
+    }
 
-        return { date, url: latest.html_url || "" };
+    function isDailyPuzzleCommit(commit) {
+        const subject = commit?.commit?.message?.split("\n", 1)[0] || "";
+        return DAILY_PUZZLE_MESSAGE.test(subject);
+    }
+
+    async function fetchLatestSiteCommit() {
+        for (let page = 1; page <= MAX_PAGES; page += 1) {
+            const commits = await fetchCommitPage(page);
+            const latest = commits.find(commit => !isDailyPuzzleCommit(commit));
+
+            if (latest) {
+                const date = latest.commit?.committer?.date || latest.commit?.author?.date;
+                if (!date) throw new Error("The latest site commit did not include a date");
+                return { date, url: latest.html_url || "" };
+            }
+
+            if (commits.length < COMMITS_PER_PAGE) break;
+        }
+
+        throw new Error("No non-puzzle site commit was found");
     }
 
     async function initializeCommitDate() {
@@ -95,7 +121,7 @@
         if (cacheIsFresh) return;
 
         try {
-            const commit = await fetchLatestCommit();
+            const commit = await fetchLatestSiteCommit();
             cacheCommit(commit);
             renderFooter(commit);
         } catch (error) {

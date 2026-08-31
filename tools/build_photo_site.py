@@ -178,6 +178,7 @@ def render_gallery_page(gallery: dict[str, object]) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050506">
   <meta name="description" content="Photography from {html.escape(title, quote=True)} by Grant Hevia.">
   <title>{html.escape(title)} Photos | Grant Hevia</title>
   <link rel="stylesheet" href="/css/styles.css">
@@ -232,6 +233,7 @@ def render_photo_index(galleries: list[dict[str, object]]) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050506">
   <meta name="description" content="Landscape and travel photography collections by Grant Hevia.">
   <title>Photography | Grant Hevia</title>
   <link rel="stylesheet" href="/css/styles.css">

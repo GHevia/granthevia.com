@@ -8,6 +8,8 @@ Source for the static website at granthevia.com.
 - `partials/footer.html` contains the shared footer markup.
 - `css/styles.css` contains the site-wide layout and component styles.
 - `js/include.js` loads the shared header/footer and marks the active section.
+- `js/git-info.js` displays the newest site-edit commit while ignoring automated
+  commits whose subject starts with `Update daily puzzle for YYYY-MM-DD`.
 
 ## Rebuilding the photography pages
 

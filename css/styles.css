@@ -1,18 +1,18 @@
 :root {
-  --ink: #1f2923;
-  --muted: #647068;
-  --surface: #ffffff;
-  --surface-soft: #f2f4f0;
-  --background: #f7f6f2;
-  --accent: #315a46;
-  --accent-dark: #213e31;
-  --line: #d9dfda;
+  --ink: #f4f4f5;
+  --muted: #a1a1aa;
+  --surface: #0b0b0d;
+  --surface-soft: #141417;
+  --background: #050506;
+  --accent: #ffffff;
+  --accent-dark: #d4d4d8;
+  --line: #2a2a30;
   --white: #ffffff;
-  --shadow-sm: 0 0.35rem 1.2rem rgba(31, 41, 35, 0.08);
-  --shadow-lg: 0 1.4rem 3.5rem rgba(31, 41, 35, 0.14);
-  --radius-sm: 0.65rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.35rem;
+  --shadow-sm: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 1.4rem 3.5rem rgba(0, 0, 0, 0.55);
+  --radius-sm: 0.2rem;
+  --radius-md: 0.35rem;
+  --radius-lg: 0.5rem;
   --content-width: 72rem;
   --transition: 180ms ease;
 }
@@ -28,7 +28,7 @@
 }
 
 html {
-  color-scheme: light;
+  color-scheme: dark;
   scroll-behavior: smooth;
 }
 
@@ -39,8 +39,11 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 8% 0%, rgba(49, 90, 70, 0.08), transparent 28rem),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    radial-gradient(circle at 50% -10rem, #1a1a1e 0, transparent 38rem),
     var(--background);
+  background-size: 4rem 4rem, 4rem 4rem, auto, auto;
   color: var(--ink);
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;
@@ -90,14 +93,14 @@ h1,
 h2,
 h3 {
   line-height: 1.15;
+  text-wrap: balance;
 }
 
 h1 {
   margin-bottom: 0.65rem;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.35rem, 7vw, 4.9rem);
-  font-weight: 600;
-  letter-spacing: -0.045em;
+  font-weight: 650;
+  letter-spacing: -0.04em;
 }
 
 h2 {
@@ -130,8 +133,8 @@ p {
   position: sticky;
   z-index: 100;
   top: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(30, 42, 35, 0.96);
+  border-bottom: 1px solid var(--line);
+  background: rgba(5, 5, 6, 0.92);
   color: var(--white);
   backdrop-filter: blur(14px);
 }
@@ -152,8 +155,11 @@ p {
   align-items: center;
   gap: 0.65rem;
   color: var(--white);
+  font-size: 0.78rem;
   font-weight: 750;
+  letter-spacing: 0.12em;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .site-brand:hover {
@@ -165,11 +171,11 @@ p {
   width: 2rem;
   height: 2rem;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 50%;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.75rem;
-  letter-spacing: -0.04em;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2px;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
 }
 
 .nav-list {
@@ -184,18 +190,21 @@ p {
 .nav-list a {
   display: block;
   padding: 0.55rem 0.85rem;
-  border-radius: 999px;
+  border-radius: 2px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.9rem;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.72rem;
   font-weight: 650;
+  letter-spacing: 0.08em;
   text-decoration: none;
+  text-transform: uppercase;
   transition: color var(--transition), background-color var(--transition);
 }
 
 .nav-list a:hover,
 .nav-list a[aria-current="page"] {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--white);
+  background: var(--white);
+  color: #050506;
 }
 
 .nav-toggle {
@@ -205,7 +214,7 @@ p {
   align-items: center;
   gap: 0.55rem;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
+  border-radius: 2px;
   background: transparent;
   color: var(--white);
   cursor: pointer;
@@ -247,6 +256,16 @@ main {
   padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(3.5rem, 8vw, 6rem);
 }
 
+.home-page {
+  display: grid;
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.home-page > section {
+  width: 100%;
+}
+
 .page-intro {
   max-width: 46rem;
   margin: 0 auto clamp(2rem, 5vw, 3.75rem);
@@ -267,7 +286,8 @@ main {
 
 .eyebrow {
   margin-bottom: 0.35rem;
-  color: var(--accent);
+  color: var(--muted);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -296,9 +316,9 @@ main {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--accent);
-  border-radius: 999px;
+  border-radius: 2px;
   background: var(--accent);
-  color: var(--white);
+  color: #050506;
   font-weight: 750;
   text-decoration: none;
   transition: transform var(--transition), background-color var(--transition);
@@ -306,7 +326,7 @@ main {
 
 .button-link:hover {
   background: var(--accent-dark);
-  color: var(--white);
+  color: #050506;
   transform: translateY(-1px);
 }
 
@@ -322,28 +342,6 @@ main {
 }
 
 /* Home, games, and reusable feature cards */
-.home-hero {
-  display: grid;
-  min-height: min(62vh, 38rem);
-  place-items: center;
-  text-align: center;
-}
-
-.home-hero__content {
-  max-width: 52rem;
-}
-
-.home-hero h1 {
-  font-size: clamp(2.7rem, 8vw, 5.8rem);
-}
-
-.home-hero__lede {
-  max-width: 42rem;
-  margin: 0 auto;
-  color: var(--muted);
-  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
-}
-
 .feature-grid,
 .homegallery {
   display: grid;
@@ -362,11 +360,12 @@ main {
   border-radius: var(--radius-lg);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .feature-card:hover,
 .homegallery > div:hover {
+  border-color: #73737c;
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
@@ -412,8 +411,10 @@ main {
 .homegallery p {
   margin: 0;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.45rem;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .feature-card__body p {
@@ -436,6 +437,7 @@ main {
   display: block;
   margin: 0 0 0.35rem 0.2rem;
   color: var(--muted);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -446,7 +448,7 @@ main {
   display: flex;
   padding: 0.35rem;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: 2px;
   background: var(--surface);
   box-shadow: var(--shadow-sm);
 }
@@ -464,7 +466,7 @@ main {
 .collection-search button {
   padding: 0.5rem 0.85rem;
   border: 0;
-  border-radius: 999px;
+  border-radius: 2px;
   background: var(--surface-soft);
   color: var(--accent);
   font-weight: 750;
@@ -490,10 +492,11 @@ main {
   border-radius: var(--radius-lg);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .collection-card:hover {
+  border-color: #73737c;
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
@@ -530,8 +533,10 @@ main {
 
 .collection-card__body h2 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
 }
 
 .collection-card__body p {
@@ -575,7 +580,7 @@ main {
   overflow: hidden;
   border: 0;
   border-radius: var(--radius-sm);
-  background: #e8ece8;
+  background: #101012;
   box-shadow: var(--shadow-sm);
   cursor: zoom-in;
 }
@@ -600,7 +605,7 @@ main {
 .collection-search input:focus-visible,
 .collection-search button:focus-visible,
 .button-link:focus-visible {
-  outline: 3px solid #2286c3;
+  outline: 2px solid var(--white);
   outline-offset: 3px;
 }
 
@@ -614,7 +619,7 @@ main {
   align-items: center;
   gap: 1rem;
   padding: clamp(1rem, 3vw, 2rem);
-  background: rgba(12, 17, 14, 0.96);
+  background: rgba(0, 0, 0, 0.97);
 }
 
 .lightbox-figure {
@@ -631,7 +636,7 @@ main {
   height: auto;
   max-height: calc(100vh - 6rem);
   object-fit: contain;
-  border-radius: 0.35rem;
+  border-radius: 2px;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
 }
 
@@ -694,7 +699,7 @@ main {
 }
 
 .thesis-summary h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 650;
 }
 
 .thesis-summary p {
@@ -754,9 +759,9 @@ main {
   min-height: 2.75rem;
   padding: 0.55rem 0.9rem;
   border: 0;
-  border-radius: 999px;
+  border-radius: 2px;
   background: var(--accent);
-  color: var(--white);
+  color: #050506;
   cursor: pointer;
 }
 
@@ -766,7 +771,8 @@ footer {
   width: 100%;
   margin-top: auto;
   padding: 1.1rem 1rem;
-  background: #1e2a23;
+  border-top: 1px solid var(--line);
+  background: #050506;
   color: rgba(255, 255, 255, 0.76);
   text-align: center;
 }
@@ -817,7 +823,7 @@ footer a {
     padding: 0.55rem;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-md);
-    background: #26372e;
+    background: #08080a;
     box-shadow: var(--shadow-lg);
   }
 
@@ -871,10 +877,6 @@ footer a {
   .homegallery,
   .collection-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .home-hero {
-    min-height: 48vh;
   }
 
   .pdf-preview {
